@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Pırpır V123 • 3D Hayatta Kalma</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;inset:0;width:100%;height:100%;overscroll-behavior:none;-webkit-overflow-scrolling:auto;margin:0;background:#101e21;color:white;font-family:system-ui;overflow:hidden;touch-action:none}#stage{position:fixed;inset:0;touch-action:none;overscroll-behavior:none}#stage canvas{display:block;touch-action:none}#hud{position:fixed;top:env(safe-area-inset-top);left:0;right:0;padding:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none;text-shadow:0 2px 4px #000}#hud a{pointer-events:auto;color:#fff;background:#183e46;padding:9px;border-radius:12px;text-decoration:none;font-size:12px}#hud span{font-weight:800}#joy{position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));left:25px;width:128px;height:128px;border:3px solid #ffffff70;background:#ffffff20;border-radius:50%;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;z-index:5}#nub{position:absolute;left:40px;top:40px;width:43px;height:43px;background:#ffffffb8;border-radius:50%}#attack{position:fixed;bottom:calc(45px + env(safe-area-inset-bottom));right:28px;border:2px solid #ffdc91;border-radius:50%;width:95px;height:95px;background:#a64227;color:white;font-weight:900;font-size:17px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;z-index:5}#coins{position:fixed;top:calc(100px + env(safe-area-inset-top));left:12px;font-weight:700;color:#ffe69c;pointer-events:none}#note{position:fixed;top:62px;left:10px;right:10px;text-align:center;font-size:12px;color:#f6e8bd;pointer-events:none}#error{position:fixed;inset:0;background:#17272a;padding:28px;display:none;z-index:10}#timer{position:fixed;top:calc(136px + env(safe-area-inset-top));left:12px;font-size:21px;font-weight:900;color:#fff;pointer-events:none;text-shadow:0 2px 5px #000}#powers{position:fixed;top:calc(187px + env(safe-area-inset-top));left:12px;font-size:12px;max-width:78vw;color:#fff5bf;pointer-events:none;text-shadow:0 2px 4px #000}#chest{position:fixed;bottom:calc(160px + env(safe-area-inset-bottom));right:20px;border:2px solid #ffe4a2;border-radius:14px;background:#68472e;color:#fff;padding:12px;font-weight:800;z-index:6;touch-action:manipulation}#message{position:fixed;top:44%;left:10%;width:80%;text-align:center;font-weight:900;font-size:22px;color:#ffe5a3;text-shadow:0 3px 7px #000;pointer-events:none;z-index:7}#restart{display:none;position:fixed;top:56%;left:30%;width:40%;border:2px solid #fff3b4;border-radius:14px;background:#a64227;color:white;font-size:17px;font-weight:800;padding:15px;z-index:8}#bossbar{display:none;position:fixed;top:calc(220px + env(safe-area-inset-top));left:12px;right:12px;z-index:4;pointer-events:none;background:#250e17bb;border:1px solid #ff9b69;border-radius:10px;padding:7px;font-size:12px;font-weight:800}#bossfill{height:9px;background:linear-gradient(90deg,#c83236,#ffad41);border-radius:8px;width:100%;margin-top:5px}#hitnote{position:fixed;left:50%;top:35%;transform:translateX(-50%);font-weight:900;font-size:22px;color:#fff1a4;text-shadow:0 2px 4px black;pointer-events:none;opacity:0;z-index:6}#chest:disabled{opacity:.5}#chest{bottom:calc(150px + env(safe-area-inset-bottom));right:18px;display:none;box-shadow:0 0 14px #ffd15c55}#chest.near{display:block}#nearChest{position:fixed;bottom:calc(260px + env(safe-area-inset-bottom));right:10px;color:#ffe9a0;font-size:12px;font-weight:800;text-shadow:0 2px 3px #000;pointer-events:none;z-index:5}
+<!doctype html><html lang="tr"><head><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Pırpır V140 • 3D Hayatta Kalma</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;inset:0;width:100%;height:100%;overscroll-behavior:none;-webkit-overflow-scrolling:auto;margin:0;background:#101e21;color:white;font-family:system-ui;overflow:hidden;touch-action:none}#stage{position:fixed;inset:0;touch-action:none;overscroll-behavior:none}#stage canvas{display:block;touch-action:none}#hud{position:fixed;top:env(safe-area-inset-top);left:0;right:0;padding:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none;text-shadow:0 2px 4px #000}#hud a{pointer-events:auto;color:#fff;background:#183e46;padding:9px;border-radius:12px;text-decoration:none;font-size:12px}#hud span{font-weight:800}#joy{position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));left:25px;width:128px;height:128px;border:3px solid #ffffff70;background:#ffffff20;border-radius:50%;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;z-index:5}#nub{position:absolute;left:40px;top:40px;width:43px;height:43px;background:#ffffffb8;border-radius:50%}#attack{position:fixed;bottom:calc(45px + env(safe-area-inset-bottom));right:28px;border:2px solid #ffdc91;border-radius:50%;width:95px;height:95px;background:#a64227;color:white;font-weight:900;font-size:17px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;z-index:5}#coins{position:fixed;top:calc(100px + env(safe-area-inset-top));left:12px;font-weight:700;color:#ffe69c;pointer-events:none}#note{position:fixed;top:62px;left:10px;right:10px;text-align:center;font-size:12px;color:#f6e8bd;pointer-events:none}#error{position:fixed;inset:0;background:#17272a;padding:28px;display:none;z-index:10}#timer{position:fixed;top:calc(136px + env(safe-area-inset-top));left:12px;font-size:21px;font-weight:900;color:#fff;pointer-events:none;text-shadow:0 2px 5px #000}#powers{position:fixed;top:calc(187px + env(safe-area-inset-top));left:12px;font-size:12px;max-width:78vw;color:#fff5bf;pointer-events:none;text-shadow:0 2px 4px #000}#chest{position:fixed;bottom:calc(160px + env(safe-area-inset-bottom));right:20px;border:2px solid #ffe4a2;border-radius:14px;background:#68472e;color:#fff;padding:12px;font-weight:800;z-index:6;touch-action:manipulation}#message{position:fixed;top:44%;left:10%;width:80%;text-align:center;font-weight:900;font-size:22px;color:#ffe5a3;text-shadow:0 3px 7px #000;pointer-events:none;z-index:7}#restart{display:none;position:fixed;top:56%;left:30%;width:40%;border:2px solid #fff3b4;border-radius:14px;background:#a64227;color:white;font-size:17px;font-weight:800;padding:15px;z-index:8}#bossbar{display:none;position:fixed;top:calc(220px + env(safe-area-inset-top));left:12px;right:12px;z-index:4;pointer-events:none;background:#250e17bb;border:1px solid #ff9b69;border-radius:10px;padding:7px;font-size:12px;font-weight:800}#bossfill{height:9px;background:linear-gradient(90deg,#c83236,#ffad41);border-radius:8px;width:100%;margin-top:5px}#hitnote{position:fixed;left:50%;top:35%;transform:translateX(-50%);font-weight:900;font-size:22px;color:#fff1a4;text-shadow:0 2px 4px black;pointer-events:none;opacity:0;z-index:6}#chest:disabled{opacity:.5}#chest{bottom:calc(150px + env(safe-area-inset-bottom));right:18px;display:none;box-shadow:0 0 14px #ffd15c55}#chest.near{display:block}#nearChest{position:fixed;bottom:calc(260px + env(safe-area-inset-bottom));right:10px;color:#ffe9a0;font-size:12px;font-weight:800;text-shadow:0 2px 3px #000;pointer-events:none;z-index:5}
 /* V73 ana menu ve Duo lobisi */
 #menuRoot{isolation:isolate;pointer-events:auto;position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,#071b24ed,#103d39e8 50%,#111c2aef);padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom));overflow-y:auto;touch-action:pan-y}
 #menuRoot.hidden{display:none}#menuCard{width:min(460px,100%);max-height:100%;overflow-y:auto;background:linear-gradient(160deg,#183c43,#10232d);border:1px solid #e3c47a80;border-radius:24px;box-shadow:0 16px 55px #0009;padding:20px;touch-action:pan-y}
@@ -113,12 +113,84 @@ button{font-family:inherit;-webkit-tap-highlight-color:transparent}button:focus-
 /* V100 release-candidate: readable controls on small mobile displays */
 button:focus-visible,input:focus-visible{outline:3px solid #ffdf8b;outline-offset:3px}
 @media(max-width:380px){#hud{font-size:12px}#attack{right:calc(8px + env(safe-area-inset-right))}#joy{left:calc(8px + env(safe-area-inset-left))}#v87ResultCard{width:96vw}}
+
+#v134Store{margin:10px 0;padding:12px;border:1px solid #e9c27b88;border-radius:14px;background:#101f30;color:#f9e9d0}
+#v134Store[hidden]{display:none}#v134Store h3{margin:0 0 8px;color:#ffd88a}
+.v134Bar{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.v134Bar button,.v134Product button{background:#dba84e;color:#182332;border:0;border-radius:9px;padding:8px 10px;font-weight:800}
+#v134Grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+.v134Product{padding:10px;border-radius:12px;background:#20354a;border:1px solid #ffffff22;display:grid;gap:6px;text-align:center}
+.v134Product .emoji{font-size:29px}.v134Product small{color:#e8d1a7}
+#v134Toast{min-height:20px;font-size:12px;color:#f7d68d;margin-top:8px}
+
+#v136Tasks{margin:10px 0;padding:12px;border:1px solid #80c7d088;border-radius:14px;background:#132b37;color:#fff}
+#v136Tasks[hidden]{display:none}
+#v136Tasks h3{margin:0 0 8px;color:#b5efff}
+.v136Task{padding:8px;border-radius:9px;background:#234252;margin-top:7px;display:flex;gap:8px;justify-content:space-between;align-items:center}
+.v136Task button,#v136Toggle,#v136Close{border:0;border-radius:9px;padding:8px;background:#80d9db;color:#142a35;font-weight:800}
+.v136Task button:disabled{opacity:.55}
+
+#v137Progress{margin:10px 0;padding:12px;background:#142e39;border:1px solid #73d9c788;border-radius:14px;color:#f5f7ed}
+#v137Progress[hidden]{display:none}
+#v137Progress h3{margin:0 0 8px;color:#b6f4e4}
+#v137Progress button{border:0;border-radius:9px;padding:8px;background:#80d9db;color:#102733;font-weight:800}
+#v137XpBar{height:10px;background:#304e57;border-radius:12px;overflow:hidden;margin:8px 0}
+#v137XpFill{height:100%;background:linear-gradient(90deg,#53c7b3,#f6d56a);width:0%;transition:width .25s}
+.v137Badge{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#244451;border-radius:10px;padding:8px;margin-top:6px}
+.v137Badge.locked{opacity:.52}
+
+#v138Arena{padding:12px;margin:10px 0;background:#142b38;border:1px solid #b7dcff77;border-radius:14px;color:#eaf6ff}
+#v138Arena[hidden]{display:none}
+#v138Arena select,#v138Arena input,#v138Arena button,#v138Open{padding:9px;border-radius:9px;border:1px solid #6aa4b5;background:#25475a;color:white}
+#v138Arena button,#v138Open{background:#d3a84e;color:#172837;font-weight:800}
+#v138Scores{max-height:210px;overflow:auto}
+.v138Score{display:flex;justify-content:space-between;padding:7px;border-bottom:1px solid #ffffff20;font-size:13px}
 </style></head><body><div id="stage"></div><button id="pauseButton" type="button">☰ MENÜ</button>
-<div id="v93Load" role="status" aria-live="polite"><div style="font-size:32px">⚔️ PIRPIR V123</div><div id="v93Track"><div id="v93Progress"></div></div><small id="v93LoadText">Orman hazırlanıyor...</small></div>
+<div id="v93Load" role="status" aria-live="polite"><div style="font-size:32px">⚔️ PIRPIR V140</div><div id="v93Track"><div id="v93Progress"></div></div><small id="v93LoadText">Orman hazırlanıyor...</small></div>
 <div id="v93Pause" role="dialog" aria-modal="true" aria-label="Duraklatma menüsü"><div id="v93PauseCard"><h2>⏸ OYUN MENÜSÜ</h2><p id="v93PauseInfo">Oyun duraklatıldı.</p><button id="v93Resume">▶ DEVAM ET</button><button id="v104Home" class="secondary" type="button">🏠 ANA MENÜYE DÖN</button><button id="v93PauseHelp" class="secondary">🎮 KONTROLLER</button><div class="v94AudioSettings"><strong>🔊 Ses ve müzik</strong><label>Sesler açık <input type="checkbox" data-v94="enabled" checked></label><label>Arka plan müziği <input type="checkbox" data-v94="music" checked></label><label>Genel ses <input type="range" data-v94="volume" min="0" max="100" value="45"></label><label>Efekt seviyesi <input type="range" data-v94="effects" min="0" max="100" value="80"></label><small class="v94Note">Sesler oyuna başladıktan veya ekrana dokunduktan sonra etkinleşir. Tamamen özgün, tarayıcıda üretilen seslerdir.</small></div><p id="v93PauseHelpText" hidden>Sol joystick: hareket • Sağ kılıç: saldırı • Ekranı sürükle: kamera • Sandığa yaklaş: aç.</p></div></div>
 <div id="v93MobileHint">Sol: hareket · Sağ: saldırı · ☰: menü</div>
 <div id="menuRoot"><section id="menuCard" aria-label="Pırpır ana menü">
-<div class="v80HeroArt" aria-hidden="true"><span>⚔️</span><span>🐉</span><span>🛡️</span></div><div class="menuBrand">⚔️ PIRPIR</div><div class="menuSub">V123 · 3D HAYATTA KALMA · ORMAN ARENASI</div><div id="v93Subtitle">🌲 DÖRT BÖLGE · ⚔️ 10 DAKİKA · 👥 DUO</div>
+<div class="v80HeroArt" aria-hidden="true"><span>⚔️</span><span>🐉</span><span>🛡️</span></div><div class="menuBrand">⚔️ PIRPIR</div><div class="menuSub">V140 · 3D HAYATTA KALMA · ORMAN ARENASI</div><div id="v93Subtitle">🌲 DÖRT BÖLGE · ⚔️ 10 DAKİKA · 👥 DUO</div>
+<div class="v134Bar" style="margin:10px 0"><button id="v134Open" type="button" style="background:#edc469;border:0;border-radius:10px;padding:10px;font-weight:900">💎 ELMAZ MAĞAZASI</button><strong id="v134Balance">💎 0</strong></div>
+<section id="v134Store" hidden aria-label="Elmas ve kostüm mağazası">
+<h3>💎 Kostüm Mağazası</h3>
+<div class="v134Bar"><strong id="v134ShopBalance">💎 0 elmas</strong><button type="button" id="v134Close">✕ Kapat</button></div>
+<p style="font-size:12px">Bu sürüm demo mağazadır. Gerçek para ödemesi yapılmaz. Elmaslar ve eşyalar yalnızca bu cihazda saklanır.</p>
+<div id="v134Grid"></div>
+<div id="v134Toast" role="status" aria-live="polite"></div>
+</section>
+<div style="margin:8px 0"><button id="v136Toggle" type="button">🎯 GÜNLÜK GÖREVLER</button></div>
+<section id="v136Tasks" hidden aria-label="Günlük görevler">
+<div class="v134Bar"><h3>🎯 Günlük Görevler</h3><button type="button" id="v136Close">✕</button></div>
+<p style="font-size:12px">Demo elmas ödülleri. Günlük ilerleme bu cihazda tutulur; gerçek para değeri yoktur.</p>
+<div id="v136TaskList"></div>
+<div id="v136Notice" role="status" aria-live="polite" style="font-size:12px;margin-top:8px"></div>
+</section>
+<div style="margin:8px 0"><button id="v137Toggle" type="button" style="background:#9be4d5;border:0;border-radius:10px;padding:10px;font-weight:900">🏅 SEVİYE & BAŞARILAR</button></div>
+<section id="v137Progress" hidden aria-label="Seviye ve başarılar">
+<div class="v134Bar"><h3>🏅 Oyuncu İlerlemesi</h3><button id="v137Close" type="button">✕ Kapat</button></div>
+<strong id="v137Level">Seviye 1</strong>
+<div id="v137XpBar"><div id="v137XpFill"></div></div>
+<div id="v137XpText" style="font-size:12px"></div>
+<p style="font-size:12px">Bu sürümde XP ve rozetler cihazında saklanır. Duo sıralaması ve gerçek para bakiyesiyle bağlantılı değildir.</p>
+<div id="v137Badges"></div>
+<div id="v137Notice" role="status" aria-live="polite" style="font-size:12px;margin-top:8px"></div>
+</section>
+<div style="margin:8px 0"><button id="v138Open" type="button">🏆 YARIŞ & YEREL SIRALAMA</button></div>
+<section id="v138Arena" hidden aria-label="Yarış modları ve sıralama">
+<div class="v134Bar"><h3>🏆 Pırpır Arenası</h3><button id="v138Close" type="button">✕ Kapat</button></div>
+<label>Oyuncu adı <input id="v138Name" maxlength="18" placeholder="Pırpır Oyuncusu"></label>
+<label>Yarış modu <select id="v138Mode">
+<option value="classic">🌲 Klasik (10 dk)</option>
+<option value="rush">⚡ Hızlı Av (10 dk, daha çok düşman)</option>
+<option value="hard">🔥 Zorlu Hayatta Kalma (10 dk, güçlü düşmanlar)</option>
+</select></label>
+<p style="font-size:12px">Modu oyuna başlamadan seç. Sıralama yalnızca bu cihazdaki tamamlanan oyunları gösterir; çevrimiçi genel sıralama henüz yok.</p>
+<strong id="v138ModeInfo"></strong>
+<h4>🥇 Yerel Sıralama</h4>
+<div id="v138Scores"></div>
+<p id="v138Message" role="status" style="font-size:12px"></p>
+</section>
 <div id="characterPanel"><h3>🛡️ Savaşçını seç</h3><div id="v88PreviewWrap"><canvas id="v88Preview" aria-label="Seçilen savaşçının döndürülebilir üç boyutlu önizlemesi"></canvas><div class="v88PreviewControls"><button type="button" id="v88Left" aria-label="Sola döndür">↶</button><span>3D ÖNİZLEME · Sürükleyerek döndür</span><button type="button" id="v88Right" aria-label="Sağa döndür">↷</button></div></div><div class="v87Characters" role="group" aria-label="Karakter seçimi"><button type="button" class="v87Char" data-character="ates" aria-pressed="true"><span class="avatar">🔥</span>Ateş Savaşçısı</button><button type="button" class="v87Char" data-character="buz" aria-pressed="false"><span class="avatar">❄️</span>Buz Muhafızı</button><button type="button" class="v87Char" data-character="orman" aria-pressed="false"><span class="avatar">🌿</span>Orman Şövalyesi</button></div><p class="menuHint">Üç farklı animasyon ve savaş efekti; temel güçleri eşit.</p></div><div class="menuGrid"><button class="menuBtn menuWide" id="soloBtn">▶ TEK OYUNCU BAŞLA</button><button class="menuBtn" id="duoBtn">👥 DUO</button><button class="menuBtn secondary" id="howBtn">📜 NASIL OYNANIR?</button><button class="menuBtn secondary" id="profileBtn">🛡️ OYUNCU</button><button class="menuBtn secondary" id="settingsBtn">⚙️ AYARLAR</button></div>
 <div class="menuPanel" id="duoPanel" hidden><h3>👥 Duo lobisi</h3><p>Arkadaşınla birlikte oynama için lobi arayüzü. Oda koduyla arkadaşınla aynı arenaya bağlan. Bağlantı için aşağıdaki Supabase ayarları gereklidir.</p><label>Oyuncu adın<input id="playerName" maxlength="18" placeholder="Pırpır savaşçısı" autocomplete="off"></label><div class="menuGrid"><button class="menuBtn" id="makeRoom">Oda kodu oluştur</button><button class="menuBtn secondary" id="joinRoom">Kod gir</button></div><div id="roomResult" class="menuStatus" aria-live="polite"></div><button class="menuBtn secondary" type="button" id="copyRoom" style="width:100%;margin:4px 0 10px">📋 Oda kodunu kopyala</button><label>Oda kodu<input id="roomCode" maxlength="6" placeholder="6 karakter" autocomplete="off"></label><div class="menuGrid"><button class="menuBtn" id="duoStart" disabled>▶ DUO OYUNU BAŞLAT</button><button class="menuBtn secondary" id="duoLeave">Odadan ayrıl</button></div><p id="duoConnection" class="menuStatus" aria-live="polite">Bağlantı bekleniyor.</p><p class="menuHint" id="peerCount">👥 Lobide: 0/2 oyuncu</p><p class="menuHint">Oda sahibi oyunu başlatır. Aynı Supabase projesini kullanan iki telefon eşleşir.</p></div>
 <div class="menuPanel" id="howPanel" hidden><h3>📜 Nasıl oynanır?</h3>10 dakika hayatta kal. Sol joystick ile yürü, sağdaki kılıçla saldır. Canavarlardan altın topla; haritadaki sandıkları 50 altınla aç ve güç kazan. Son dakikada boss'a karşı savaş!</div>
@@ -153,13 +225,13 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffdf8b;outline-offse
 const root=document.getElementById('menuRoot');const panels=['duoPanel','howPanel','profilePanel','settingsPanel'];
 function showPanel(id){for(const p of panels)document.getElementById(p).hidden=p!==id;}
 // V99: Character selection is handled once by the 3D preview controller below.
-function start(){if(window.pirpirStarted||document.getElementById("v87Result").style.display==="flex")return;window.pirpirAudio?.unlock();window.pirpirSoloPaused=false;window.pirpirDuoMenuOpen=false;v93Pause.classList.remove('open');document.body.classList.remove('v93Paused');if(!window.pirpirEngineReady){alert('3D oyun motoru henüz hazır değil. İnternet bağlantısını kontrol edip yeniden dene.');return;}window.pirpirStarted=true;document.body.classList.remove('menuOpen');root.classList.add('hidden');document.getElementById('pauseButton').style.display='block';}
+function start(){if(window.pirpirStarted||document.getElementById("v87Result").style.display==="flex")return;window.pirpirAudio?.unlock();window.pirpirSoloPaused=false;window.pirpirDuoMenuOpen=false;v93Pause.classList.remove('open');document.body.classList.remove('v93Paused');if(!window.pirpirEngineReady){alert('3D oyun motoru henüz hazır değil. İnternet bağlantısını kontrol edip yeniden dene.');return;}window.pirpirRaceModeLocked=window.pirpirRaceMode||'classic';window.pirpirStarted=true;document.body.classList.remove('menuOpen');root.classList.add('hidden');document.getElementById('pauseButton').style.display='block';}
 document.body.classList.add('menuOpen');window.pirpirStarted=false;
 document.getElementById('soloBtn').onclick=()=>{if(window.pirpirIsDuo?.()){document.getElementById('roomResult').textContent='Tek oyunculu başlamak için önce Duo odasından ayrıl.';showPanel('duoPanel');return}start()};
 const v93Pause=document.getElementById('v93Pause');
 function v93SetPause(open){const duoMode=!!window.pirpirIsDuo?.();window.pirpirSoloPaused=open&&!duoMode;window.pirpirDuoMenuOpen=open&&duoMode;v93Pause.classList.toggle('open',open);document.body.classList.toggle('v93Paused',open);document.getElementById('v93PauseInfo').textContent=duoMode?'Duo oyunu devam ediyor. Yalnızca senin kontrollerin geçici olarak kapatıldı; arkadaşının süresi ve hareketleri durmaz.':'Tek oyunculu oyun ve süre duraklatıldı.';if(open){window.pirpirResetControls?.();}}
 document.getElementById('pauseButton').onclick=()=>v93SetPause(true);
-document.getElementById('v93Resume').onclick=()=>{v93SetPause(false);if(!window.pirpirStarted&&window.pirpirEngineReady){window.pirpirStarted=true;document.getElementById('menuRoot')?.classList.add('hidden');document.body.classList.remove('menuOpen');}};document.getElementById('v104Home').onclick=()=>{if(confirm('Ana menüye dönülsün mü? Mevcut oyun ilerlemesi kaybolacak.')){try{window.pirpirDuo?.leave?.()}catch(e){}location.replace(location.pathname+'?v=105')}};
+document.getElementById('v93Resume').onclick=()=>{v93SetPause(false);if(!window.pirpirStarted&&window.pirpirEngineReady){window.pirpirRaceModeLocked=window.pirpirRaceModeLocked||window.pirpirRaceMode||'classic';window.pirpirStarted=true;document.getElementById('menuRoot')?.classList.add('hidden');document.body.classList.remove('menuOpen');}};document.getElementById('v104Home').onclick=()=>{if(confirm('Ana menüye dönülsün mü? Mevcut oyun ilerlemesi kaybolacak.')){try{window.pirpirDuo?.leave?.()}catch(e){}location.replace(location.pathname+'?v=105')}};
 document.getElementById('v93PauseHelp').onclick=()=>{const el=document.getElementById('v93PauseHelpText');el.hidden=!el.hidden};
 addEventListener('keydown',e=>{if(e.key==='Escape'&&window.pirpirStarted&&!e.repeat){e.preventDefault();v93SetPause(!v93Pause.classList.contains('open'))}});
 
@@ -171,16 +243,16 @@ document.getElementById('duoLeave').onclick=()=>window.pirpirDuo?.leave();
 document.getElementById('copyRoom').onclick=async()=>{const code=document.getElementById('roomCode').value.trim();if(!code)return;try{await navigator.clipboard.writeText(code);document.getElementById('roomResult').textContent='📋 Kod kopyalandı: '+code}catch{document.getElementById('roomCode').select();document.getElementById('roomResult').textContent='Kodu seçip kopyala: '+code}};
 window.pirpirBeginDuo=start;
 })();
-</script><div id="hud"><span>🔥 PIRPIR V123 3D<br><small id="status">❤️ 100 • 🪙 0 • 👹 0</small></span><span style="font-size:12px">🌲 ORMAN ARENASI</span></div><div id="v97Connection" role="status" aria-live="polite" style="display:none;position:fixed;top:calc(52px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(92vw,440px);padding:10px 12px;background:#241d20ee;color:#ffe8be;border:1px solid #e7a35a;border-radius:12px;z-index:60;font:700 12px system-ui;text-align:center;box-shadow:0 5px 20px #0008"><span id="v97ConnectionText">Bağlantı bekleniyor</span><button id="v97Reconnect" type="button" style="margin-left:8px;background:#d6a44f;color:#161b1d;border:0;border-radius:8px;padding:7px 9px;font-weight:800">Yeniden bağlan</button></div><div id="duoHud" style="position:fixed;top:calc(255px + env(safe-area-inset-top));left:12px;font-size:12px;color:#aef7ff;z-index:4;pointer-events:none"></div><div id="teamPanel" style="display:none;position:fixed;top:calc(285px + env(safe-area-inset-top));left:12px;z-index:5;background:#082436dd;border:1px solid #59c8ec88;border-radius:12px;padding:9px 11px;color:white;font-size:12px;min-width:145px;pointer-events:none"><b>🛡️ DUO TAKIM</b><div id="teamHost">Ev sahibi ❤️ 100</div><div id="teamGuest">Arkadaş ❤️ 100</div><div id="teamShield">Kalkan hazır</div></div><button id="duoShieldBtn" style="display:none;position:fixed;right:12px;bottom:175px;z-index:8;border:2px solid #65ddff;border-radius:50%;background:#145b7ddd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">🛡️<br>KORU</button><button id="duoHealBtn" style="display:none;position:fixed;right:94px;bottom:175px;z-index:8;border:2px solid #8bf6a2;border-radius:50%;background:#176e47dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">💚<br>İYİLEŞTİR</button><button id="duoReviveBtn" style="display:none;position:fixed;right:176px;bottom:175px;z-index:8;border:2px solid #ffd478;border-radius:50%;background:#855126dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">✨<br>KALDIR</button><div id="v77Victory" style="display:none;position:fixed;inset:0;z-index:22;background:#061b2bf2;color:white;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:22px;font-family:system-ui"><div style="font-size:52px">🏆</div><h1 style="color:#ffe29b;text-shadow:0 4px 18px #ffd36b66">🏆 DUO ZAFERİ!</h1><p id="v77VictoryText"></p><p id="v78VictoryStats" style="font-size:13px;opacity:.85;line-height:1.8"></p><button onclick="location.replace(location.pathname+location.search+location.hash)" style="padding:14px 24px;border:0;border-radius:14px;background:#e9b65b;color:#1b2833;font-weight:bold">ANA MENÜYE DÖN</button></div><div id="coins">🪙 Toplanan altın: 0</div><div id="timer">⏳ 10:00</div><div id="v85Stage" style="position:fixed;top:calc(161px + env(safe-area-inset-top));left:12px;font-size:11px;color:#a8ffcc;text-shadow:0 1px 3px #000;pointer-events:none;z-index:4">🌱 Başlangıç</div><div id="v87PowerBar" aria-label="Aktif özel güçler"></div><div id="powers">Güçler: Henüz yok</div><div id="v87Result" role="dialog" aria-modal="true" aria-labelledby="v87ResultTitle"><div id="v87ResultCard"><div id="v87ResultIcon" style="font-size:48px">🏆</div><h2 id="v87ResultTitle">Oyun tamamlandı</h2><p id="v87ResultSummary"></p><div id="v95ResultStats" aria-label="Oyun istatistikleri"><div class="v95Stat"><b id="v95Kills">0</b>Canavar</div><div class="v95Stat"><b id="v95Gold">0</b>Altın</div><div class="v95Stat"><b id="v95Time">0:00</b>Süre</div></div><button type="button" id="v87ResultRestart">↻ ANA MENÜYE DÖN</button></div></div><div id="message"></div><div id="hitnote"></div><div id="bossbar">👹 BOSS CANI<div id="bossfill"></div></div><button id="restart">YENİDEN OYNA</button><button id="chest">🎁 AÇ<br>🪙 50</button><div id="nearChest"></div><div id="note">V123 • Haritada sandık ara (50 altın) • Son dakikada boss!</div><div id="joy"><div id="nub"></div></div><button id="attack">⚔️<br>SALDIR</button><div id="hurt" style="position:fixed;inset:0;pointer-events:none;z-index:3;background:#ff242455;opacity:0"></div><div id="error">3D motoru yüklenemedi. İnternet bağlantını kontrol et ve Safari'de tekrar aç.</div><script type="module">
+</script><div id="hud"><span>🔥 PIRPIR V140 3D<br><small id="status">❤️ 100 • 🪙 0 • 👹 0</small></span><span style="font-size:12px">🌲 ORMAN ARENASI</span></div><div id="v97Connection" role="status" aria-live="polite" style="display:none;position:fixed;top:calc(52px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(92vw,440px);padding:10px 12px;background:#241d20ee;color:#ffe8be;border:1px solid #e7a35a;border-radius:12px;z-index:60;font:700 12px system-ui;text-align:center;box-shadow:0 5px 20px #0008"><span id="v97ConnectionText">Bağlantı bekleniyor</span><button id="v97Reconnect" type="button" style="margin-left:8px;background:#d6a44f;color:#161b1d;border:0;border-radius:8px;padding:7px 9px;font-weight:800">Yeniden bağlan</button></div><div id="duoHud" style="position:fixed;top:calc(255px + env(safe-area-inset-top));left:12px;font-size:12px;color:#aef7ff;z-index:4;pointer-events:none"></div><div id="teamPanel" style="display:none;position:fixed;top:calc(285px + env(safe-area-inset-top));left:12px;z-index:5;background:#082436dd;border:1px solid #59c8ec88;border-radius:12px;padding:9px 11px;color:white;font-size:12px;min-width:145px;pointer-events:none"><b>🛡️ DUO TAKIM</b><div id="teamHost">Ev sahibi ❤️ 100</div><div id="teamGuest">Arkadaş ❤️ 100</div><div id="teamShield">Kalkan hazır</div></div><button id="duoShieldBtn" style="display:none;position:fixed;right:12px;bottom:175px;z-index:8;border:2px solid #65ddff;border-radius:50%;background:#145b7ddd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">🛡️<br>KORU</button><button id="duoHealBtn" style="display:none;position:fixed;right:94px;bottom:175px;z-index:8;border:2px solid #8bf6a2;border-radius:50%;background:#176e47dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">💚<br>İYİLEŞTİR</button><button id="duoReviveBtn" style="display:none;position:fixed;right:176px;bottom:175px;z-index:8;border:2px solid #ffd478;border-radius:50%;background:#855126dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">✨<br>KALDIR</button><div id="v77Victory" style="display:none;position:fixed;inset:0;z-index:22;background:#061b2bf2;color:white;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:22px;font-family:system-ui"><div style="font-size:52px">🏆</div><h1 style="color:#ffe29b;text-shadow:0 4px 18px #ffd36b66">🏆 DUO ZAFERİ!</h1><p id="v77VictoryText"></p><p id="v78VictoryStats" style="font-size:13px;opacity:.85;line-height:1.8"></p><button onclick="location.replace(location.pathname+location.search+location.hash)" style="padding:14px 24px;border:0;border-radius:14px;background:#e9b65b;color:#1b2833;font-weight:bold">ANA MENÜYE DÖN</button></div><div id="coins">🪙 Toplanan altın: 0</div><div id="timer">⏳ 10:00</div><div id="v85Stage" style="position:fixed;top:calc(161px + env(safe-area-inset-top));left:12px;font-size:11px;color:#a8ffcc;text-shadow:0 1px 3px #000;pointer-events:none;z-index:4">🌱 Başlangıç</div><div id="v87PowerBar" aria-label="Aktif özel güçler"></div><div id="powers">Güçler: Henüz yok</div><div id="v87Result" role="dialog" aria-modal="true" aria-labelledby="v87ResultTitle"><div id="v87ResultCard"><div id="v87ResultIcon" style="font-size:48px">🏆</div><h2 id="v87ResultTitle">Oyun tamamlandı</h2><p id="v87ResultSummary"></p><div id="v95ResultStats" aria-label="Oyun istatistikleri"><div class="v95Stat"><b id="v95Kills">0</b>Canavar</div><div class="v95Stat"><b id="v95Gold">0</b>Altın</div><div class="v95Stat"><b id="v95Time">0:00</b>Süre</div></div><button type="button" id="v87ResultRestart">↻ ANA MENÜYE DÖN</button></div></div><div id="message"></div><div id="hitnote"></div><div id="bossbar">👹 BOSS CANI<div id="bossfill"></div></div><button id="restart">YENİDEN OYNA</button><button id="chest">🎁 AÇ<br>🪙 50</button><div id="nearChest"></div><div id="note">V140 • Haritada sandık ara (50 altın) • Son dakikada boss!</div><div id="joy"><div id="nub"></div></div><button id="attack">⚔️<br>SALDIR</button><div id="hurt" style="position:fixed;inset:0;pointer-events:none;z-index:3;background:#ff242455;opacity:0"></div><div id="error">3D motoru yüklenemedi. İnternet bağlantını kontrol et ve Safari'de tekrar aç.</div><script type="module">
 import * as THREE from 'three';
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/GLTFLoader.js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './duo-config.js';
-const scene=new THREE.Scene();scene.background=new THREE.Color(0x9ecbca);scene.fog=new THREE.Fog(0x9ecbca,29,72);const camera=new THREE.PerspectiveCamera(58,innerWidth/innerHeight,.1,100);const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,matchMedia("(pointer:coarse)").matches?1.1:1.25));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;document.querySelector('#stage').append(renderer.domElement);scene.add(new THREE.HemisphereLight(0xe6f8ff,0x53673b,2));const sun=new THREE.DirectionalLight(0xffe4bb,2.0);sun.position.set(-8,15,8);scene.add(sun);// V95: a single low-cost instanced mesh of warm woodland motes, away from the central arena.
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x9ecbca);scene.fog=new THREE.Fog(0x9ecbca,29,72);const camera=new THREE.PerspectiveCamera(58,innerWidth/innerHeight,.1,100);const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,matchMedia("(pointer:coarse)").matches?1.1:1.25));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.17;document.querySelector('#stage').append(renderer.domElement);scene.add(new THREE.HemisphereLight(0xe6f8ff,0x53673b,2));const sun=new THREE.DirectionalLight(0xffe4bb,2.0);sun.position.set(-8,15,8);scene.add(sun);// V95: a single low-cost instanced mesh of warm woodland motes, away from the central arena.
 const v95MoteGeometry=new THREE.SphereGeometry(.055,5,4);
 const v95MoteMaterial=new THREE.MeshBasicMaterial({color:0xffd68b,transparent:true,opacity:.63,depthWrite:false});
 const v95Motes=new THREE.InstancedMesh(v95MoteGeometry,v95MoteMaterial,36);
 const v95Dummy=new THREE.Object3D();for(let i=0;i<36;i++){const angle=i*2.39996,dist=8+(i*13%29);v95Dummy.position.set(Math.cos(angle)*dist,.8+(i*7%23)*.11,Math.sin(angle)*dist);v95Dummy.scale.setScalar(.6+(i%5)*.14);v95Dummy.updateMatrix();v95Motes.setMatrixAt(i,v95Dummy.matrix)}v95Motes.instanceMatrix.needsUpdate=true;v95Motes.frustumCulled=false;scene.add(v95Motes);
-// V123: one draw call for scattered woodland grass tufts, away from center.
+// V140: one draw call for scattered woodland grass tufts, away from center.
 const v120GrassGeo=new THREE.ConeGeometry(.105,.38,3);
 const v120GrassMat=new THREE.MeshStandardMaterial({color:0x579957,roughness:1,flatShading:true});
 const v120Grass=new THREE.InstancedMesh(v120GrassGeo,v120GrassMat,260);
@@ -194,7 +266,27 @@ for(let i=0;i<260;i++){
  v120GrassDummy.updateMatrix();v120Grass.setMatrixAt(i,v120GrassDummy.matrix);
 }
 v120Grass.instanceMatrix.needsUpdate=true;v120Grass.frustumCulled=true;scene.add(v120Grass);
-const materialCache=new Map();const mat=(c)=>{if(!materialCache.has(c))materialCache.set(c,new THREE.MeshStandardMaterial({color:c,roughness:.75}));return materialCache.get(c)};const ground=mat(0x477f4c),red=mat(0x9d2e21),gold=mat(0xe5b94c),skin=mat(0xf2b78b),hair=mat(0xd34b1c),dark=mat(0x283443),fire=new THREE.MeshBasicMaterial({color:0xff9c23});const geo={box:new THREE.BoxGeometry(1,1,1),sphere:new THREE.SphereGeometry(1,10,8),cone:new THREE.ConeGeometry(1,1,7),cyl:new THREE.CylinderGeometry(1,1,1,8)};function part(parent,g,m,x,y,z,sx,sy,sz){const o=new THREE.Mesh(geo[g],m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);return o}// V123: one shared procedural albedo texture, generated once (no network asset).
+const materialCache=new Map();const mat=(c)=>{if(!materialCache.has(c))materialCache.set(c,new THREE.MeshStandardMaterial({color:c,roughness:.75}));return materialCache.get(c)};
+// V140: bundled material maps; color fallback remains if a texture fails to load.
+const v129TextureLoader=new THREE.TextureLoader();
+function v129MapMaterial(color,path){
+ const material=mat(color);
+ v129TextureLoader.load(path,tex=>{
+  tex.colorSpace=THREE.SRGBColorSpace;
+  tex.wrapS=tex.wrapT=THREE.RepeatWrapping;
+  tex.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
+  material.map=tex;
+  material.color.set(0xffffff);
+  material.needsUpdate=true;
+ },undefined,()=>{});
+}
+v129MapMaterial(0x6c4930,'./textures/bark-768.png');
+v129MapMaterial(0x5b4435,'./textures/bark-768.png');
+v129MapMaterial(0x2e7544,'./textures/foliage-768.png');
+v129MapMaterial(0x28613e,'./textures/foliage-768.png');
+v129MapMaterial(0x927c56,'./textures/stone-768.png');
+
+const ground=mat(0x477f4c),red=mat(0x9d2e21),gold=mat(0xe5b94c),skin=mat(0xf2b78b),hair=mat(0xd34b1c),dark=mat(0x283443),fire=new THREE.MeshBasicMaterial({color:0xff9c23});const geo={box:new THREE.BoxGeometry(1,1,1),sphere:new THREE.SphereGeometry(1,10,8),cone:new THREE.ConeGeometry(1,1,7),cyl:new THREE.CylinderGeometry(1,1,1,8)};function part(parent,g,m,x,y,z,sx,sy,sz){const o=new THREE.Mesh(geo[g],m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);return o}// V140: one shared procedural albedo texture, generated once (no network asset).
 const v122Canvas=document.createElement('canvas');v122Canvas.width=v122Canvas.height=256;
 const v122Ctx=v122Canvas.getContext('2d');v122Ctx.fillStyle='#608b56';v122Ctx.fillRect(0,0,256,256);
 let v122Seed=82413;function v122Rand(){v122Seed=(1664525*v122Seed+1013904223)>>>0;return v122Seed/4294967296}
@@ -209,7 +301,28 @@ v122Texture.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
 const v122GroundMaterial=new THREE.MeshStandardMaterial({map:v122Texture,color:0xffffff,roughness:.96});
 const v122Ground=part(scene,'box',ground,0,-.22,0,90,.4,90);
 // Top surface is textured, sides retain the old inexpensive material.
-v122Ground.material=[ground,ground,v122GroundMaterial,ground,ground,ground];const rand=(a,b)=>a+Math.random()*(b-a);for(let i=0;i<100;i++){const x=rand(-37,37),z=rand(-37,37);if(Math.hypot(x,z)<7)continue;const tree=new THREE.Group();tree.position.set(x,0,z);part(tree,'cyl',mat(0x6c4930),0,.9,0,.27,1.8,.27);const leaf=mat(i%3===0?0x2e7544:0x28613e);part(tree,'cone',leaf,0,2.2,0,1.25,2.5,1.25);part(tree,'cone',leaf,0,3.1,0,.95,2,.95);scene.add(tree)}for(let i=0;i<52;i++){let x=rand(-35,35),z=rand(-35,35);if(Math.hypot(x,z)<5)continue;part(scene,'sphere',mat(i%2?0x819477:0x7d8b8c),x,.14,z,rand(.2,.55),.25,.35)}
+v122Ground.material=[ground,ground,v122GroundMaterial,ground,ground,ground];
+// V140: locally bundled 1024px albedo; procedural canvas remains fallback.
+new THREE.TextureLoader().load('./textures/forest-ground-1024.png',tex=>{
+ tex.wrapS=tex.wrapT=THREE.RepeatWrapping;
+ tex.repeat.set(13,13);tex.colorSpace=THREE.SRGBColorSpace;
+ tex.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
+ v122GroundMaterial.map=tex;v122GroundMaterial.needsUpdate=true;
+},undefined,err=>console.warn('V140 zemin dokusu yüklenemedi',err));
+const rand=(a,b)=>a+Math.random()*(b-a);for(let i=0;i<100;i++){const x=rand(-37,37),z=rand(-37,37);if(Math.hypot(x,z)<7)continue;const tree=new THREE.Group();tree.position.set(x,0,z);part(tree,'cyl',mat(0x6c4930),0,.9,0,.27,1.8,.27);const leaf=mat(i%3===0?0x2e7544:0x28613e);part(tree,'cone',leaf,0,2.2,0,1.25,2.5,1.25);part(tree,'cone',leaf,0,3.1,0,.95,2,.95);scene.add(tree)}for(let i=0;i<52;i++){let x=rand(-35,35),z=rand(-35,35);if(Math.hypot(x,z)<5)continue;part(scene,'sphere',mat(i%2?0x819477:0x7d8b8c),x,.14,z,rand(.2,.55),.25,.35)}
+// V140: Instanced woodland undergrowth with predictable GPU cost.
+const v128ShrubGeometry=new THREE.DodecahedronGeometry(.48,0);
+const v128Shrubs=new THREE.InstancedMesh(v128ShrubGeometry,
+ new THREE.MeshLambertMaterial({color:0x36774c,flatShading:true}),175);
+const v128ShrubDummy=new THREE.Object3D();
+for(let i=0;i<175;i++){
+ const a=i*2.39996323,r=9+Math.sqrt((i+.5)/175)*32;
+ v128ShrubDummy.position.set(Math.cos(a)*r,.33,Math.sin(a)*r);
+ v128ShrubDummy.scale.set(.65+(i%4)*.18,.6+(i%5)*.12,.65+(i%3)*.17);
+ v128ShrubDummy.rotation.y=i*.7;
+ v128ShrubDummy.updateMatrix();v128Shrubs.setMatrixAt(i,v128ShrubDummy.matrix);
+}
+v128Shrubs.instanceMatrix.needsUpdate=true;scene.add(v128Shrubs);
 // V68: woodland pathways, pond, stones and distant hill silhouettes.
 const pathMat=mat(0x927c56),waterMat=new THREE.MeshStandardMaterial({color:0x3c9cb0,roughness:.32,metalness:.05,transparent:true,opacity:.88}),bankMat=mat(0x65834d);
 for(let i=0;i<42;i++){const z=-35+i*1.7;const x=20+Math.sin(z*.12)*2.4;part(scene,'box',pathMat,x,-.005,z,2.8,.025,1.85)}
@@ -367,18 +480,129 @@ v83Impact.rotation.x=-Math.PI/2;v83Impact.visible=false;scene.add(v83Impact);
 let v83ImpactLife=0;
 function v83Hit(x,z){const zi=v83Zone(x,z);v83Impact.material.color.setHex([0x56cf8c,0xffcf61,0x78dfdf,0xff6b4c][zi]);v83Impact.position.set(x,.09,z);v83Impact.scale.setScalar(1);v83ImpactLife=.3;v83Impact.visible=true}
 function v83Tick(dt){if(v83ImpactLife<=0)return;v83ImpactLife=Math.max(0,v83ImpactLife-dt);v83Impact.visible=v83ImpactLife>0;v83Impact.scale.setScalar(1+(.3-v83ImpactLife)*3);v83Impact.material.opacity=v83ImpactLife*1.8}
+
+// V140: shared geometry and instanced flowers, avoids hundreds of draw calls.
+const v124Flowers=new THREE.InstancedMesh(
+ new THREE.ConeGeometry(.11,.24,5),
+ new THREE.MeshLambertMaterial({color:0xe7ad6d,vertexColors:false}),
+ 110
+);
+const v124FlowerDummy=new THREE.Object3D();
+for(let i=0;i<110;i++){
+ const a=i*2.3999632297,r=5+Math.sqrt(i/110)*42;
+ v124FlowerDummy.position.set(Math.cos(a)*r,.15,Math.sin(a)*r);
+ v124FlowerDummy.rotation.y=i*.7;
+ v124FlowerDummy.scale.setScalar(.65+(i%7)*.08);
+ v124FlowerDummy.updateMatrix();
+ v124Flowers.setMatrixAt(i,v124FlowerDummy.matrix);
+}
+v124Flowers.instanceMatrix.needsUpdate=true;scene.add(v124Flowers);
+
+// V140: instanced ambient fireflies, a single draw call and no per-frame allocations.
+const v126Fireflies=new THREE.InstancedMesh(
+ new THREE.IcosahedronGeometry(.075,0),
+ new THREE.MeshBasicMaterial({color:0xffdb81,transparent:true,opacity:.74,depthWrite:false,blending:THREE.AdditiveBlending}),
+ 64
+);
+const v126FlyDummy=new THREE.Object3D();
+for(let i=0;i<64;i++){
+ const a=i*2.3999632297,r=5+Math.sqrt((i+.5)/64)*36;
+ v126FlyDummy.position.set(Math.cos(a)*r,.6+(i%7)*.28,Math.sin(a)*r);
+ v126FlyDummy.scale.setScalar(.55+(i%5)*.13);
+ v126FlyDummy.updateMatrix();v126Fireflies.setMatrixAt(i,v126FlyDummy.matrix);
+}
+v126Fireflies.instanceMatrix.needsUpdate=true;
+scene.add(v126Fireflies);
+function v126UpdateAmbient(dt){
+ if(dt<=0)return;
+ v126Fireflies.rotation.y+=dt*.018;
+ v126Fireflies.position.y=Math.sin(elapsed*.65)*.09;
+}
 const hero=new THREE.Group();scene.add(hero);
+
+const v124CombatFx=new THREE.Group();scene.add(v124CombatFx);
+const v124Ring=new THREE.Mesh(
+ new THREE.RingGeometry(1.05,1.17,48),
+ new THREE.MeshBasicMaterial({color:0xffc567,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false,blending:THREE.AdditiveBlending})
+);
+v124Ring.rotation.x=-Math.PI/2;v124Ring.position.y=.08;v124CombatFx.add(v124Ring);
+const v124Blade=new THREE.Mesh(
+ new THREE.TorusGeometry(1.6,.065,6,32,Math.PI*1.2),
+ new THREE.MeshBasicMaterial({color:0xffa53d,transparent:true,opacity:0,depthWrite:false,blending:THREE.AdditiveBlending})
+);
+v124Blade.rotation.x=-Math.PI/2;v124Blade.position.y=1.05;v124CombatFx.add(v124Blade);
+
+// V140: pooled GPU-instanced sparks; one draw call.
+const v125Sparks=new THREE.InstancedMesh(
+ new THREE.OctahedronGeometry(.10,0),
+ new THREE.MeshBasicMaterial({color:0xffd57a,transparent:true,opacity:.88,depthWrite:false}),
+ 18
+);
+v125Sparks.frustumCulled=false;
+v125Sparks.visible=false;
+scene.add(v125Sparks);
+const v125SparkDummy=new THREE.Object3D();
+// Match sword sparks to selected hero without changing attack damage.
+const v126HeroStyle=window.pirpirCharacter||'ates';
+v125Sparks.material.color.setHex(v126HeroStyle==='buz'?0x8cecff:v126HeroStyle==='orman'?0x9df5a8:0xffd57a);
+
+function v125UpdateSparks(){
+ const age=1-v124FxTime/.27;
+ v125Sparks.visible=v124FxTime>0;
+ if(!v125Sparks.visible)return;
+ for(let i=0;i<18;i++){
+   const angle=i*2.3999632297+hero.rotation.y;
+   const radius=.5+age*(1.6+(i%4)*.16);
+   v125SparkDummy.position.set(hero.position.x+Math.cos(angle)*radius,
+     .6+Math.sin(age*Math.PI)*.8+(i%5)*.12,
+     hero.position.z+Math.sin(angle)*radius);
+   v125SparkDummy.scale.setScalar(Math.max(.01,(1-age)*(.65+(i%3)*.25)));
+   v125SparkDummy.updateMatrix();
+   v125Sparks.setMatrixAt(i,v125SparkDummy.matrix);
+ }
+ v125Sparks.instanceMatrix.needsUpdate=true;
+}
+
+let v124FxTime=0;
+function v124TriggerAttack(){
+ v124FxTime=.27;
+ v124CombatFx.position.copy(hero.position);
+ v124CombatFx.rotation.y=hero.rotation.y;
+}
+function v124UpdateFx(dt){
+ v124CombatFx.position.copy(hero.position);
+ v124CombatFx.rotation.y=hero.rotation.y;
+ v124FxTime=Math.max(0,v124FxTime-dt);
+ const t=v124FxTime/.27;
+ v124Ring.material.opacity=t*.6;
+ v124Blade.material.opacity=t*.86;
+ v124Ring.scale.setScalar(1+(1-t)*.45);
+ v124Blade.rotation.z=(1-t)*2.1;
+ v125UpdateSparks();
+}
+
 // V87 appearance-only character palette: clone hero-specific materials to avoid recoloring mobs.
 const v87Appearance=window.pirpirCharacter||'ates';
 const v87Palette={ates:{armor:0x9d2e21,trim:0xe5b94c,plume:0xd34b1c},buz:{armor:0x2d659c,trim:0xb6eaff,plume:0x7bc8ed},orman:{armor:0x34714b,trim:0xc4d78a,plume:0x71b65b}};
-const hips=new THREE.Group();hero.add(hips);const torso=part(hips,'box',red,0,1.38,0,.92,.98,.55);part(hips,'box',gold,0,1.48,-.32,.46,.53,.08);part(hips,'box',gold,0,1.0,0,1.04,.17,.6);part(hips,'sphere',skin,0,2.17,0,.34,.38,.33);part(hips,'box',gold,0,1.9,-.34,.63,.16,.13);part(hips,'box',dark,0,1.48,-.38,.17,.44,.06);for(const x of [-.13,.13])part(hips,'sphere',dark,x,2.22,-.302,.045,.045,.04);part(hips,'box',gold,0,2.03,-.26,.16,.07,.14);part(hips,'cone',red,0,2.68,.12,.34,.46,.32);part(hips,'box',gold,0,1.58,-.37,.52,.10,.12);part(hips,'box',gold,0,1.26,-.37,.52,.10,.12);part(hips,'sphere',gold,-.55,1.77,-.02,.29,.21,.31);part(hips,'sphere',gold,.55,1.77,-.02,.29,.21,.31);part(hips,'cone',hair,-.29,2.48,-.23,.19,.42,.21);part(hips,'cone',hair,.29,2.48,-.23,.19,.42,.21);for(let i=-1;i<=1;i++)part(hips,'cone',hair,i*.22,2.55,-.04,.22,.46,.26);// V123: additional hero silhouette, metal trim and crest without new draw loops.
+const hips=new THREE.Group();hero.add(hips);const torso=part(hips,'box',red,0,1.38,0,.92,.98,.55);part(hips,'box',gold,0,1.48,-.32,.46,.53,.08);part(hips,'box',gold,0,1.0,0,1.04,.17,.6);part(hips,'sphere',skin,0,2.17,0,.34,.38,.33);part(hips,'box',gold,0,1.9,-.34,.63,.16,.13);part(hips,'box',dark,0,1.48,-.38,.17,.44,.06);for(const x of [-.13,.13])part(hips,'sphere',dark,x,2.22,-.302,.045,.045,.04);part(hips,'box',gold,0,2.03,-.26,.16,.07,.14);part(hips,'cone',red,0,2.68,.12,.34,.46,.32);part(hips,'box',gold,0,1.58,-.37,.52,.10,.12);part(hips,'box',gold,0,1.26,-.37,.52,.10,.12);part(hips,'sphere',gold,-.55,1.77,-.02,.29,.21,.31);part(hips,'sphere',gold,.55,1.77,-.02,.29,.21,.31);part(hips,'cone',hair,-.29,2.48,-.23,.19,.42,.21);part(hips,'cone',hair,.29,2.48,-.23,.19,.42,.21);for(let i=-1;i<=1;i++)part(hips,'cone',hair,i*.22,2.55,-.04,.22,.46,.26);// V140: additional hero silhouette, metal trim and crest without new draw loops.
 for(const side of [-1,1]){
  part(hips,'box',gold,side*.49,1.48,-.33,.13,.68,.10);
  part(hips,'sphere',dark,side*.57,1.82,-.28,.13,.12,.13);
  part(hips,'box',gold,side*.28,.81,-.19,.18,.19,.16);
 }
 part(hips,'sphere',fire,0,1.50,-.425,.10,.10,.055);
-const capeMat=new THREE.MeshStandardMaterial({color:0x751c24,side:THREE.DoubleSide,roughness:.9});const cape=new THREE.Mesh(new THREE.PlaneGeometry(1.28,1.55),capeMat);cape.position.set(0,1.16,.37);cape.rotation.x=-.13;hips.add(cape);part(hips,'box',gold,0,.91,-.08,.78,.19,.53);for(const side of [-1,1]){part(hips,'box',gold,side*.37,1.36,-.36,.11,.75,.12);part(hips,'cone',gold,side*.62,1.99,0,.19,.38,.24);part(hips,'box',dark,side*.15,2.29,-.32,.13,.045,.035);part(hips,'cone',hair,side*.39,2.56,.09,.18,.56,.22)}part(hips,'box',gold,0,1.03,-.38,.24,.24,.11);part(hips,'sphere',fire,0,1.05,-.46,.10,.10,.08);const arms=[],legs=[];for(const side of [-1,1]){const a=new THREE.Group();a.position.set(side*.64,1.74,0);hips.add(a);part(a,'box',red,0,-.37,0,.34,.72,.36);part(a,'sphere',gold,0,-.08,0,.27,.24,.27);part(a,'box',gold,0,-.56,-.03,.39,.15,.42);arms.push(a);const l=new THREE.Group();l.position.set(side*.25,.93,0);hips.add(l);part(l,'box',dark,0,-.4,0,.34,.8,.4);part(l,'box',gold,0,-.78,-.06,.39,.27,.49);part(l,'box',red,0,-.81,-.22,.42,.17,.54);legs.push(l)}
+const capeMat=new THREE.MeshStandardMaterial({color:0x751c24,side:THREE.DoubleSide,roughness:.9});
+// V140: cloth heraldry, graceful fallback if asset is missing.
+new THREE.TextureLoader().load('./textures/hero-cape-1024.png',tex=>{tex.colorSpace=THREE.SRGBColorSpace;capeMat.map=tex;capeMat.color.set(0xffffff);capeMat.needsUpdate=true;},undefined,()=>{});const cape=new THREE.Mesh(new THREE.PlaneGeometry(1.28,1.55,4,8),capeMat);cape.position.set(0,1.16,.37);cape.rotation.x=-.13;hips.add(cape);part(hips,'box',gold,0,.91,-.08,.78,.19,.53);for(const side of [-1,1]){part(hips,'box',gold,side*.37,1.36,-.36,.11,.75,.12);part(hips,'cone',gold,side*.62,1.99,0,.19,.38,.24);part(hips,'box',dark,side*.15,2.29,-.32,.13,.045,.035);part(hips,'cone',hair,side*.39,2.56,.09,.18,.56,.22)}part(hips,'box',gold,0,1.03,-.38,.24,.24,.11);part(hips,'sphere',fire,0,1.05,-.46,.10,.10,.08);const arms=[],legs=[];for(const side of [-1,1]){const a=new THREE.Group();a.position.set(side*.64,1.74,0);hips.add(a);part(a,'box',red,0,-.37,0,.34,.72,.36);part(a,'sphere',gold,0,-.08,0,.27,.24,.27);part(a,'box',gold,0,-.56,-.03,.39,.15,.42);arms.push(a);const l=new THREE.Group();l.position.set(side*.25,.93,0);hips.add(l);part(l,'box',dark,0,-.4,0,.34,.8,.4);part(l,'box',gold,0,-.78,-.06,.39,.27,.49);part(l,'box',red,0,-.81,-.22,.42,.17,.54);legs.push(l)}
+// V140: layered crest, chest insignia and shield rivets with shared materials.
+const v130Bronze=mat(0xd8a452),v130Ruby=mat(0xe7552f),v130Iron=mat(0x586773);
+for(const side of [-1,1]){
+ part(hips,'sphere',v130Bronze,side*.54,1.76,-.405,.11,.11,.06);
+ part(hips,'sphere',v130Iron,side*.54,1.76,-.466,.045,.045,.028);
+ part(hips,'box',v130Bronze,side*.25,.53,-.435,.17,.045,.07);
+}
+part(hips,'cone',v130Bronze,0,1.55,-.65,.17,.29,.06);
+part(hips,'sphere',v130Ruby,0,1.49,-.69,.075,.075,.05);
 // V68: Extra armor plates, helmet crest and 3D facial details.
 const steel=mat(0xc6d5da),ember=mat(0xff7a27);
 part(hips,'box',steel,0,1.46,-.435,.24,.32,.06);
@@ -449,6 +673,61 @@ v87SetHeroPalette(v87Appearance);
 // V88: selection listener installed after gear and preview initialization.
 
 const sword=new THREE.Group();arms[1].add(sword);sword.position.set(0,-.76,0);part(sword,'cyl',dark,0,-.12,0,.075,.33,.075);part(sword,'box',gold,0,-.28,0,.38,.09,.15);part(sword,'cone',fire,0,-.82,0,.19,.98,.16);sword.rotation.z=-.35;
+
+// V140: equipped lobby cosmetics appear on the actual 3D hero, not just inventory.
+const v135CosmeticRoot=new THREE.Group();hips.add(v135CosmeticRoot);
+const v135SwordRoot=new THREE.Group();sword.add(v135SwordRoot);
+const v139CosmeticMats={
+ gold:mat(0xffd46a),ruby:mat(0xf4494d),ice:mat(0x80dcff),shadow:mat(0x33304f)
+};
+let v135LastEquip='',v135EquipTimer=0;
+function v135SyncCosmetics(dt){
+ v135EquipTimer-=dt;
+ if(v135EquipTimer>0)return;
+ v135EquipTimer=.3;
+ const equipped=window.pirpirCosmetics?.getEquipped?.();
+ if(!equipped)return;
+ const signature=JSON.stringify(equipped);
+ if(signature===v135LastEquip)return;
+ v135LastEquip=signature;
+ v135CosmeticRoot.clear();v135SwordRoot.clear();
+ const {gold,ruby,ice,shadow}=v139CosmeticMats;
+ const hat=equipped['Şapka'];
+ if(hat==='hat_crown'){
+  part(v135CosmeticRoot,'cyl',gold,0,2.67,0,.39,.22,.39);
+  for(let i=0;i<5;i++){const a=i*Math.PI*2/5;part(v135CosmeticRoot,'cone',gold,Math.cos(a)*.29,2.87,Math.sin(a)*.29,.12,.30,.12)}
+ }else if(hat==='hat_wizard'){
+  part(v135CosmeticRoot,'cyl',shadow,0,2.63,0,.48,.10,.48);
+  part(v135CosmeticRoot,'cone',shadow,0,2.98,0,.34,.70,.34);
+  part(v135CosmeticRoot,'box',gold,0,2.75,-.28,.45,.07,.06);
+ }
+ const weapon=equipped['Silah görünümü'];
+ if(weapon==='weapon_flame'||weapon==='weapon_ice'){
+  const blade=weapon==='weapon_flame'?ruby:ice;
+  part(v135SwordRoot,'cone',blade,0,-.89,0,.23,1.14,.20);
+  part(v135SwordRoot,'sphere',gold,0,-.32,-.07,.17,.12,.17);
+ }
+ const costume=equipped['Kostüm'];
+ if(costume==='outfit_royal'){
+  part(v135CosmeticRoot,'box',gold,0,1.44,-.41,.74,.65,.13);
+  part(v135CosmeticRoot,'sphere',ruby,0,1.48,-.50,.15,.16,.07);
+ }else if(costume==='outfit_shadow'){
+  part(v135CosmeticRoot,'box',shadow,0,1.45,-.42,.77,.73,.14);
+  part(v135CosmeticRoot,'sphere',ice,0,1.46,-.52,.12,.12,.06);
+ }
+ if(equipped['Pelerin']==='cape_dragon'){
+  const cape=part(v135CosmeticRoot,'box',ruby,0,1.27,.42,1.10,1.47,.09);
+  cape.rotation.x=.12;
+  for(const x of [-.36,0,.36])part(v135CosmeticRoot,'cone',gold,x,.48,.48,.14,.30,.11);
+ }
+ if(equipped['Efekt']==='trail_star'){
+  for(let i=0;i<6;i++){
+   const a=i*Math.PI/3;
+   part(v135CosmeticRoot,'sphere',gold,Math.cos(a)*.75,.28,Math.sin(a)*.75,.065,.065,.065);
+  }
+ }
+}
+
 // V88: lightweight, class-specific gear. The same geometry cache is used by the game and preview.
 const v88Gear={};
 function v88BuildGear(name){
@@ -633,21 +912,21 @@ function v75AnimateTeammate(dt){if(!teammate.visible)return;const moving=duo.rol
 const remoteLabel=document.createElement('div');remoteLabel.id='remoteLabel';remoteLabel.style.cssText='position:fixed;top:35%;right:10px;color:#8ceaff;font-size:12px;font-weight:800;pointer-events:none;z-index:4';document.body.append(remoteLabel);
 let mobSerial=0;
 
-// V123: distinctive, mobile-friendly monster silhouettes. Geometry is built once per enemy.
+// V140: distinctive, mobile-friendly monster silhouettes. Geometry is built once per enemy.
 const v113Palette=[
  {armor:mat(0x51317d),accent:new THREE.MeshBasicMaterial({color:0xd88bff}),spike:mat(0xa47ce2)},
  {armor:mat(0x175c4c),accent:new THREE.MeshBasicMaterial({color:0x61ffd0}),spike:mat(0x43b893)},
  {armor:mat(0x8c3d26),accent:new THREE.MeshBasicMaterial({color:0xffbd55}),spike:mat(0xd98a42)},
  {armor:mat(0x55202a),accent:new THREE.MeshBasicMaterial({color:0xff4c2b}),spike:mat(0xe3aa46)}
 ];
-// V123: bold, distinct silhouettes, built from existing shared low-poly geometries.
+// V140: bold, distinct silhouettes, built from existing shared low-poly geometries.
 const v113Materials=[
  {body:mat(0x503096),plate:mat(0x8f5be1),glow:new THREE.MeshBasicMaterial({color:0xe7a2ff}),horn:mat(0xd5c1f7)},
  {body:mat(0x187e5b),plate:mat(0x3bc68c),glow:new THREE.MeshBasicMaterial({color:0x9dffb8}),horn:mat(0xb8e7a0)},
  {body:mat(0x8d3d24),plate:mat(0xd47737),glow:new THREE.MeshBasicMaterial({color:0xffd066}),horn:mat(0xf1b76d)},
  {body:mat(0x4c203c),plate:mat(0xa73348),glow:new THREE.MeshBasicMaterial({color:0xff542f}),horn:mat(0xffcf6a)}
 ];
-// V123: distinct silhouettes; custom low-poly 3D creatures (no external assets).
+// V140: distinct silhouettes; custom low-poly 3D creatures (no external assets).
 const v113M={
  gob:mat(0x628d42),gobDark:mat(0x27472c),leather:mat(0x68402b),steel:mat(0xc4d7d5),gold:mat(0xffd26a),
  wolf:mat(0x344b56),wolfLight:mat(0x698c8b),wolfDark:mat(0x192e38),claw:mat(0xe9e1ca),
@@ -729,13 +1008,50 @@ function v113BuildMonster(g,type=0,q=1){
 }
 
 
-// V123: actual local glTF 2.0 binary character assets, loaded once and reused.
+// V140: actual local glTF 2.0 binary character assets, loaded once and reused.
 // The original low-poly monsters remain visible if an asset cannot load.
 const v114Assets=[null,null,null,null];
 const v114Names=['goblin','wolf','golem','boss'];
 const v114Loader=new GLTFLoader();
 
-// V123: actual THREE.Bone + SkinnedMesh skinning on GLB limb meshes.
+// V140: four independent high-resolution monster surface maps.
+// Only the model's main body receives its map; eyes, horns, claws and runes keep their original colors.
+const v131MonsterMaps={};
+const v131TextureLoader=new THREE.TextureLoader();
+['goblin-leather','wolf-fur','golem-rock','boss-armor'].forEach((name,i)=>{
+ v131TextureLoader.load('./textures/'+name+'-1024.png',tex=>{
+  tex.colorSpace=THREE.SRGBColorSpace;
+  tex.wrapS=tex.wrapT=THREE.RepeatWrapping;
+  tex.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
+  v131MonsterMaps[i]=tex;
+  if(v114Assets[i])v131ApplyMonsterSurface(v114Assets[i],i);
+ },undefined,()=>{});
+});
+function v131ApplyMonsterSurface(root,type){
+ const texture=v131MonsterMaps[type];
+ if(!texture||!root||root.userData.v131SurfaceApplied)return;
+ root.userData.v131SurfaceApplied=true;
+ const mainNames=type===0?['torso','breastplate','head']:
+   type===1?['body','chest','head']:
+   type===2?['torso','head','shoulder-1','shoulder-2']:
+   ['body','chest','head','pauldron-1','pauldron-2'];
+ root.traverse(node=>{
+  if(!node.isMesh||!mainNames.includes((node.name||'').toLowerCase()))return;
+  const mats=Array.isArray(node.material)?node.material:[node.material];
+  const next=mats.map(original=>{
+   const m=original.clone();
+   m.map=texture;
+   m.roughness=type===3?.48:type===2?.94:.88;
+   m.metalness=type===3?.48:type===2?.07:.02;
+   m.needsUpdate=true;
+   return m;
+  });
+  node.material=Array.isArray(node.material)?next:next[0];
+ });
+}
+
+
+// V140: actual THREE.Bone + SkinnedMesh skinning on GLB limb meshes.
 // Skinning uses a two-joint chain and blended per-vertex weights.
 function v118RigModel(model){
  const rigs=[];
@@ -808,7 +1124,7 @@ function v114Install(g,type,size){
  contact.rotation.x=-Math.PI/2;contact.position.y=.025;contact.name='v121GroundRing';contact.scale.setScalar(type===3?1.8:type===1?1.2:1);
  g.add(contact);g.userData.v120Contact=contact;
 
- // V123: cache limb nodes once, rather than traversing models every frame.
+ // V140: cache limb nodes once, rather than traversing models every frame.
  const limbs=[];
  model.traverse(node=>{
    if(!node.isMesh)return;
@@ -824,21 +1140,22 @@ function v114LoadAssets(){
  for(let type=0;type<4;type++){
    v114Loader.load('./models/'+v114Names[type]+'.glb',gltf=>{
      v114Assets[type]=gltf.scene;
+     v131ApplyMonsterSurface(v114Assets[type],type);
      for(const m of mobs){
        if(m.alive&&m.variety===type&&!m.g.userData.v114Visual)
          v114Install(m.g,type,m.boss?1.9:(type===1?.88:type===2?1.13:1));
      }
-   },undefined,err=>console.warn('V123 model yüklenemedi:',v114Names[type],err));
+   },undefined,err=>console.warn('V140 model yüklenemedi:',v114Names[type],err));
  }
 }
 const mobs=[];for(let i=0;i<4;i++){const g=new THREE.Group();const a=i*Math.PI*2/5;g.position.set(Math.cos(a)*(12+i*.9),0,Math.sin(a)*(7+i*.9));part(g,'sphere',mat([0x654b87,0x387b64,0x9b633b][i%3]),0,.55,0,.25,.30,.25);part(g,'cone',dark,0,1.04,0,.32,.42,.3);part(g,'sphere',fire,-.15,.62,-.37,.07,.07,.07);part(g,'sphere',fire,.15,.62,-.37,.07,.07,.07);v113BuildMonster(g,i%3,1);v114Install(g,i%3,1);scene.add(g);mobs.push({id:++mobSerial,g,alive:true,hp:2,maxHp:2,attackCooldown:0,phase:i*1.7,boss:false,variety:i%3,strafe:i%2?1:-1,charge:0,windup:0,stun:0,attackTell:0,stepPhase:Math.random()*6.28})}v114LoadAssets();document.addEventListener('touchmove',e=>{if(window.pirpirStarted&&(e.target.closest('#stage,#joy,#attack,#chest')||e.target.closest('canvas'))&&e.cancelable)e.preventDefault()},{passive:false});const joy=document.querySelector('#joy'),nub=document.querySelector('#nub');let axis={x:0,y:0},pid=null,attackTime=0,elapsed=0,kills=0,health=100,damageFlash=0,deadTimer=0;let gameOver=false,bossSpawned=false,bossDefeated=false,spawnClock=0,attackCooldown=0;const powers={};const powerNames=["Ateş Kılıcı","Koruma Kalkanı","Hız Gücü","Can Yenileme","Zincir Şimşek","Kritik Vuruş"];// V85: predictable 10-minute difficulty curve, capped for mobile stability.
 function v85Stage(){return Math.min(4,Math.floor(elapsed/120))}
-function v85SpawnInterval(){return [8.0,6.2,4.8,3.8,3.0][v85Stage()]}
-function v85MobCap(){return [5,8,11,14,17][v85Stage()]}
+function v85SpawnInterval(){const base=[8.0,6.2,4.8,3.8,3.0][v85Stage()];return base*((window.pirpirRaceModeLocked||window.pirpirRaceMode)==='rush'?.72:(window.pirpirRaceModeLocked||window.pirpirRaceMode)==='hard'?.85:1)}
+function v85MobCap(){return [5,8,11,14,17][v85Stage()]+((window.pirpirRaceModeLocked||window.pirpirRaceMode)==='rush'?5:(window.pirpirRaceModeLocked||window.pirpirRaceMode)==='hard'?3:0)}
 let v85ShownStage=-1;
 function v85UpdateStage(){const stage=v85Stage();if(stage===v85ShownStage)return;v85ShownStage=stage;const label=['🌱 Başlangıç','🌲 Derin Orman','⚔️ Tehlike Artıyor','🔥 Karanlık Yaklaşıyor','👹 Son Direniş'][stage];const el=document.getElementById('v85Stage');if(el)el.textContent=label;}
-function v85MobHp(){return [1,1.15,1.35,1.55,1.8][v85Stage()]}
-function v85DamageScale(){return [1,1.08,1.18,1.3,1.42][v85Stage()]}
+function v85MobHp(){return [1,1.15,1.35,1.55,1.8][v85Stage()]*((window.pirpirRaceModeLocked||window.pirpirRaceMode)==='hard'?1.45:1)}
+function v85DamageScale(){return [1,1.08,1.18,1.3,1.42][v85Stage()]*((window.pirpirRaceModeLocked||window.pirpirRaceMode)==='hard'?1.35:1)}
 // Rare drops become slightly more likely as the run progresses; regional identity remains.
 function v85ChestPower(zone){
  const regionalChance=[.58,.60,.63,.66,.69][v85Stage()];
@@ -852,8 +1169,11 @@ function v87RenderPowers(){const entries=Object.entries(powers);v87PowerBar.repl
 const timerEl=document.querySelector("#timer"),powersEl=document.querySelector("#powers"),messageEl=document.querySelector("#message"),restartEl=document.querySelector("#restart"),chestEl=document.querySelector("#chest");let hitNoteTime=0;const hitNoteEl=document.querySelector("#hitnote"),bossBar=document.querySelector("#bossbar"),bossFill=document.querySelector("#bossfill");let messageTimeout=0;function message(t){messageEl.textContent=t;messageTimeout=3}function finish(t){if(gameOver||document.getElementById("v87Result").style.display==="flex")return;window.pirpirAudio?.play(bossDefeated?'victory':'lose');gameOver=true;messageEl.textContent=t;restartEl.style.display="none";
  const win=!!bossDefeated;document.getElementById('v87ResultIcon').textContent=win?'🏆':'💀';
  document.getElementById('v87ResultTitle').textContent=win?'ZAFER!':'MÜCADELE SONA ERDİ';
- document.getElementById('v87ResultSummary').textContent=t;document.getElementById('v95Kills').textContent=kills;document.getElementById('v95Gold').textContent=goldCount;document.getElementById('v95Time').textContent=Math.floor(elapsed/60)+':'+String(Math.floor(elapsed%60)).padStart(2,'0');
+ document.getElementById('v87ResultSummary').textContent=t+' · Mod: '+({classic:'Klasik',rush:'Hızlı Av',hard:'Zorlu'}[window.pirpirRaceModeLocked||window.pirpirRaceMode]||'Klasik');document.getElementById('v95Kills').textContent=kills;document.getElementById('v95Gold').textContent=goldCount;document.getElementById('v95Time').textContent=Math.floor(elapsed/60)+':'+String(Math.floor(elapsed%60)).padStart(2,'0');
  document.getElementById('v87Result').style.display='flex';
+ window.dispatchEvent(new CustomEvent('pirpir:run-finished',{detail:{
+ mode:window.pirpirRaceModeLocked||window.pirpirRaceMode||'classic',kills,seconds:Math.min(600,Math.max(0,Math.floor(elapsed))),won:win
+ }}));
 }function v97Restart(){window.pirpirAudio?.stop?.();location.replace(location.pathname+location.search+location.hash)}document.getElementById('v87ResultRestart').addEventListener('click',v97Restart);restartEl.addEventListener("click",v97Restart);function spawnMob(boss=false){const g=new THREE.Group();const angle=Math.random()*Math.PI*2,dist=boss?12:10+Math.random()*6;g.position.set(THREE.MathUtils.clamp(hero.position.x+Math.cos(angle)*dist,-38,38),0,THREE.MathUtils.clamp(hero.position.z+Math.sin(angle)*dist,-38,38));const variety=boss?3:Math.floor(Math.random()*3);const size=boss?1.9:variety===1?.88:variety===2?1.13:1;const body=part(g,"sphere",mat(boss?0x992f39:[0x654b87,0x387b64,0x9b633b][Math.floor(Math.random()*3)]),0,.55*size,0,.25*size,.30*size,.25*size);part(g,"cone",dark,0,1.04*size,0,.32*size,.42*size,.3*size);for(const x of [-.15,.15])part(g,"sphere",fire,x*size,.62*size,-.37*size,.07*size,.07*size,.07*size);if(boss){part(g,"cone",gold,-.4,1.6,0,.22,.65,.2);part(g,"cone",gold,.4,1.6,0,.22,.65,.2)}
 // V68: 3D monster feet, fangs, horns and boss armor.
 const fang=mat(0xf5e8d2),monsterFoot=mat(boss?0x56252d:0x3e3458);
@@ -1009,6 +1329,41 @@ function v81BossPhase(dt){const b=mobs.find(m=>m.alive&&m.boss);const phase=!!b&
 // V68: boss attack radius warning ring, no extra per-frame geometry allocation.
 const bossWarning=new THREE.Mesh(new THREE.RingGeometry(2.3,2.48,36),new THREE.MeshBasicMaterial({color:0xff6633,transparent:true,opacity:.65,side:THREE.DoubleSide,depthWrite:false}));
 bossWarning.rotation.x=-Math.PI/2;bossWarning.visible=false;scene.add(bossWarning);
+
+// V140: boss telegraph is visible and legible on small mobile screens.
+const v127BossDanger=new THREE.Mesh(
+ new THREE.CircleGeometry(2.27,40),
+ new THREE.MeshBasicMaterial({color:0xe74636,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false})
+);
+v127BossDanger.rotation.x=-Math.PI/2;
+v127BossDanger.position.y=.045;
+v127BossDanger.visible=false;
+scene.add(v127BossDanger);
+const v127BossInnerRing=new THREE.Mesh(
+ new THREE.RingGeometry(1.48,1.55,40),
+ new THREE.MeshBasicMaterial({color:0xffd46e,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false})
+);
+v127BossInnerRing.rotation.x=-Math.PI/2;
+v127BossInnerRing.position.y=.06;
+v127BossInnerRing.visible=false;
+scene.add(v127BossInnerRing);
+function v127BossWarningTick(m){
+ const active=bossWarning.visible&&m.alive;
+ v127BossDanger.visible=active;
+ v127BossInnerRing.visible=active;
+ if(!active)return;
+ const t=.5+.5*Math.sin(elapsed*15);
+ v127BossDanger.position.x=m.g.position.x;
+ v127BossDanger.position.z=m.g.position.z;
+ v127BossInnerRing.position.x=m.g.position.x;
+ v127BossInnerRing.position.z=m.g.position.z;
+ v127BossDanger.material.opacity=.07+.10*t;
+ v127BossInnerRing.material.opacity=.35+.40*t;
+ v127BossInnerRing.scale.setScalar(.94+.12*t);
+ v127BossDanger.scale.setScalar(.95+.08*t);
+
+}
+
 const chestObjects=[];
 const wood=mat(0x86502a),woodDark=mat(0x4b2c1c),metal=mat(0xd7ad43);
 function makeChest(x,z){
@@ -1061,10 +1416,10 @@ function grantPower(){if(!window.pirpirStarted)return;if(gameOver||!nearestChest
  // V84: animate the lid over time, rather than snapping it open.
  nearestChest.lid.rotation.x=0;
  nearestChest=null;
- const name=v85ChestPower(v83ChestZone);powers[name]=(powers[name]||0)+1;if(name==="Can Yenileme")health=Math.min(100,health+25*powers[name]);powersEl.textContent="Güçler: "+Object.entries(powers).map(([n,l])=>n+" Lv."+l).join(" • ");v87RenderPowers();message("🎁 "+v83ZoneNames[v83ChestZone]+" sandığı: "+name+" Lv."+powers[name]);updateHud();updateChestProximity()}chestEl.addEventListener("pointerdown",e=>{e.preventDefault();grantPower()});function stick(e){if(window.pirpirDuoMenuOpen||window.pirpirSoloPaused)return;const r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),len=Math.hypot(dx,dy)||1,p=Math.min(1,len/(r.width*.38));axis.x=dx/len*p;axis.y=dy/len*p;nub.style.transform=`translate(${axis.x*40}px,${axis.y*40}px)`;window.pirpirV123Input={x:axis.x,y:axis.y,last:Date.now()};}
+ const name=v85ChestPower(v83ChestZone);powers[name]=(powers[name]||0)+1;if(name==="Can Yenileme")health=Math.min(100,health+25*powers[name]);powersEl.textContent="Güçler: "+Object.entries(powers).map(([n,l])=>n+" Lv."+l).join(" • ");v87RenderPowers();message("🎁 "+v83ZoneNames[v83ChestZone]+" sandığı: "+name+" Lv."+powers[name]);updateHud();updateChestProximity()}chestEl.addEventListener("pointerdown",e=>{e.preventDefault();grantPower()});function stick(e){if(window.pirpirDuoMenuOpen||window.pirpirSoloPaused)return;const r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),len=Math.hypot(dx,dy)||1,p=Math.min(1,len/(r.width*.38));axis.x=dx/len*p;axis.y=dy/len*p;nub.style.transform=`translate(${axis.x*40}px,${axis.y*40}px)`;window.pirpirV140Input={x:axis.x,y:axis.y,last:Date.now()};}
 function joyBegin(e){if(window.pirpirDuoMenuOpen||window.pirpirSoloPaused)return;if(pid!==null)return;e.preventDefault();pid=e.pointerId;try{joy.setPointerCapture(pid)}catch(_){}stick(e)}
 joy.addEventListener('pointerdown',joyBegin,{passive:false});joy.addEventListener('pointermove',e=>{if(e.pointerId===pid){e.preventDefault();stick(e)}},{passive:false});
-function release(e){if(e.pointerId!==pid)return;if(e.cancelable)e.preventDefault();pid=null;axis.x=axis.y=0;nub.style.transform='';window.pirpirV123Input={x:0,y:0,last:Date.now()}}
+function release(e){if(e.pointerId!==pid)return;if(e.cancelable)e.preventDefault();pid=null;axis.x=axis.y=0;nub.style.transform='';window.pirpirV140Input={x:0,y:0,last:Date.now()}}
 for(const ev of ['pointerup','pointercancel','lostpointercapture'])joy.addEventListener(ev,release);
 window.pirpirResetControls=()=>{axis.x=axis.y=0;nub.style.transform='';pid=null;guestAttack=false;for(const k in keys)keys[k]=false};
 const keys={};addEventListener('keydown',e=>keys[e.key.toLowerCase()]=true);addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();if(!e.repeat&&!window.pirpirDuoMenuOpen&&!window.pirpirSoloPaused)strike()}});
@@ -1084,8 +1439,8 @@ pulse.rotation.x=-Math.PI/2;pulse.visible=false;scene.add(pulse);let pulseAge=1;
 function updatePulse(dt){if(pulseAge>=.32){pulse.visible=false;return;}pulseAge+=dt;
 pulse.visible=true;pulse.scale.setScalar(1+pulseAge*5);pulse.material.opacity=Math.max(0,.7*(1-pulseAge/.32));}
 let v116Flash=0;
-function strike(){if(!window.pirpirStarted||gameOver||health<=0||window.pirpirSoloPaused||window.pirpirDuoMenuOpen)return;if(duo.role==='guest'){if(duo.connected&&duo.peer)guestAttack=true;return}if(attackCooldown>0)return;window.pirpirAudio?.play('sword');v116Flash=0.16;v91Shake=Math.min(.11,v91Shake+.045);attackCooldown=.28;attackTime=.4;slashLife=.22;pulseAge=0;pulse.position.set(hero.position.x,.085,hero.position.z);hips.rotation.z=-.13;slash.rotation.z=hero.rotation.y;slash.scale.setScalar(1+(powers["Ateş Kılıcı"]||0)*.08);const damage=1+(powers["Ateş Kılıcı"]||0)+(Math.random()<Math.min(.6,.12*(powers["Kritik Vuruş"]||0))?2:0);let target=null,closest=3.25;for(const m of mobs){if(!m.alive)continue;const d=m.g.position.distanceTo(hero.position);if(d<closest){closest=d;target=m}}if(target){window.pirpirAudio?.play('hit');v69Burst(target.g.position.x,target.g.position.z);v83Hit(target.g.position.x,target.g.position.z);hitSparks(target.g.position.x,.9,target.g.position.z);target.hp-=damage;target.stun=target.boss?.08:.16;hitNoteEl.textContent="⚔️ -"+damage;hitNoteEl.style.opacity="1";hitNoteTime=.7;if(target.boss)bossFill.style.width=(Math.max(0,target.hp)/target.maxHp*100)+"%";target.g.scale.setScalar(target.boss?1:Math.max(.78,target.hp/target.maxHp));if(target.hp<=0){target.alive=false;v90Burst(target,true);v80DeathBurst(target.g.position.x,target.g.position.z,!!target.boss);scene.remove(target.g);kills++;for(let i=0;i<(target.boss?12:1);i++)dropCoin(target.g.position.x+rand(-.7,.7),target.g.position.z+rand(-.7,.7));if(target.boss){bossWarning.visible=false;v81PhaseRing.visible=false;bossDefeated=true;bossBar.style.display="none";message("🏆 BOSS YENİLDİ!");v77Win()}}if(powers["Zincir Şimşek"]){const other=mobs.find(m=>m.alive&&m!==target&&m.g.position.distanceTo(target.g.position)<3.5);if(other){other.hp-=powers["Zincir Şimşek"];if(other.hp<=0){other.alive=false;v90Burst(other,true);v80DeathBurst(other.g.position.x,other.g.position.z,false);scene.remove(other.g);kills++;dropCoin(other.g.position.x,other.g.position.z)}}}}updateHud()}
-const attackButton=document.querySelector('#attack');let lastAttackPointer=0;attackButton.addEventListener('pointerdown',e=>{e.preventDefault();lastAttackPointer=Date.now();window.pirpirV123AttackTap=lastAttackPointer;strike()});attackButton.addEventListener('click',e=>{e.preventDefault();if(Date.now()-lastAttackPointer>400){window.pirpirV123AttackTap=Date.now();strike()}});const stage=document.querySelector('#stage');let cameraPointer=null,lastX=0,lastY=0,orbitAngle=.61,orbitPitch=.48;stage.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;if(cameraPointer!==null)return;e.preventDefault();cameraPointer=e.pointerId;lastX=e.clientX;lastY=e.clientY;stage.setPointerCapture(e.pointerId)});stage.addEventListener('pointermove',e=>{if(e.pointerId!==cameraPointer)return;e.preventDefault();const mx=e.clientX-lastX,my=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;orbitAngle-=mx*.008;orbitPitch=THREE.MathUtils.clamp(orbitPitch+my*.004,.18,1.05)});function endOrbit(e){if(e.pointerId===cameraPointer)cameraPointer=null}for(const ev of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(ev,endOrbit);// V68: boss ground shockwave, telegraphed and dodgeable.
+function strike(){if(!window.pirpirStarted||gameOver||health<=0||window.pirpirSoloPaused||window.pirpirDuoMenuOpen)return;if(duo.role==='guest'){if(duo.connected&&duo.peer)guestAttack=true;return}if(attackCooldown>0)return;window.pirpirAudio?.play('sword');v124TriggerAttack();v116Flash=0.16;v91Shake=Math.min(.11,v91Shake+.045);attackCooldown=.28;attackTime=.4;slashLife=.22;pulseAge=0;pulse.position.set(hero.position.x,.085,hero.position.z);hips.rotation.z=-.13;slash.rotation.z=hero.rotation.y;slash.scale.setScalar(1+(powers["Ateş Kılıcı"]||0)*.08);const damage=1+(powers["Ateş Kılıcı"]||0)+(Math.random()<Math.min(.6,.12*(powers["Kritik Vuruş"]||0))?2:0);let target=null,closest=3.25;for(const m of mobs){if(!m.alive)continue;const d=m.g.position.distanceTo(hero.position);if(d<closest){closest=d;target=m}}if(target){window.pirpirAudio?.play('hit');v69Burst(target.g.position.x,target.g.position.z);v83Hit(target.g.position.x,target.g.position.z);hitSparks(target.g.position.x,.9,target.g.position.z);target.hp-=damage;target.stun=target.boss?.08:.16;hitNoteEl.textContent="⚔️ -"+damage;hitNoteEl.style.opacity="1";hitNoteTime=.7;if(target.boss)bossFill.style.width=(Math.max(0,target.hp)/target.maxHp*100)+"%";target.g.scale.setScalar(target.boss?1:Math.max(.78,target.hp/target.maxHp));if(target.hp<=0){target.alive=false;v90Burst(target,true);v80DeathBurst(target.g.position.x,target.g.position.z,!!target.boss);scene.remove(target.g);kills++;window.dispatchEvent(new Event("pirpir:kill"));for(let i=0;i<(target.boss?12:1);i++)dropCoin(target.g.position.x+rand(-.7,.7),target.g.position.z+rand(-.7,.7));if(target.boss){bossWarning.visible=false;v81PhaseRing.visible=false;bossDefeated=true;bossBar.style.display="none";message("🏆 BOSS YENİLDİ!");v77Win()}}if(powers["Zincir Şimşek"]){const other=mobs.find(m=>m.alive&&m!==target&&m.g.position.distanceTo(target.g.position)<3.5);if(other){other.hp-=powers["Zincir Şimşek"];if(other.hp<=0){other.alive=false;v90Burst(other,true);v80DeathBurst(other.g.position.x,other.g.position.z,false);scene.remove(other.g);kills++;window.dispatchEvent(new Event("pirpir:kill"));dropCoin(other.g.position.x,other.g.position.z)}}}}updateHud()}
+const attackButton=document.querySelector('#attack');let lastAttackPointer=0;attackButton.addEventListener('pointerdown',e=>{e.preventDefault();lastAttackPointer=Date.now();window.pirpirV140AttackTap=lastAttackPointer;strike()});attackButton.addEventListener('click',e=>{e.preventDefault();if(Date.now()-lastAttackPointer>400){window.pirpirV140AttackTap=Date.now();strike()}});const stage=document.querySelector('#stage');let cameraPointer=null,lastX=0,lastY=0,orbitAngle=.61,orbitPitch=.48;stage.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;if(cameraPointer!==null)return;e.preventDefault();cameraPointer=e.pointerId;lastX=e.clientX;lastY=e.clientY;stage.setPointerCapture(e.pointerId)});stage.addEventListener('pointermove',e=>{if(e.pointerId!==cameraPointer)return;e.preventDefault();const mx=e.clientX-lastX,my=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;orbitAngle-=mx*.008;orbitPitch=THREE.MathUtils.clamp(orbitPitch+my*.004,.18,1.05)});function endOrbit(e){if(e.pointerId===cameraPointer)cameraPointer=null}for(const ev of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(ev,endOrbit);// V68: boss ground shockwave, telegraphed and dodgeable.
 const shockMat=new THREE.MeshBasicMaterial({color:0xff632f,transparent:true,opacity:.0,depthWrite:false,side:THREE.DoubleSide});
 const shockRing=new THREE.Mesh(new THREE.RingGeometry(.94,1.04,40),shockMat);
 shockRing.rotation.x=-Math.PI/2;shockRing.visible=false;scene.add(shockRing);
@@ -1389,7 +1744,7 @@ function duoTick(dt){if(!duo.peer||!duo.connected||!window.pirpirStarted)return;
   if(duo.sendAt>.075){duo.sendAt=0;duoSend('input',{x:health<=0?0:axis.x+(keys.d||keys.arrowright?1:0)-(keys.a||keys.arrowleft?1:0),y:axis.y+(keys.s||keys.arrowdown?1:0)-(keys.w||keys.arrowup?1:0),attack:health>0&&!window.pirpirDuoMenuOpen&&(!!keys[' ']||guestAttack)}) ;guestAttack=false}
  }else if(duo.role==='host'){
   teammate.visible=true;
-  if(performance.now()-duo.heartbeat<1500){const v=duo.remote.hp>0?duo.lastInput:{x:0,y:0,attack:false};const len=Math.hypot(v.x,v.y);if(len>.1){const vx=v.x/len,vz=v.y/len;const wx=vx*Math.cos(orbitAngle)+vz*Math.sin(orbitAngle),wz=-vx*Math.sin(orbitAngle)+vz*Math.cos(orbitAngle);duo.remote.x=THREE.MathUtils.clamp(duo.remote.x+wx*dt*4,-38,38);duo.remote.z=THREE.MathUtils.clamp(duo.remote.z+wz*dt*4,-38,38);duo.remote.rot=Math.atan2(-wx,-wz)}if(v.attack){v.attack=false;let target=null,best=3.25;for(const m of mobs){if(!m.alive)continue;const d=Math.hypot(m.g.position.x-duo.remote.x,m.g.position.z-duo.remote.z);if(d<best){best=d;target=m}}if(target){v75CoopHit(target.g.position.x,target.g.position.z);v83Hit(target.g.position.x,target.g.position.z);hitSparks(target.g.position.x,.9,target.g.position.z);target.hp-=1+(powers['Ateş Kılıcı']||0);if(target.boss){bossFill.style.width=(Math.max(0,target.hp)/target.maxHp*100)+'%';v75BossFlash=.4}if(target.hp<=0){target.alive=false;v90Burst(target,true);v80DeathBurst(target.g.position.x,target.g.position.z,!!target.boss);scene.remove(target.g);kills++;dropCoin(target.g.position.x,target.g.position.z);if(target.boss){bossDefeated=true;v81PhaseRing.visible=false;bossBar.style.display='none';v77Win()}}}}}
+  if(performance.now()-duo.heartbeat<1500){const v=duo.remote.hp>0?duo.lastInput:{x:0,y:0,attack:false};const len=Math.hypot(v.x,v.y);if(len>.1){const vx=v.x/len,vz=v.y/len;const wx=vx*Math.cos(orbitAngle)+vz*Math.sin(orbitAngle),wz=-vx*Math.sin(orbitAngle)+vz*Math.cos(orbitAngle);duo.remote.x=THREE.MathUtils.clamp(duo.remote.x+wx*dt*4,-38,38);duo.remote.z=THREE.MathUtils.clamp(duo.remote.z+wz*dt*4,-38,38);duo.remote.rot=Math.atan2(-wx,-wz)}if(v.attack){v.attack=false;let target=null,best=3.25;for(const m of mobs){if(!m.alive)continue;const d=Math.hypot(m.g.position.x-duo.remote.x,m.g.position.z-duo.remote.z);if(d<best){best=d;target=m}}if(target){v75CoopHit(target.g.position.x,target.g.position.z);v83Hit(target.g.position.x,target.g.position.z);hitSparks(target.g.position.x,.9,target.g.position.z);target.hp-=1+(powers['Ateş Kılıcı']||0);if(target.boss){bossFill.style.width=(Math.max(0,target.hp)/target.maxHp*100)+'%';v75BossFlash=.4}if(target.hp<=0){target.alive=false;v90Burst(target,true);v80DeathBurst(target.g.position.x,target.g.position.z,!!target.boss);scene.remove(target.g);kills++;window.dispatchEvent(new Event("pirpir:kill"));dropCoin(target.g.position.x,target.g.position.z);if(target.boss){bossDefeated=true;v81PhaseRing.visible=false;bossBar.style.display='none';v77Win()}}}}}
   teammate.position.set(duo.remote.x,0,duo.remote.z);teammate.rotation.y=duo.remote.rot;
   if(duo.sendAt>.1){duo.sendAt=0;duoSend('snapshot',{seq:++v92SnapshotSequence,healReady:v77HealReady,reviveReady:v77ReviveReady,supportReady:v78SupportReady,teamReward:v77TeamReward,victory:v77VictoryDone,victoryStats:v78VictoryStats,elapsed,hostHp:health,shieldUntil:v76ShieldUntil,shieldReady:v76ShieldReady,guestHp:duo.remote.hp,gold:goldCount,kills,over:gameOver,endText:messageEl.textContent,bossDefeated,guest:{x:duo.remote.x,z:duo.remote.z,rot:duo.remote.rot,swing:v75GuestSwing},host:{x:hero.position.x,z:hero.position.z,rot:hero.rotation.y},mobs:mobs.filter(m=>m.alive).map(m=>({id:m.id,x:m.g.position.x,z:m.g.position.z,rot:m.g.rotation.y,hp:m.hp,maxHp:m.maxHp,boss:m.boss,elite:!!m.g.userData.v83Elite})),v84Skills:v84SkillPools.filter(f=>f.life>0).map(f=>({x:f.x,z:f.z,zone:f.zone,life:f.life,windup:f.windup})),chests:chestObjects.map(c=>c.opened),powers})}
  }
@@ -1460,18 +1815,41 @@ function v91Collision(dt){
 }
 camera.position.set(12,17,15);camera.lookAt(0,1,0);let qualityAdjusted=false,slowFrames=0;const clock=new THREE.Clock();let v100PauseRenderAt=0;const cameraTarget=new THREE.Vector3();const hurtEl=document.querySelector("#hurt");let v119HealClock=0;
 const v120EnemyVector=new THREE.Vector3();
-function loop(){window.pirpirV123Frame=Date.now();requestAnimationFrame(loop);let dt=Math.min(clock.getDelta(),.05);window.pirpirAudio?.tick(!!window.pirpirStarted&&!gameOver,elapsed>=540,!!window.pirpirSoloPaused||!!window.pirpirDuoMenuOpen||document.hidden);if(window.pirpirSoloPaused){const now=performance.now();if(now-v100PauseRenderAt>180){renderer.render(scene,camera);v100PauseRenderAt=now;}return;}if(document.hidden||!window.pirpirStarted||duo.role==='guest')dt=0;duoTick(dt||.016);v75AnimateTeammate(dt);if(typeof v75HitTick==='function')v75HitTick(dt);v80Tick(dt);v90GhostTick(dt);v76Tick(dt);v116Flash=Math.max(0,v116Flash-dt);
+function loop(){window.pirpirV140Frame=Date.now();requestAnimationFrame(loop);let dt=Math.min(clock.getDelta(),.05);window.pirpirAudio?.tick(!!window.pirpirStarted&&!gameOver,elapsed>=540,!!window.pirpirSoloPaused||!!window.pirpirDuoMenuOpen||document.hidden);if(window.pirpirSoloPaused){const now=performance.now();if(now-v100PauseRenderAt>180){renderer.render(scene,camera);v100PauseRenderAt=now;}return;}if(document.hidden||!window.pirpirStarted||duo.role==='guest')dt=0;duoTick(dt||.016);v75AnimateTeammate(dt);if(typeof v75HitTick==='function')v75HitTick(dt);v80Tick(dt);v90GhostTick(dt);v76Tick(dt);v124UpdateFx(dt);v126UpdateAmbient(dt);v135SyncCosmetics(dt);v116Flash=Math.max(0,v116Flash-dt);
 for(const m of mobs){
  const model=m.g.userData.v114Visual;
  if(!model||model===true||!m.alive)continue;
+ // V140: reaction to actual health loss, with a short recoverable stagger.
+ const hpNow=Number.isFinite(m.hp)?m.hp:null;
+ if(hpNow!==null){
+  if(m.v133PreviousHp!==undefined && hpNow<m.v133PreviousHp)
+    m.v133Stagger=Math.min(.24,.10+(m.v133PreviousHp-hpNow)*.002);
+  m.v133PreviousHp=hpNow;
+ }
+ m.v133Stagger=Math.max(0,(m.v133Stagger||0)-dt);
+ const stagger=(m.v133Stagger||0)/.24;
+ const moving=THREE.MathUtils.clamp(m.g.userData.v120Moving??1,0,1);
  const phase=elapsed*(m.variety===1?11:7)+(m.phase||0);
  model.position.y=Math.abs(Math.sin(phase))*(m.variety===1?.045:.065);
  model.rotation.z=Math.sin(phase*.5)*(m.variety===1?.065:.035);
  model.rotation.x=Math.sin(phase)*(m.variety===1?.055:.025);
+ // Distinct movement silhouettes: wolf lunges, golem lumbers, boss winds up.
+ const attackPhase=THREE.MathUtils.clamp((m.v90Attack||0)/.38,0,1);
+ const windup=Math.sin(attackPhase*Math.PI);
+ const variety=m.variety||0;
+ model.rotation.x+=windup*(variety===1?-.24:variety===2?-.14:variety===3?-.32:-.18);
+ model.rotation.z+=stagger*.13*Math.sin(elapsed*35);
+ const squash=1-stagger*.065;
+ model.scale.y=(m.g.userData.v114Size||1)*squash;
+ model.scale.x=(m.g.userData.v114Size||1)*(1+stagger*.035);
+ model.scale.z=(m.g.userData.v114Size||1)*(1+stagger*.035);
+
  if(m.v90Attack>0)model.rotation.x-=Math.sin(Math.min(1,m.v90Attack/.38)*Math.PI)*.15;
  // Procedural gait on the real GLB model nodes; no expensive skeletal rig.
  const attack=Math.max(0,Math.min(1,(m.v90Attack||0)/.38));
- const swing=Math.sin(phase)*.28;
+ const gaitSpeed=variety===1?1.28:variety===2?.72:variety===3?.62:1;
+ const swing=Math.sin(phase*gaitSpeed)*(variety===1?.37:variety===2?.19:.28);
+
  for(const limb of (model.userData.v117Limbs||[])){if(!limb.node.visible)continue;
    const side=limb.name.includes('-1')?-1:1;
    const leg=/leg|paw/.test(limb.name);
@@ -1487,14 +1865,14 @@ for(const m of mobs){
    const isLeg=/leg|paw/.test(rig.name);
    const isArm=/arm|forearm|fist/.test(rig.name);
    rig.root.rotation.x=(isLeg?walk*.36:isArm?-walk*.28:0);
-   rig.tip.rotation.x=(isLeg?Math.max(0,walk)*.36:isArm?attack*.5:0);
+   rig.tip.rotation.x=(isLeg?Math.max(0,walk)*(.25+variety*.025):isArm?attack*(variety===3?.8:.5):0);
    rig.root.rotation.z=(isArm?attack*.28*side:rig.name.includes('tail')?Math.sin(phase*.6)*.16:0);
  }
 
 }
 v77Tick(dt);v75BossFlash=Math.max(0,v75BossFlash-dt);v69Update(dt);v70MeteorUpdate(dt);v71BossArc(dt);
 v82UpdateRegion(hero.position.x,hero.position.z);v85UpdateStage();v83Tick(dt);v84Lighting(dt);v84ChestTick(dt);v84SkillTick(dt);if(!qualityAdjusted&&dt>.041){slowFrames++;if(slowFrames>100){renderer.setPixelRatio(Math.min(devicePixelRatio,1));v98ScheduleResize();qualityAdjusted=true}}if(!gameOver&&duo.role!=='guest'){elapsed+=dt;spawnClock+=dt;
- // V123: small solo recovery during the learning phase; never affects Duo.
+ // V140: small solo recovery during the learning phase; never affects Duo.
  if(!duo.connected&&elapsed<120&&health>0&&health<100){
    v119HealClock+=dt;
    if(v119HealClock>=3){v119HealClock=0;health=Math.min(100,health+1);updateHud()}
@@ -1537,7 +1915,7 @@ if(m.variety===0&&!m.boss&&distance<3.8){
  m.g.position.z+=(delta.x)*dt*weave;
 }
 m.g.position.addScaledVector(delta,dt*moveSpeed);
-// V123: local separation steering, bounded and lightweight for mobile.
+// V140: local separation steering, bounded and lightweight for mobile.
 if(!m.boss){let sx=0,sz=0,n=0;
  for(const other of mobs){if(other===m||!other.alive)continue;
   const dx=m.g.position.x-other.g.position.x,dz=m.g.position.z-other.g.position.z;
@@ -1575,17 +1953,18 @@ if(m.stun>0)m.stun=Math.max(0,m.stun-dt);
 if(m.boss&&!gameOver&&distance<8){
  bossWarning.position.set(m.g.position.x,.055,m.g.position.z);
  bossWarning.visible=m.windup>(m.hp<m.maxHp*.5?2.65:3.9)&&m.windup<(m.hp<m.maxHp*.5?3.5:5.05);
- bossWarning.material.opacity=.4+.3*Math.abs(Math.sin(elapsed*12));
+ bossWarning.material.opacity=.4+.3*Math.abs(Math.sin(elapsed*12));v127BossWarningTick(m);
  m.windup+=dt;
  if(m.windup>(m.hp<m.maxHp*.5?2.7:4.2)&&m.windup<(m.hp<m.maxHp*.5?3.4:4.9)){m.g.scale.setScalar(1+Math.sin(elapsed*22)*.055);}
  else if(m.charge<=0)m.g.scale.setScalar(1);
  if(m.windup>(m.hp<m.maxHp*.5?3.5:5)){m.windup=0;m.charge=1.15;startShock(m.g.position.x,m.g.position.z);message('⚠️ BOSS HÜCUMU VE ATEŞ DALGASI!');v69Burst(m.g.position.x,m.g.position.z)}
 }
+if(m.boss&&distance>=8){bossWarning.visible=false;v127BossDanger.visible=false;v127BossInnerRing.visible=false;}
 if(!m.boss&&m.variety===2&&distance<4&&m.attackCooldown<=0){m.attackTell+=dt;m.g.rotation.z=Math.sin(elapsed*16)*.11;if(m.attackTell<.55)continue;m.attackTell=0;m.g.rotation.z=0}
 if(m.charge>0){m.charge-=dt;if(distance>.2){const speed=m.boss?(m.hp<m.maxHp*.5?5.2:3.7):m.variety===1?4.3:2.3;m.g.position.addScaledVector(delta.normalize(),dt*speed)}}
 if(duo.role!=='guest'&&!gameOver&&elapsed>15&&distance<(m.boss?2.8:1.65)&&m.attackCooldown<=0&&health>0){health=Math.max(0,health-Math.max(1,Math.round((m.boss?16:Math.round((4+(m.g.userData.v83Elite?3:0))*v85DamageScale()))/(1+.35*(powers["Koruma Kalkanı"]||0)))));damageFlash=.3;m.attackCooldown=m.boss?1.6:2.2;m.v90Attack=.38;window.pirpirAudio?.play('monster');v90Burst(m,false);updateHud()}}for(let i=coins.length-1;i>=0;i--){const c=coins[i];c.age+=dt;c.g.rotation.y+=dt*3;c.g.position.y=.48+Math.sin(elapsed*4+i)*.08;if(duo.role!=='guest'&&!gameOver&&c.g.position.distanceTo(hero.position)<1.55){scene.remove(c.g);coins.splice(i,1);goldCount+=5;updateHud()}}// V68: boss fires a targeted projectile every few seconds; markers make it dodgeable.
 if(duo.role!=='guest'&&!gameOver){const activeBoss=mobs.find(m=>m.alive&&m.boss);if(activeBoss){bossVolleyClock+=dt;if(bossVolleyClock>=(activeBoss.hp<activeBoss.maxHp*.5?3.3:4.5)){bossVolleyClock=0;launchBossOrb(activeBoss);if(activeBoss.hp<activeBoss.maxHp*.5){launchBossOrb(activeBoss);message('🔥 BOSS ÇİFT ATEŞ TOPU! KAÇ!')}else message('🔥 BOSS ATEŞ TOPU! HEDEFTEN KAÇ!')}}else bossVolleyClock=0}
-updateBossOrbs(dt);updateBossAura(dt);v81BossPhase(dt);v86Frame(dt);
+if(!mobs.some(m=>m.alive&&m.boss)){bossWarning.visible=false;v127BossDanger.visible=false;v127BossInnerRing.visible=false;}updateBossOrbs(dt);updateBossAura(dt);v81BossPhase(dt);v86Frame(dt);
 if(shockAge>=0){
  shockAge+=dt;
  const radiusWave=.8+shockAge*5.4;
@@ -1631,8 +2010,8 @@ addEventListener('resize',v98ScheduleResize,{passive:true});addEventListener('or
 let fault='';const badge=document.createElement('div');badge.id='v105Diag';badge.setAttribute('role','status');badge.style.cssText='position:fixed;top:calc(48px + env(safe-area-inset-top));right:8px;z-index:15;background:#10272be8;border:1px solid #ffd58c;border-radius:8px;padding:5px 8px;color:#fff;font:11px system-ui;max-width:55vw;pointer-events:none;display:none';document.body.append(badge);
 window.addEventListener('error',e=>{if(e.message)fault=String(e.message).slice(0,130)});
 window.addEventListener('unhandledrejection',e=>{fault=String(e.reason?.message||e.reason||'Promise hatası').slice(0,130)});
-setInterval(()=>{if(!window.pirpirStarted){badge.style.display='none';return}badge.style.display=fault?'block':'none';const age=Date.now()-(window.pirpirV123Frame||0);const input=window.pirpirV123Input||{};const tap=Date.now()-(window.pirpirV123AttackTap||0)<1800;
-badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döngüsü durdu ('+Math.round(age/1000)+' sn)':'V123 • Motor aktif • Joy '+(Math.hypot(input.x||0,input.y||0)>.1?'ALGILANDI':'hazır')+' • Saldır '+(tap?'ALGILANDI':'hazır');},350);
+setInterval(()=>{if(!window.pirpirStarted){badge.style.display='none';return}badge.style.display=fault?'block':'none';const age=Date.now()-(window.pirpirV140Frame||0);const input=window.pirpirV140Input||{};const tap=Date.now()-(window.pirpirV140AttackTap||0)<1800;
+badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döngüsü durdu ('+Math.round(age/1000)+' sn)':'V140 • Motor aktif • Joy '+(Math.hypot(input.x||0,input.y||0)>.1?'ALGILANDI':'hazır')+' • Saldır '+(tap?'ALGILANDI':'hazır');},350);
 })();</script><script>(function(){const p=document.getElementById('v93Progress'),t=document.getElementById('v93LoadText'),e=document.getElementById('v93Load');let completed=false;function fail(){if(completed)return;t.textContent='Oyun yüklenemedi. İnterneti kontrol edip yeniden deneyin.';p.style.width='12%';if(!document.getElementById('v98Retry')){const b=document.createElement('button');b.id='v98Retry';b.textContent='↻ YENİDEN DENE';b.style.cssText='padding:12px 18px;border:1px solid #ffe2a2;border-radius:12px;background:#b66a36;color:white;font-weight:900;cursor:pointer';b.addEventListener('click',()=>location.reload());e.append(b)}}function ready(){if(completed)return;if(!document.querySelector('#stage canvas')){fail();return}completed=true;window.pirpirEngineReady=true;p.style.width='100%';t.textContent='Oyun hazır!';requestAnimationFrame(()=>requestAnimationFrame(()=>{e.classList.add('done');setTimeout(()=>e.remove(),350)}))}window.addEventListener('load',()=>setTimeout(ready,150));window.addEventListener('error',event=>{if(!completed&&event.target!==window)fail()},true);window.addEventListener('unhandledrejection',()=>{if(!completed)fail()});setTimeout(()=>{if(!completed)fail()},14000)})();</script><script id="v103MenuRecovery">
 (function(){
   'use strict';
@@ -1657,14 +2036,14 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
         window.pirpirSoloPaused=false;window.pirpirDuoMenuOpen=false;
         document.getElementById('v93Pause')?.classList.remove('open');
         document.body.classList.remove('v93Paused','menuOpen');
-        if(!window.pirpirEngineReady){alert('3D oyun motoru yüklenmedi. Sayfayı yenileyip tekrar dene.');return;}window.pirpirStarted=true;window.pirpirSoloPaused=false;window.pirpirDuoMenuOpen=false;
+        if(!window.pirpirEngineReady){alert('3D oyun motoru yüklenmedi. Sayfayı yenileyip tekrar dene.');return;}window.pirpirRaceModeLocked=window.pirpirRaceModeLocked||window.pirpirRaceMode||'classic';window.pirpirStarted=true;window.pirpirSoloPaused=false;window.pirpirDuoMenuOpen=false;
         root.classList.add('hidden');window.dispatchEvent(new Event('resize'));
         const pause=document.getElementById('pauseButton');if(pause)pause.style.display='block';
       }
     },true);
     // Keep controls reachable in Safari, even with an invisible stale loading overlay.
     const load=document.getElementById('v93Load');if(load)load.style.pointerEvents='none';
-    window.pirpirV123MenuReady=true;
+    window.pirpirV140MenuReady=true;
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
 })();
@@ -1676,16 +2055,16 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
   document.body.appendChild(status);
   let previous=0;
   setInterval(function(){
-    const frame=window.pirpirV123Frame||0;
+    const frame=window.pirpirV140Frame||0;
     const active=!!window.pirpirStarted;
     const paused=!!window.pirpirSoloPaused;
     const alive=Date.now()-frame<1500;
-    status.textContent='V123 | '+(active?'BAŞLADI':'BAŞLAMADI')+' | '+(paused?'DURAKLATILDI':'AKTİF')+' | '+(alive?'ÇİZİM VAR':'ÇİZİM YOK');
+    status.textContent='V140 | '+(active?'BAŞLADI':'BAŞLAMADI')+' | '+(paused?'DURAKLATILDI':'AKTİF')+' | '+(alive?'ÇİZİM VAR':'ÇİZİM YOK');
     previous=frame;
   },500);
   document.getElementById('v93Resume')?.addEventListener('click',function(){
     if(!window.pirpirStarted&&window.pirpirEngineReady){
-      window.pirpirStarted=true;
+      window.pirpirRaceModeLocked=window.pirpirRaceModeLocked||window.pirpirRaceMode||'classic';window.pirpirStarted=true;
       window.pirpirSoloPaused=false;
       window.pirpirDuoMenuOpen=false;
       document.body.classList.remove('v93Paused','menuOpen');
@@ -1693,4 +2072,213 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
     }
   });
 })();
-</script></body></html>
+</script>
+<script>
+(()=>{
+ 'use strict';
+ const key='pirpir-v134-cosmetics';
+ const catalog=[
+  {id:'hat_crown',name:'Altın Taç',icon:'👑',type:'Şapka',price:100},
+  {id:'hat_wizard',name:'Büyücü Şapkası',icon:'🧙',type:'Şapka',price:75},
+  {id:'weapon_flame',name:'Alev Kılıcı',icon:'🗡️',type:'Silah görünümü',price:150},
+  {id:'weapon_ice',name:'Buz Kılıcı',icon:'❄️',type:'Silah görünümü',price:150},
+  {id:'outfit_royal',name:'Kraliyet Zırhı',icon:'🛡️',type:'Kostüm',price:220},
+  {id:'outfit_shadow',name:'Gölge Kostümü',icon:'🥷',type:'Kostüm',price:180},
+  {id:'trail_star',name:'Yıldız İzi',icon:'✨',type:'Efekt',price:90},
+  {id:'cape_dragon',name:'Ejder Pelerini',icon:'🐉',type:'Pelerin',price:200}
+ ];
+ const defaultState=()=>({diamonds:250,owned:[],equipped:{}});
+ let state;
+ try{
+  const raw=JSON.parse(localStorage.getItem(key)||'null');
+  state=raw&&Number.isSafeInteger(raw.diamonds)&&raw.diamonds>=0&&Array.isArray(raw.owned)&&raw.equipped&&typeof raw.equipped==='object'
+   ?{diamonds:raw.diamonds,owned:raw.owned.filter(id=>catalog.some(item=>item.id===id)),equipped:raw.equipped}:defaultState();
+ }catch(e){state=defaultState()}
+ const $=id=>document.getElementById(id);
+ const save=()=>{try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}};
+ const message=t=>{$('v134Toast').textContent=t};
+ const render=()=>{
+  $('v134Balance').textContent='💎 '+state.diamonds;
+  $('v134ShopBalance').textContent='💎 '+state.diamonds+' elmas';
+  const grid=$('v134Grid');grid.replaceChildren();
+  for(const item of catalog){
+   const owned=state.owned.includes(item.id);
+   const equipped=state.equipped[item.type]===item.id;
+   const card=document.createElement('div');card.className='v134Product';
+   const icon=document.createElement('span');icon.className='emoji';icon.textContent=item.icon;
+   const name=document.createElement('strong');name.textContent=item.name;
+   const info=document.createElement('small');info.textContent=item.type+' · '+(owned?'Sende var':'💎 '+item.price);
+   const btn=document.createElement('button');btn.type='button';
+   btn.textContent=equipped?'✓ Kuşanıldı':owned?'Kuşan':'💎 Satın al';
+   btn.disabled=equipped;
+   btn.addEventListener('click',()=>{
+    if(!state.owned.includes(item.id)){
+     if(state.diamonds<item.price){message('Yeterli elmasın yok.');return}
+     state.diamonds-=item.price;state.owned.push(item.id);
+    }
+    state.equipped[item.type]=item.id;save();render();
+    message(item.name+' seçildi. Bu sürümde seçim envantere kaydedilir; 3D görünüm bağlantısı sonraki aşamada.');
+   });
+   card.append(icon,name,info,btn);grid.append(card);
+  }
+ };
+ $('v134Open').addEventListener('click',()=>{$('v134Store').hidden=false;render()});
+ $('v134Close').addEventListener('click',()=>{$('v134Store').hidden=true});
+ save();render();
+ window.pirpirCosmetics={getEquipped:()=>({...state.equipped}),getDiamonds:()=>state.diamonds,addDemoDiamonds:(amount)=>{if(!Number.isSafeInteger(amount)||amount<1||amount>100)return false;state.diamonds+=amount;save();render();return true}};
+})();
+</script>
+
+<script>
+(()=>{
+ 'use strict';
+ const key='pirpir-v136-daily';
+ const $=id=>document.getElementById(id);
+ const today=()=>{const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};
+ const defaults=()=>({date:today(),kills:0,claimed:[]});
+ let state=defaults();
+ try{
+  const saved=JSON.parse(localStorage.getItem(key)||'null');
+  if(saved&&saved.date===today()&&Number.isSafeInteger(saved.kills)&&saved.kills>=0&&Array.isArray(saved.claimed))
+   state={date:saved.date,kills:Math.min(9999,saved.kills),claimed:saved.claimed.filter(x=>['visit','kill5','kill20'].includes(x))};
+ }catch(e){}
+ const tasks=[
+  {id:'visit',label:'Bugün oyuna giriş yap',target:0,reward:15},
+  {id:'kill5',label:'5 canavar yen',target:5,reward:25},
+  {id:'kill20',label:'20 canavar yen',target:20,reward:50}
+ ];
+ const persist=()=>{try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}};
+ const refreshDay=()=>{if(state.date!==today()){state=defaults();persist()}};
+ const render=()=>{
+  refreshDay();
+  const list=$('v136TaskList');list.replaceChildren();
+  for(const t of tasks){
+   const row=document.createElement('div');row.className='v136Task';
+   const label=document.createElement('span');
+   const count=t.target?Math.min(state.kills,t.target)+'/'+t.target:'Hazır';
+   label.textContent=t.label+' · '+count+' · 💎 '+t.reward;
+   const btn=document.createElement('button');btn.type='button';
+   const claimed=state.claimed.includes(t.id),ready=state.kills>=t.target;
+   btn.textContent=claimed?'✓ Alındı':ready?'Ödülü al':'Devam et';
+   btn.disabled=claimed||!ready;
+   btn.addEventListener('click',()=>{
+    refreshDay();
+    if(state.claimed.includes(t.id)||state.kills<t.target)return;
+    const add=window.pirpirCosmetics?.addDemoDiamonds;
+    if(typeof add!=='function'||!add(t.reward)){$('v136Notice').textContent='Elmas mağazası hazır değil.';return}
+    state.claimed.push(t.id);persist();render();
+    $('v136Notice').textContent='💎 '+t.reward+' demo elmas kazandın!';
+   });
+   row.append(label,btn);list.append(row);
+  }
+ };
+ $('v136Toggle').addEventListener('click',()=>{$('v136Tasks').hidden=false;render()});
+ $('v136Close').addEventListener('click',()=>{$('v136Tasks').hidden=true});
+ window.addEventListener('pirpir:kill',()=>{refreshDay();state.kills=Math.min(9999,state.kills+1);persist();if(!$('v136Tasks').hidden)render()});
+ persist();render();
+})();
+</script>
+
+<script>
+(()=>{
+ 'use strict';
+ const key='pirpir-v137-progression';
+ const $=id=>document.getElementById(id);
+ const achievements=[
+  {id:'first',name:'İlk Zafer',icon:'🥉',target:1},
+  {id:'hunter',name:'Canavar Avcısı',icon:'🥈',target:25},
+  {id:'veteran',name:'Orman Muhafızı',icon:'🥇',target:100},
+  {id:'legend',name:'Pırpır Efsanesi',icon:'🏆',target:500}
+ ];
+ const defaultState=()=>({xp:0,kills:0,unlocked:[]});
+ let state=defaultState();
+ try{
+  const value=JSON.parse(localStorage.getItem(key)||'null');
+  if(value&&Number.isSafeInteger(value.xp)&&value.xp>=0&&Number.isSafeInteger(value.kills)&&value.kills>=0&&Array.isArray(value.unlocked))
+   state={xp:Math.min(value.xp,100000000),kills:Math.min(value.kills,10000000),unlocked:value.unlocked.filter(id=>achievements.some(a=>a.id===id))};
+ }catch(e){}
+ const persist=()=>{try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}};
+ const threshold=level=>50*level*(level-1);
+ const levelFor=xp=>{
+  let low=1,high=1001;
+  while(low<high){const mid=Math.ceil((low+high)/2);if(threshold(mid)<=xp)low=mid;else high=mid-1}
+  return low;
+ };
+ const render=()=>{
+  const level=levelFor(state.xp);
+  const start=threshold(level),end=threshold(level+1);
+  $('v137Level').textContent='⭐ Seviye '+level+' · Toplam '+state.kills+' canavar';
+  $('v137XpFill').style.width=(Math.min(100,Math.max(0,(state.xp-start)/(end-start)*100)))+'%';
+  $('v137XpText').textContent=(state.xp-start)+' / '+(end-start)+' XP · Sonraki seviyeye '+(end-state.xp)+' XP';
+  const badges=$('v137Badges');badges.replaceChildren();
+  for(const item of achievements){
+   const achieved=state.kills>=item.target;
+   const row=document.createElement('div');row.className='v137Badge'+(achieved?'':' locked');
+   const label=document.createElement('span');label.textContent=item.icon+' '+item.name;
+   const status=document.createElement('small');status.textContent=achieved?'✓ Kazanıldı':Math.min(state.kills,item.target)+'/'+item.target;
+   row.append(label,status);badges.append(row);
+  }
+ };
+ $('v137Toggle').addEventListener('click',()=>{$('v137Progress').hidden=false;render()});
+ $('v137Close').addEventListener('click',()=>{$('v137Progress').hidden=true});
+ window.addEventListener('pirpir:kill',()=>{
+  const oldLevel=levelFor(state.xp);
+  state.kills=Math.min(10000000,state.kills+1);
+  state.xp=Math.min(100000000,state.xp+10);
+  const unlocked=achievements.filter(a=>state.kills>=a.target&&!state.unlocked.includes(a.id));
+  unlocked.forEach(a=>state.unlocked.push(a.id));
+  persist();
+  if(!$('v137Progress').hidden)render();
+  if(unlocked.length)$('v137Notice').textContent='🏅 Yeni rozet: '+unlocked.map(a=>a.name).join(', ');
+  else if(levelFor(state.xp)>oldLevel)$('v137Notice').textContent='⭐ Seviye atladın!';
+ });
+ persist();render();
+})();
+</script>
+
+<script>
+(()=>{
+ 'use strict';
+ const key='pirpir-v138-rankings';
+ const modes={classic:'🌲 Klasik',rush:'⚡ Hızlı Av',hard:'🔥 Zorlu'};
+ const $=id=>document.getElementById(id);
+ const read=()=>{try{const d=JSON.parse(localStorage.getItem(key)||'null');return d&&typeof d==='object'?d:{}}catch(e){return {}}};
+ const store=read();
+ const results=Array.isArray(store.results)?store.results.filter(x=>x&&modes[x.mode]&&Number.isFinite(x.kills)&&x.kills>=0&&Number.isFinite(x.seconds)&&x.seconds>=0&&x.seconds<=600).slice(-200):[];
+ const selected=modes[store.mode]?store.mode:'classic';
+ $('v138Mode').value=selected;
+ $('v138Name').value=typeof store.name==='string'?store.name.trim().slice(0,18):'';
+ window.pirpirRaceMode=selected;
+ const persist=()=>{try{localStorage.setItem(key,JSON.stringify({mode:window.pirpirRaceMode,name:$('v138Name').value.slice(0,18),results:results.slice(-200)}))}catch(e){}};
+ const render=()=>{
+  const mode=$('v138Mode').value;
+  $('v138ModeInfo').textContent=mode==='classic'?'Standart canavar dengesi':mode==='rush'?'Daha hızlı ve kalabalık canavar dalgaları':'Canavarlar daha dayanıklı ve daha çok hasar verir';
+  const box=$('v138Scores');box.replaceChildren();
+  const sorted=results.filter(r=>r.mode===mode).sort((a,b)=>Number(b.won)-Number(a.won)||b.kills-a.kills||b.seconds-a.seconds).slice(0,10);
+  if(!sorted.length){box.textContent='Bu modda henüz tamamlanmış oyun yok.';return}
+  sorted.forEach((r,i)=>{
+   const row=document.createElement('div');row.className='v138Score';
+   const a=document.createElement('span');a.textContent=(i+1)+'. '+r.name+(r.won?' 🏆':'');
+   const b=document.createElement('span');b.textContent=r.kills+' av · '+Math.floor(r.seconds/60)+' dk';
+   row.append(a,b);box.append(row);
+  });
+ };
+ $('v138Open').addEventListener('click',()=>{$('v138Arena').hidden=false;render()});
+ $('v138Close').addEventListener('click',()=>{$('v138Arena').hidden=true});
+ $('v138Mode').addEventListener('change',()=>{
+  if(window.pirpirStarted){$('v138Mode').value=window.pirpirRaceModeLocked||window.pirpirRaceMode;$('v138Message').textContent='Mod değiştirmek için yeni oyuna başla.';return}
+  window.pirpirRaceMode=$('v138Mode').value;persist();render();
+ });
+ $('v138Name').addEventListener('change',persist);
+ window.addEventListener('pirpir:run-finished',e=>{
+  const d=e.detail||{};
+  if(!modes[d.mode]||!Number.isFinite(d.kills)||d.kills<0||!Number.isFinite(d.seconds)||d.seconds<0||d.seconds>600)return;
+  const name=($('v138Name').value||'Pırpır Oyuncusu').trim().slice(0,18);
+  results.push({name,mode:d.mode,kills:Math.max(0,Math.floor(d.kills)),seconds:Math.max(0,Math.floor(d.seconds)),won:!!d.won});
+  if(results.length>200)results.splice(0,results.length-200);
+  persist();render();
+ });
+ persist();render();
+})();
+</script>
+</body></html>
