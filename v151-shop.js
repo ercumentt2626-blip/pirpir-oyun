@@ -13,6 +13,10 @@ const el=$('v145Shop');if(!el)throw Error('V145 mağaza alanı bulunamadı');
 const notice=document.createElement('div');notice.id='v145Notice';notice.setAttribute('role','status');
 const auth=document.createElement('div');auth.id='v145Auth';
 auth.innerHTML='<b>🔐 Oyuncu hesabı</b><p id="v145AuthState">Hesap kontrol ediliyor…</p><label>E-posta<input id="v145Email" type="email" autocomplete="email" placeholder="ornek@eposta.com"></label><label>Şifre (en az 8 karakter)<input id="v145Password" type="password" autocomplete="current-password" minlength="8"></label><button id="v145Login" type="button">Giriş yap</button> <button id="v145Signup" type="button">Kayıt ol</button> <button id="v145Logout" type="button">Çıkış</button>';
+const authNotice=document.createElement('p');
+authNotice.setAttribute('role','status');
+authNotice.setAttribute('aria-live','polite');
+auth.append(authNotice);
 el.append(auth);
 const cards=document.createElement('div');el.append(cards,notice);
 function say(t){notice.textContent=t}
@@ -154,11 +158,55 @@ function setUser(nextUser){
  status();
 }
 function status(){const st=$('v145AuthState');st.textContent=user?'Giriş yapıldı: '+(user.email||'Oyuncu'):'Giriş yapılmadı. Ücretsiz karakterlerle oynayabilirsin.';$('v145Logout').hidden=!user}
-async function connect(){try{const mod=await import('https://esm.sh/@supabase/supabase-js@2');client=mod.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});const {data}=await client.auth.getUser();setUser(data?.user||null);await sync();client.auth.onAuthStateChange((_event,session)=>{setUser(session?.user||null);setTimeout(()=>sync(),0)});}catch(e){status();say('Hesap bağlantısı kurulamadı. Tek oyunculu mod kullanılabilir.')}}
-async function sign(mode){if(!client){say('Supabase bağlantısı yok.');return}const email=$('v145Email').value.trim(),password=$('v145Password').value;if(!email||password.length<8){say('Geçerli e-posta ve en az 8 karakter şifre gir.');return}try{const {error}=mode==='up'?await client.auth.signUp({email,password}):await client.auth.signInWithPassword({email,password});if(error)throw error;say(mode==='up'?'Kayıt talebi alındı. Gerekirse e-postanı doğrula.':'Giriş yapıldı.')}catch(e){say('Hesap işlemi başarısız: '+e.message)}}
+let connection=null;
+function connect(){
+ if(!connection){
+  connection=(async()=>{
+   const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+   client=createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+   client.auth.onAuthStateChange((_event,session)=>{
+    setUser(session?.user||null);
+    setTimeout(()=>void sync(),0);
+   });
+   return client;
+  })().catch(error=>{connection=null;throw error;});
+ }
+ return connection;
+}
+let signing=false;
+async function sign(mode){
+ if(signing)return;
+ const email=$('v145Email').value.trim(),password=$('v145Password').value;
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||password.length<8){
+  authNotice.textContent='Geçerli e-posta ve en az 8 karakterli bir şifre gir.';
+  return;
+ }
+ signing=true;
+ $('v145Login').disabled=$('v145Signup').disabled=true;
+ authNotice.textContent=mode==='up'?'Kayıt isteği gönderiliyor…':'Giriş yapılıyor…';
+ try{
+  const supabase=await connect();
+  const {data,error}=mode==='up'?await supabase.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}}):await supabase.auth.signInWithPassword({email,password});
+  if(error)throw error;
+  if(data?.session){
+   setUser(data.session.user);
+   void sync();
+   authNotice.textContent='Giriş yapıldı. Test mağazasını kullanabilirsin.';
+  }else{
+   authNotice.textContent='E-postana gelen doğrulama bağlantısını aç. Ardından oyuna dönüp giriş yap.';
+  }
+ }catch(error){
+  const messages={email_not_confirmed:'Önce e-postana gelen doğrulama bağlantısını aç.',invalid_credentials:'E-posta veya şifre hatalı. İlk kez oynuyorsan Kayıt ol’u kullan.',over_email_send_rate_limit:'Çok sık kayıt denendi. Biraz bekleyip tekrar dene.'};
+  authNotice.textContent=messages[error.code]||'Hesap işlemi tamamlanamadı. '+(error.message||'Tekrar dene.');
+ }finally{
+  signing=false;
+  $('v145Login').disabled=$('v145Signup').disabled=false;
+ }
+}
 $('v145Login').onclick=()=>sign('in');$('v145Signup').onclick=()=>sign('up');$('v145Logout').onclick=async()=>{if(client)await client.auth.signOut();setUser(null)};
 window.pirpirV145={getUser:()=>user?.id||null,getOwned:()=>[...owned],getSelected:()=>chosen};
 window.addEventListener('pirpir-cosmetics-ready',applyAppearance);
 window.addEventListener('focus',()=>void sync());
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)void sync();});
-render();status();connect();
+render();status();void connect().catch(()=>{authNotice.textContent='Hesap bağlantısı kurulamadı. Giriş yap düğmesiyle tekrar deneyebilirsin.';});
+
