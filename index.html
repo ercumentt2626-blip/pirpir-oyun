@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Pırpır V144 • 3D Hayatta Kalma</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;inset:0;width:100%;height:100%;overscroll-behavior:none;-webkit-overflow-scrolling:auto;margin:0;background:#101e21;color:white;font-family:system-ui;overflow:hidden;touch-action:none}#stage{position:fixed;inset:0;touch-action:none;overscroll-behavior:none}#stage canvas{display:block;touch-action:none}#hud{position:fixed;top:env(safe-area-inset-top);left:0;right:0;padding:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none;text-shadow:0 2px 4px #000}#hud a{pointer-events:auto;color:#fff;background:#183e46;padding:9px;border-radius:12px;text-decoration:none;font-size:12px}#hud span{font-weight:800}#joy{position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));left:25px;width:128px;height:128px;border:3px solid #ffffff70;background:#ffffff20;border-radius:50%;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;z-index:5}#nub{position:absolute;left:40px;top:40px;width:43px;height:43px;background:#ffffffb8;border-radius:50%}#attack{position:fixed;bottom:calc(45px + env(safe-area-inset-bottom));right:28px;border:2px solid #ffdc91;border-radius:50%;width:95px;height:95px;background:#a64227;color:white;font-weight:900;font-size:17px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;z-index:5}#coins{position:fixed;top:calc(100px + env(safe-area-inset-top));left:12px;font-weight:700;color:#ffe69c;pointer-events:none}#note{position:fixed;top:62px;left:10px;right:10px;text-align:center;font-size:12px;color:#f6e8bd;pointer-events:none}#error{position:fixed;inset:0;background:#17272a;padding:28px;display:none;z-index:10}#timer{position:fixed;top:calc(136px + env(safe-area-inset-top));left:12px;font-size:21px;font-weight:900;color:#fff;pointer-events:none;text-shadow:0 2px 5px #000}#powers{position:fixed;top:calc(187px + env(safe-area-inset-top));left:12px;font-size:12px;max-width:78vw;color:#fff5bf;pointer-events:none;text-shadow:0 2px 4px #000}#chest{position:fixed;bottom:calc(160px + env(safe-area-inset-bottom));right:20px;border:2px solid #ffe4a2;border-radius:14px;background:#68472e;color:#fff;padding:12px;font-weight:800;z-index:6;touch-action:manipulation}#message{position:fixed;top:44%;left:10%;width:80%;text-align:center;font-weight:900;font-size:22px;color:#ffe5a3;text-shadow:0 3px 7px #000;pointer-events:none;z-index:7}#restart{display:none;position:fixed;top:56%;left:30%;width:40%;border:2px solid #fff3b4;border-radius:14px;background:#a64227;color:white;font-size:17px;font-weight:800;padding:15px;z-index:8}#bossbar{display:none;position:fixed;top:calc(220px + env(safe-area-inset-top));left:12px;right:12px;z-index:4;pointer-events:none;background:#250e17bb;border:1px solid #ff9b69;border-radius:10px;padding:7px;font-size:12px;font-weight:800}#bossfill{height:9px;background:linear-gradient(90deg,#c83236,#ffad41);border-radius:8px;width:100%;margin-top:5px}#hitnote{position:fixed;left:50%;top:35%;transform:translateX(-50%);font-weight:900;font-size:22px;color:#fff1a4;text-shadow:0 2px 4px black;pointer-events:none;opacity:0;z-index:6}#chest:disabled{opacity:.5}#chest{bottom:calc(150px + env(safe-area-inset-bottom));right:18px;display:none;box-shadow:0 0 14px #ffd15c55}#chest.near{display:block}#nearChest{position:fixed;bottom:calc(260px + env(safe-area-inset-bottom));right:10px;color:#ffe9a0;font-size:12px;font-weight:800;text-shadow:0 2px 3px #000;pointer-events:none;z-index:5}
+<!doctype html><html lang="tr"><head><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Pırpır V151 • 3D Hayatta Kalma</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;inset:0;width:100%;height:100%;overscroll-behavior:none;-webkit-overflow-scrolling:auto;margin:0;background:#101e21;color:white;font-family:system-ui;overflow:hidden;touch-action:none}#stage{position:fixed;inset:0;touch-action:none;overscroll-behavior:none}#stage canvas{display:block;touch-action:none}#hud{position:fixed;top:env(safe-area-inset-top);left:0;right:0;padding:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none;text-shadow:0 2px 4px #000}#hud a{pointer-events:auto;color:#fff;background:#183e46;padding:9px;border-radius:12px;text-decoration:none;font-size:12px}#hud span{font-weight:800}#joy{position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));left:25px;width:128px;height:128px;border:3px solid #ffffff70;background:#ffffff20;border-radius:50%;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;z-index:5}#nub{position:absolute;left:40px;top:40px;width:43px;height:43px;background:#ffffffb8;border-radius:50%}#attack{position:fixed;bottom:calc(45px + env(safe-area-inset-bottom));right:28px;border:2px solid #ffdc91;border-radius:50%;width:95px;height:95px;background:#a64227;color:white;font-weight:900;font-size:17px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;z-index:5}#coins{position:fixed;top:calc(100px + env(safe-area-inset-top));left:12px;font-weight:700;color:#ffe69c;pointer-events:none}#note{position:fixed;top:62px;left:10px;right:10px;text-align:center;font-size:12px;color:#f6e8bd;pointer-events:none}#error{position:fixed;inset:0;background:#17272a;padding:28px;display:none;z-index:10}#timer{position:fixed;top:calc(136px + env(safe-area-inset-top));left:12px;font-size:21px;font-weight:900;color:#fff;pointer-events:none;text-shadow:0 2px 5px #000}#powers{position:fixed;top:calc(187px + env(safe-area-inset-top));left:12px;font-size:12px;max-width:78vw;color:#fff5bf;pointer-events:none;text-shadow:0 2px 4px #000}#chest{position:fixed;bottom:calc(160px + env(safe-area-inset-bottom));right:20px;border:2px solid #ffe4a2;border-radius:14px;background:#68472e;color:#fff;padding:12px;font-weight:800;z-index:6;touch-action:manipulation}#message{position:fixed;top:44%;left:10%;width:80%;text-align:center;font-weight:900;font-size:22px;color:#ffe5a3;text-shadow:0 3px 7px #000;pointer-events:none;z-index:7}#restart{display:none;position:fixed;top:56%;left:30%;width:40%;border:2px solid #fff3b4;border-radius:14px;background:#a64227;color:white;font-size:17px;font-weight:800;padding:15px;z-index:8}#bossbar{display:none;position:fixed;top:calc(220px + env(safe-area-inset-top));left:12px;right:12px;z-index:4;pointer-events:none;background:#250e17bb;border:1px solid #ff9b69;border-radius:10px;padding:7px;font-size:12px;font-weight:800}#bossfill{height:9px;background:linear-gradient(90deg,#c83236,#ffad41);border-radius:8px;width:100%;margin-top:5px}#hitnote{position:fixed;left:50%;top:35%;transform:translateX(-50%);font-weight:900;font-size:22px;color:#fff1a4;text-shadow:0 2px 4px black;pointer-events:none;opacity:0;z-index:6}#chest:disabled{opacity:.5}#chest{bottom:calc(150px + env(safe-area-inset-bottom));right:18px;display:none;box-shadow:0 0 14px #ffd15c55}#chest.near{display:block}#nearChest{position:fixed;bottom:calc(260px + env(safe-area-inset-bottom));right:10px;color:#ffe9a0;font-size:12px;font-weight:800;text-shadow:0 2px 3px #000;pointer-events:none;z-index:5}
 /* V73 ana menu ve Duo lobisi */
 #menuRoot{isolation:isolate;pointer-events:auto;position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,#071b24ed,#103d39e8 50%,#111c2aef);padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom));overflow-y:auto;touch-action:pan-y}
 #menuRoot.hidden{display:none}#menuCard{width:min(460px,100%);max-height:100%;overflow-y:auto;background:linear-gradient(160deg,#183c43,#10232d);border:1px solid #e3c47a80;border-radius:24px;box-shadow:0 16px 55px #0009;padding:20px;touch-action:pan-y}
@@ -169,11 +169,11 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffdf8b;outline-offse
 </style><style>
 #v145Shop{margin-top:10px;text-align:left}#v145Shop h3{color:#ffe0a4;margin:12px 0 7px} .v145Grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.v145Card{background:linear-gradient(145deg,#19303c,#111c2c);border:1px solid #987b50;border-radius:12px;padding:10px 7px;color:#f8e5bd;min-height:106px;text-align:center}.v145Card b{display:block;font-size:12px}.v145Card .symbol{font-size:27px;display:block}.v145Card small{display:block;font-size:10px;opacity:.86;margin:4px 0}.v145Card button,#v145Auth button{border:0;border-radius:8px;background:#e5b75e;color:#15212d;font-weight:800;padding:8px 10px;max-width:100%;font-size:12px}.v145Card button:disabled{opacity:.65}.v145Card[aria-selected=true]{outline:2px solid #b7efbb}#v145Auth{border:1px solid #557a84;border-radius:12px;padding:10px;margin:10px 0;background:#102a36}#v145Auth input{width:100%;box-sizing:border-box;padding:9px;margin:4px 0 8px;border-radius:8px;border:1px solid #64818a;background:#081d27;color:white}#v145Auth p,#v145Notice{font-size:11px;line-height:1.5;color:#d5e6e8}#v145Notice{min-height:30px}
 </style></head><body><div id="stage"></div><button id="pauseButton" type="button">☰ MENÜ</button>
-<div id="v93Load" role="status" aria-live="polite"><div style="font-size:32px">⚔️ PIRPIR V143</div><div id="v93Track"><div id="v93Progress"></div></div><small id="v93LoadText">Orman hazırlanıyor...</small></div>
+<div id="v93Load" role="status" aria-live="polite"><div style="font-size:32px">⚔️ PIRPIR V151</div><div id="v93Track"><div id="v93Progress"></div></div><small id="v93LoadText">Orman hazırlanıyor...</small></div>
 <div id="v93Pause" role="dialog" aria-modal="true" aria-label="Duraklatma menüsü"><div id="v93PauseCard"><h2>⏸ OYUN MENÜSÜ</h2><p id="v93PauseInfo">Oyun duraklatıldı.</p><button id="v93Resume">▶ DEVAM ET</button><button id="v104Home" class="secondary" type="button">🏠 ANA MENÜYE DÖN</button><button id="v93PauseHelp" class="secondary">🎮 KONTROLLER</button><div class="v94AudioSettings"><strong>🔊 Ses ve müzik</strong><label>Sesler açık <input type="checkbox" data-v94="enabled" checked></label><label>Arka plan müziği <input type="checkbox" data-v94="music" checked></label><label>Genel ses <input type="range" data-v94="volume" min="0" max="100" value="45"></label><label>Efekt seviyesi <input type="range" data-v94="effects" min="0" max="100" value="80"></label><small class="v94Note">Sesler oyuna başladıktan veya ekrana dokunduktan sonra etkinleşir. Tamamen özgün, tarayıcıda üretilen seslerdir.</small></div><p id="v93PauseHelpText" hidden>Sol joystick: hareket • Sağ kılıç: saldırı • Ekranı sürükle: kamera • Sandığa yaklaş: aç.</p></div></div>
 <div id="v93MobileHint">Sol: hareket · Sağ: saldırı · ☰: menü</div>
 <div id="menuRoot"><section id="menuCard" aria-label="Pırpır ana menü">
-<div class="v80HeroArt" aria-hidden="true"><span>⚔️</span><span>🐉</span><span>🛡️</span></div><div class="menuBrand">⚔️ PIRPIR</div><div class="menuSub">V144 · 3D HAYATTA KALMA · ORMAN ARENASI</div><div id="v93Subtitle">🌲 DÖRT BÖLGE · ⚔️ 10 DAKİKA · 👥 DUO</div>
+<div class="v80HeroArt" aria-hidden="true"><span>⚔️</span><span>🐉</span><span>🛡️</span></div><div class="menuBrand">⚔️ PIRPIR</div><div class="menuSub">V151 · 3D HAYATTA KALMA · ORMAN ARENASI</div><div id="v93Subtitle">🌲 DÖRT BÖLGE · ⚔️ 10 DAKİKA · 👥 DUO</div>
 <div class="v134Bar" style="margin:10px 0"><button id="v134Open" type="button" style="background:#edc469;border:0;border-radius:10px;padding:10px;font-weight:900">💎 ELMAZ MAĞAZASI</button><strong id="v134Balance">💎 0</strong></div>
 <section id="v134Store" hidden aria-label="Elmas ve kostüm mağazası">
 <h3>💎 Kostüm Mağazası</h3>
@@ -214,10 +214,10 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffdf8b;outline-offse
 <div id="v138Scores"></div>
 <p id="v138Message" role="status" style="font-size:12px"></p>
 </section>
-<div id="characterPanel"><h3>🛡️ Savaşçını seç</h3><div id="v88PreviewWrap"><canvas id="v88Preview" aria-label="Seçilen savaşçının döndürülebilir üç boyutlu önizlemesi"></canvas><div class="v88PreviewControls"><button type="button" id="v88Left" aria-label="Sola döndür">↶</button><span>3D ÖNİZLEME · Sürükleyerek döndür</span><button type="button" id="v88Right" aria-label="Sağa döndür">↷</button></div></div><div class="v87Characters" style="display:none" role="group" aria-label="Karakter seçimi"><button type="button" class="v87Char" data-character="ates" aria-pressed="true"><span class="avatar">🔥</span>Ateş Savaşçısı</button><button type="button" class="v87Char" data-character="buz" aria-pressed="false"><span class="avatar">❄️</span>Buz Muhafızı</button><button type="button" class="v87Char" data-character="orman" aria-pressed="false"><span class="avatar">🌿</span>Orman Şövalyesi</button></div><p class="menuHint">V147: 2 ücretsiz, 4 premium. Şövalye FBX modeli oyun içinde yüklenir; GLB dönüşümü bekliyor. Gerçek ödeme kapalı.</p><div id="v145Shop"></div><div id="v144Premium" hidden></div><div id="v144Status" role="status" hidden></div></div><div class="menuGrid"><button class="menuBtn menuWide" id="soloBtn">▶ TEK OYUNCU BAŞLA</button><button class="menuBtn" id="duoBtn">👥 DUO</button><button class="menuBtn secondary" id="howBtn">📜 NASIL OYNANIR?</button><button class="menuBtn secondary" id="profileBtn">🛡️ OYUNCU</button><button class="menuBtn secondary" id="settingsBtn">⚙️ AYARLAR</button></div>
+<div id="characterPanel"><h3>🛡️ Savaşçını seç</h3><div id="v88PreviewWrap"><canvas id="v88Preview" aria-label="Seçilen savaşçının döndürülebilir üç boyutlu önizlemesi"></canvas><div class="v88PreviewControls"><button type="button" id="v88Left" aria-label="Sola döndür">↶</button><span>3D ÖNİZLEME · Sürükleyerek döndür</span><button type="button" id="v88Right" aria-label="Sağa döndür">↷</button></div></div><div class="v87Characters" style="display:none" role="group" aria-label="Karakter seçimi"><button type="button" class="v87Char" data-character="ates" aria-pressed="true"><span class="avatar">🔥</span>Ateş Savaşçısı</button><button type="button" class="v87Char" data-character="buz" aria-pressed="false"><span class="avatar">❄️</span>Buz Muhafızı</button><button type="button" class="v87Char" data-character="orman" aria-pressed="false"><span class="avatar">🌿</span>Orman Avcısı</button></div><p class="menuHint">İki ücretsiz savaşçıdan birini seç.</p><div id="v145Shop"></div><div id="v144Premium" hidden></div><div id="v144Status" role="status" hidden></div></div><div class="menuGrid"><button class="menuBtn menuWide" id="soloBtn">▶ TEK OYUNCU BAŞLA</button><button class="menuBtn" id="duoBtn">👥 DUO</button><button class="menuBtn secondary" id="howBtn">📜 NASIL OYNANIR?</button><button class="menuBtn secondary" id="profileBtn">🛡️ OYUNCU</button><button class="menuBtn secondary" id="settingsBtn">⚙️ AYARLAR</button></div>
 <div class="menuPanel" id="duoPanel" hidden><h3>👥 Duo lobisi</h3><p>Arkadaşınla birlikte oynama için lobi arayüzü. Oda koduyla arkadaşınla aynı arenaya bağlan. Bağlantı için aşağıdaki Supabase ayarları gereklidir.</p><label>Oyuncu adın<input id="playerName" maxlength="18" placeholder="Pırpır savaşçısı" autocomplete="off"></label><div class="menuGrid"><button class="menuBtn" id="makeRoom">Oda kodu oluştur</button><button class="menuBtn secondary" id="joinRoom">Kod gir</button></div><div id="roomResult" class="menuStatus" aria-live="polite"></div><button class="menuBtn secondary" type="button" id="copyRoom" style="width:100%;margin:4px 0 10px">📋 Oda kodunu kopyala</button><label>Oda kodu<input id="roomCode" maxlength="6" placeholder="6 karakter" autocomplete="off"></label><div class="menuGrid"><button class="menuBtn" id="duoStart" disabled>▶ DUO OYUNU BAŞLAT</button><button class="menuBtn secondary" id="duoLeave">Odadan ayrıl</button></div><p id="duoConnection" class="menuStatus" aria-live="polite">Bağlantı bekleniyor.</p><p class="menuHint" id="peerCount">👥 Lobide: 0/2 oyuncu</p><p class="menuHint">Oda sahibi oyunu başlatır. Aynı Supabase projesini kullanan iki telefon eşleşir.</p></div>
 <div class="menuPanel" id="howPanel" hidden><h3>📜 Nasıl oynanır?</h3>10 dakika hayatta kal. Sol joystick ile yürü, sağdaki kılıçla saldır. Canavarlardan altın topla; haritadaki sandıkları 50 altınla aç ve güç kazan. Son dakikada boss'a karşı savaş!</div>
-<div class="menuPanel" id="profilePanel" hidden><h3>🛡️ Oyuncu profili</h3><p>Tek oyuncu modu ve Duo lobi taslağı hazır. Kalıcı oyuncu hesabı, arkadaş listesi ve sıralama bu prototipte henüz etkin değil.</p></div>
+<div class="menuPanel" id="profilePanel" hidden><h3>🛡️ Oyuncu profili</h3><p>Tek oyuncu modu ve Duo lobi taslağı hazır. Hesabınla giriş yaparak kozmetiklerini görebilirsin.</p><p id="v150FounderBadge" hidden>🏅 Kurucu</p></div>
 <div class="menuPanel" id="settingsPanel" hidden><h3>⚙️ Ayarlar</h3><p>Mobil performans için otomatik çözünürlük uyarlaması etkin.</p><div class="v94AudioSettings"><strong>🔊 Ses ve müzik</strong><label>Sesler açık <input type="checkbox" data-v94="enabled" checked></label><label>Arka plan müziği <input type="checkbox" data-v94="music" checked></label><label>Genel ses <input type="range" data-v94="volume" min="0" max="100" value="45"></label><label>Efekt seviyesi <input type="range" data-v94="effects" min="0" max="100" value="80"></label><small class="v94Note">Sesler oyuna başladıktan veya ekrana dokunduktan sonra etkinleşir. Tamamen özgün, tarayıcıda üretilen seslerdir.</small></div></div>
 <p class="menuHint">Duo için internet ve Supabase Realtime bağlantısı gerekir. Oda kodunu ikinci telefona gönder; ev sahibi iki oyuncu bağlandıktan sonra başlatır.</p>
 </section></div>
@@ -266,10 +266,10 @@ document.getElementById('duoLeave').onclick=()=>window.pirpirDuo?.leave();
 document.getElementById('copyRoom').onclick=async()=>{const code=document.getElementById('roomCode').value.trim();if(!code)return;try{await navigator.clipboard.writeText(code);document.getElementById('roomResult').textContent='📋 Kod kopyalandı: '+code}catch{document.getElementById('roomCode').select();document.getElementById('roomResult').textContent='Kodu seçip kopyala: '+code}};
 window.pirpirBeginDuo=start;
 })();
-</script><div id="hud"><span>🔥 PIRPIR V145 3D<br><small id="status">❤️ 100 • 🪙 0 • 👹 0</small></span><span style="font-size:12px">🌲 ORMAN ARENASI</span></div><div id="v97Connection" role="status" aria-live="polite" style="display:none;position:fixed;top:calc(52px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(92vw,440px);padding:10px 12px;background:#241d20ee;color:#ffe8be;border:1px solid #e7a35a;border-radius:12px;z-index:60;font:700 12px system-ui;text-align:center;box-shadow:0 5px 20px #0008"><span id="v97ConnectionText">Bağlantı bekleniyor</span><button id="v97Reconnect" type="button" style="margin-left:8px;background:#d6a44f;color:#161b1d;border:0;border-radius:8px;padding:7px 9px;font-weight:800">Yeniden bağlan</button></div><div id="duoHud" style="position:fixed;top:calc(255px + env(safe-area-inset-top));left:12px;font-size:12px;color:#aef7ff;z-index:4;pointer-events:none"></div><div id="teamPanel" style="display:none;position:fixed;top:calc(285px + env(safe-area-inset-top));left:12px;z-index:5;background:#082436dd;border:1px solid #59c8ec88;border-radius:12px;padding:9px 11px;color:white;font-size:12px;min-width:145px;pointer-events:none"><b>🛡️ DUO TAKIM</b><div id="teamHost">Ev sahibi ❤️ 100</div><div id="teamGuest">Arkadaş ❤️ 100</div><div id="teamShield">Kalkan hazır</div></div><button id="duoShieldBtn" style="display:none;position:fixed;right:12px;bottom:175px;z-index:8;border:2px solid #65ddff;border-radius:50%;background:#145b7ddd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">🛡️<br>KORU</button><button id="duoHealBtn" style="display:none;position:fixed;right:94px;bottom:175px;z-index:8;border:2px solid #8bf6a2;border-radius:50%;background:#176e47dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">💚<br>İYİLEŞTİR</button><button id="duoReviveBtn" style="display:none;position:fixed;right:176px;bottom:175px;z-index:8;border:2px solid #ffd478;border-radius:50%;background:#855126dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">✨<br>KALDIR</button><div id="v77Victory" style="display:none;position:fixed;inset:0;z-index:22;background:#061b2bf2;color:white;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:22px;font-family:system-ui"><div style="font-size:52px">🏆</div><h1 style="color:#ffe29b;text-shadow:0 4px 18px #ffd36b66">🏆 DUO ZAFERİ!</h1><p id="v77VictoryText"></p><p id="v78VictoryStats" style="font-size:13px;opacity:.85;line-height:1.8"></p><button onclick="location.replace(location.pathname+location.search+location.hash)" style="padding:14px 24px;border:0;border-radius:14px;background:#e9b65b;color:#1b2833;font-weight:bold">ANA MENÜYE DÖN</button></div><div id="coins">🪙 Toplanan altın: 0</div><div id="timer">⏳ 10:00</div><div id="v85Stage" style="position:fixed;top:calc(161px + env(safe-area-inset-top));left:12px;font-size:11px;color:#a8ffcc;text-shadow:0 1px 3px #000;pointer-events:none;z-index:4">🌱 Başlangıç</div><div id="v87PowerBar" aria-label="Aktif özel güçler"></div><div id="powers">Güçler: Henüz yok</div><div id="v87Result" role="dialog" aria-modal="true" aria-labelledby="v87ResultTitle"><div id="v87ResultCard"><div id="v87ResultIcon" style="font-size:48px">🏆</div><h2 id="v87ResultTitle">Oyun tamamlandı</h2><p id="v87ResultSummary"></p><div id="v95ResultStats" aria-label="Oyun istatistikleri"><div class="v95Stat"><b id="v95Kills">0</b>Canavar</div><div class="v95Stat"><b id="v95Gold">0</b>Altın</div><div class="v95Stat"><b id="v95Time">0:00</b>Süre</div></div><button type="button" id="v87ResultRestart">↻ ANA MENÜYE DÖN</button></div></div><div id="message"></div><div id="hitnote"></div><div id="bossbar">👹 BOSS CANI<div id="bossfill"></div></div><button id="restart">YENİDEN OYNA</button><button id="chest">🎁 AÇ<br>🪙 50</button><div id="nearChest"></div><div id="note">V145 • Haritada sandık ara (50 altın) • Son dakikada boss!</div><div id="joy"><div id="nub"></div></div><button id="attack">⚔️<br>SALDIR</button><div id="hurt" style="position:fixed;inset:0;pointer-events:none;z-index:3;background:#ff242455;opacity:0"></div><div id="error">3D motoru yüklenemedi. İnternet bağlantını kontrol et ve Safari'de tekrar aç.</div><script type="module">
+</script><div id="hud"><span>🔥 PIRPIR V151 3D<br><small id="status">❤️ 100 • 🪙 0 • 👹 0</small></span><span style="font-size:12px">🌲 ORMAN ARENASI</span></div><div id="v97Connection" role="status" aria-live="polite" style="display:none;position:fixed;top:calc(52px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(92vw,440px);padding:10px 12px;background:#241d20ee;color:#ffe8be;border:1px solid #e7a35a;border-radius:12px;z-index:60;font:700 12px system-ui;text-align:center;box-shadow:0 5px 20px #0008"><span id="v97ConnectionText">Bağlantı bekleniyor</span><button id="v97Reconnect" type="button" style="margin-left:8px;background:#d6a44f;color:#161b1d;border:0;border-radius:8px;padding:7px 9px;font-weight:800">Yeniden bağlan</button></div><div id="duoHud" style="position:fixed;top:calc(255px + env(safe-area-inset-top));left:12px;font-size:12px;color:#aef7ff;z-index:4;pointer-events:none"></div><div id="teamPanel" style="display:none;position:fixed;top:calc(285px + env(safe-area-inset-top));left:12px;z-index:5;background:#082436dd;border:1px solid #59c8ec88;border-radius:12px;padding:9px 11px;color:white;font-size:12px;min-width:145px;pointer-events:none"><b>🛡️ DUO TAKIM</b><div id="teamHost">Ev sahibi ❤️ 100</div><div id="teamGuest">Arkadaş ❤️ 100</div><div id="teamShield">Kalkan hazır</div></div><button id="duoShieldBtn" style="display:none;position:fixed;right:12px;bottom:175px;z-index:8;border:2px solid #65ddff;border-radius:50%;background:#145b7ddd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">🛡️<br>KORU</button><button id="duoHealBtn" style="display:none;position:fixed;right:94px;bottom:175px;z-index:8;border:2px solid #8bf6a2;border-radius:50%;background:#176e47dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">💚<br>İYİLEŞTİR</button><button id="duoReviveBtn" style="display:none;position:fixed;right:176px;bottom:175px;z-index:8;border:2px solid #ffd478;border-radius:50%;background:#855126dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">✨<br>KALDIR</button><div id="v77Victory" style="display:none;position:fixed;inset:0;z-index:22;background:#061b2bf2;color:white;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:22px;font-family:system-ui"><div style="font-size:52px">🏆</div><h1 style="color:#ffe29b;text-shadow:0 4px 18px #ffd36b66">🏆 DUO ZAFERİ!</h1><p id="v77VictoryText"></p><p id="v78VictoryStats" style="font-size:13px;opacity:.85;line-height:1.8"></p><button onclick="location.replace(location.pathname+location.search+location.hash)" style="padding:14px 24px;border:0;border-radius:14px;background:#e9b65b;color:#1b2833;font-weight:bold">ANA MENÜYE DÖN</button></div><div id="coins">🪙 Toplanan altın: 0</div><div id="timer">⏳ 10:00</div><div id="v85Stage" style="position:fixed;top:calc(161px + env(safe-area-inset-top));left:12px;font-size:11px;color:#a8ffcc;text-shadow:0 1px 3px #000;pointer-events:none;z-index:4">🌱 Başlangıç</div><div id="v87PowerBar" aria-label="Aktif özel güçler"></div><div id="powers">Güçler: Henüz yok</div><div id="v87Result" role="dialog" aria-modal="true" aria-labelledby="v87ResultTitle"><div id="v87ResultCard"><div id="v87ResultIcon" style="font-size:48px">🏆</div><h2 id="v87ResultTitle">Oyun tamamlandı</h2><p id="v87ResultSummary"></p><div id="v95ResultStats" aria-label="Oyun istatistikleri"><div class="v95Stat"><b id="v95Kills">0</b>Canavar</div><div class="v95Stat"><b id="v95Gold">0</b>Altın</div><div class="v95Stat"><b id="v95Time">0:00</b>Süre</div></div><button type="button" id="v87ResultRestart">↻ ANA MENÜYE DÖN</button></div></div><div id="message"></div><div id="hitnote"></div><div id="bossbar">👹 BOSS CANI<div id="bossfill"></div></div><button id="restart">YENİDEN OYNA</button><button id="chest">🎁 AÇ<br>🪙 50</button><div id="nearChest"></div><div id="note">V151 • Haritada sandık ara (50 altın) • Son dakikada boss!</div><div id="joy"><div id="nub"></div></div><button id="attack">⚔️<br>SALDIR</button><div id="hurt" style="position:fixed;inset:0;pointer-events:none;z-index:3;background:#ff242455;opacity:0"></div><div id="error">3D motoru yüklenemedi. İnternet bağlantını kontrol et ve Safari'de tekrar aç.</div><script type="module">
 import * as THREE from 'three';
+import { clone as cloneSkeleton } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/utils/SkeletonUtils.js';
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/GLTFLoader.js';
-import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/FBXLoader.js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './duo-config.js';
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x9ecbca);scene.fog=new THREE.Fog(0x9ecbca,29,72);const camera=new THREE.PerspectiveCamera(58,innerWidth/innerHeight,.1,100);const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,matchMedia("(pointer:coarse)").matches?1.1:1.25));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.17;document.querySelector('#stage').append(renderer.domElement);scene.add(new THREE.HemisphereLight(0xe6f8ff,0x53673b,2));const sun=new THREE.DirectionalLight(0xffe4bb,2.0);sun.position.set(-8,15,8);scene.add(sun);// V95: a single low-cost instanced mesh of warm woodland motes, away from the central arena.
 const v95MoteGeometry=new THREE.SphereGeometry(.055,5,4);
@@ -547,6 +547,40 @@ const hero=new THREE.Group();scene.add(hero);
 // Gameplay collision, hero position, combat, coins, boss, timers and Duo remain unchanged.
 let v143Warrior=null, v143Mixer=null, v143Action=null, v143Actions={};
 const v144Skins={dragon:{color:0x962c25,metal:0xffb447,em:'🐉'},shadow:{color:0x28233c,metal:0x9a79e5,em:'🌑'},frost:{color:0x4b83b5,metal:0xb8f2ff,em:'❄️'},gold:{color:0xa77b29,metal:0xffe09a,em:'👑'},demon:{color:0x682d42,metal:0xff5353,em:'😈'}};
+let v150Equipped=null;
+let v150Previewing=false;
+function v150TintArmor(model, enabled){
+ model?.traverse(mesh=>{
+  if(!mesh.isMesh||!mesh.material)return;
+  for(const material of [].concat(mesh.material)){
+   if(!material.color)continue;
+   if(enabled){
+    material.userData.v150Color??=material.color.getHex();
+    material.color.set(0x41382c);
+    if(material.emissive){
+     material.userData.v150Emission??=[material.emissive.getHex(),material.emissiveIntensity];
+     material.emissive.setHex(0xca9134);
+     material.emissiveIntensity=.13;
+    }
+   }else if(material.userData.v150Color!==undefined){
+    material.color.setHex(material.userData.v150Color);
+    delete material.userData.v150Color;
+    if(material.userData.v150Emission){
+     const [color,intensity]=material.userData.v150Emission;
+     material.emissive.setHex(color);
+     material.emissiveIntensity=intensity;
+     delete material.userData.v150Emission;
+    }
+   }
+  }
+ });
+}
+window.pirpirSetCosmetic=(product, preview=false)=>{
+ v150Equipped=product;
+ v150Previewing=preview;
+ v150TintArmor(v143Warrior,Boolean(product));
+ v88RefreshPreview();
+};
 let v144Current=null;let v144Ornaments=[];
 function v144ApplySkin(id){
  v144Current=v144Skins[id]?id:null;
@@ -556,61 +590,7 @@ function v144ApplySkin(id){
  for(const o of v144Ornaments)v143Warrior.remove(o);v144Ornaments=[];
  if(skin){const g=new THREE.Group();const mat=new THREE.MeshStandardMaterial({color:skin.metal,metalness:.8,roughness:.22,emissive:skin.metal,emissiveIntensity:.18});const ring=new THREE.Mesh(new THREE.TorusGeometry(.34,.055,6,18),mat);ring.rotation.x=Math.PI/2;ring.position.y=2.34;g.add(ring);for(const side of [-1,1]){const spike=new THREE.Mesh(new THREE.ConeGeometry(.13,.52,6),mat);spike.position.set(side*.42,2.13,0);spike.rotation.z=-side*.3;g.add(spike)}v143Warrior.add(g);v144Ornaments.push(g)}
 }
-window.pirpirApplyPremium=id=>{v147ShowKnight(id==='knight');v144ApplySkin(id==='knight'?null:id);if(id){window.pirpirCharacter='ates';v88Choose('ates');v144ApplySkin(id)}if(v88PreviewHero)v88RefreshPreview()};
-// V147: load the ORIGINAL skinned knight FBX without pretending it is a GLB.
-// Premium entitlement is verified by the V145 shop before enabling this visual.
-let v147Knight=null, v147KnightMixer=null, v147KnightAction=null, v147KnightClips={};
-let v147KnightReady=false;
-const v147TexLoader=new THREE.TextureLoader();
-function v147KnightTexture(filename, color=false){
- const tex=v147TexLoader.load('./knight-source/textures/'+filename);
- tex.flipY=true;
- if(color)tex.colorSpace=THREE.SRGBColorSpace;
- tex.anisotropy=Math.min(2,renderer.capabilities.getMaxAnisotropy());
- return tex;
-}
-function v147SetupKnightMaterials(model){
- const maps={main:{d:v147KnightTexture('Knight_Main_D.png',true),n:v147KnightTexture('Knight_Main_N.png'),r:v147KnightTexture('Knight_Main_R.png'),m:v147KnightTexture('Knight_Main_M.png')},extras:{d:v147KnightTexture('Knight_Extras_D.png',true),n:v147KnightTexture('Knight_Extras_N.png'),r:v147KnightTexture('Knight_Extras_R.png'),m:v147KnightTexture('Knight_Extras_M.png')},eye:{d:v147KnightTexture('Knight_Eye_D.png',true),e:v147KnightTexture('Knight_Eye_Emissive.png',true)}};
- model.traverse(o=>{if(!o.isMesh)return;o.frustumCulled=false;o.castShadow=false;o.receiveShadow=false;
- const matFor=(original)=>{const n=(original?.name||o.name||'').toLowerCase();const t=n.includes('eye')?maps.eye:n.includes('extra')?maps.extras:maps.main;
- const m=new THREE.MeshStandardMaterial({name:original?.name||'Knight',map:t.d,normalMap:t.n||null,roughnessMap:t.r||null,metalnessMap:t.m||null,metalness:t.m?1:.45,roughness:t.r?1:.45,side:THREE.DoubleSide,skinning:true});
- if(t.e){m.emissive=new THREE.Color(0xffffff);m.emissiveMap=t.e;m.emissiveIntensity=.8}return m;};
- o.material=Array.isArray(o.material)?o.material.map(matFor):matFor(o.material);
- });
-}
-function v147ShowKnight(enabled){
- const show=!!enabled && v147KnightReady;
- if(v147Knight)v147Knight.visible=show;
- if(v143Warrior)v143Warrior.visible=!show;
- // Fallback procedural hero stays hidden while either model is visible.
- if(show){hips.visible=false;v141HeroAccent.visible=false;v142HeroArmor.visible=false;}
- return show;
-}
-window.pirpirV147SelectKnight=()=>{
- window.pirpirSelectedPremium='knight';
- v147ShowKnight(true);
- if(v88PreviewHero)v88RefreshPreview();
- return v147KnightReady;
-};
-new FBXLoader().load('./knight-source/SK-Knight.fbx', model=>{
- try{
-  v147SetupKnightMaterials(model);
-  model.updateMatrixWorld(true);
-  const bounds=new THREE.Box3().setFromObject(model),size=bounds.getSize(new THREE.Vector3());
-  if(!Number.isFinite(size.y)||size.y<=0)throw Error('Invalid FBX dimensions');
-  model.scale.multiplyScalar(2.65/size.y);
-  model.updateMatrixWorld(true);
-  const corrected=new THREE.Box3().setFromObject(model);
-  model.position.y-=corrected.min.y;
-  model.rotation.y=Math.PI;
-  hero.add(model);v147Knight=model;v147KnightReady=true;
-  v147KnightMixer=new THREE.AnimationMixer(model);
-  for(const clip of model.animations||[])v147KnightClips[clip.name.toLowerCase()]=v147KnightMixer.clipAction(clip);
-  model.visible=false;
-  if(window.pirpirSelectedPremium==='knight')v147ShowKnight(true);
-  console.info('V147 FBX knight ready; animations:',Object.keys(v147KnightClips));
- }catch(e){console.warn('V147 knight setup failed',e)}
-},undefined,e=>console.warn('V147 FBX load failed; original warrior remains',e));
+window.pirpirApplyPremium=id=>{v144ApplySkin(id);if(id){window.pirpirCharacter='ates';v88Choose('ates');v144ApplySkin(id)}if(v88PreviewHero)v88RefreshPreview()};
 const v143Loader=new GLTFLoader();
 v143Loader.load('./models/leather-armor-warrior-rigged.glb', gltf=>{
  try {
@@ -635,16 +615,17 @@ v143Loader.load('./models/leather-armor-warrior-rigged.glb', gltf=>{
   hero.add(model);
   v143Warrior=model;
   v144ApplySkin(window.pirpirSelectedPremium||null);
+  v150TintArmor(model,Boolean(v150Equipped));
   v143Mixer=new THREE.AnimationMixer(model);
   for(const clip of gltf.animations)v143Actions[clip.name.toLowerCase()]=v143Mixer.clipAction(clip);
   hips.visible=false;
   v141HeroAccent.visible=false;
   v142HeroArmor.visible=false;
-  console.info('Pırpır V143: deri zırhlı savaşçı yüklendi');
+  v88RefreshPreview();
+  console.info('Pırpır: deri zırhlı savaşçı yüklendi');
  }catch(err){console.warn('V143 model initialization failed; procedural hero preserved',err)}
 },undefined,err=>console.warn('V143 warrior load failed; original hero preserved',err));
 function v143UpdateWarrior(dt,moving){
- if(v147Knight?.visible){if(v147KnightMixer){const nextK=moving?(v147KnightClips.run||v147KnightClips.walk):v147KnightClips.idle;if(nextK!==v147KnightAction){v147KnightAction?.fadeOut(.16);if(nextK)nextK.reset().fadeIn(.16).play();v147KnightAction=nextK;}v147KnightMixer.update(Math.min(dt,.05));}return;}
  if(!v143Mixer||!v143Warrior)return;
  const next=moving?(v143Actions.run||v143Actions.walk):null;
  if(next!==v143Action){if(v143Action)v143Action.fadeOut(.16);
@@ -930,10 +911,20 @@ function v88Choose(name){
 let v88PreviewHero=null,v88PreviewRenderer=null,v88PreviewAngle=0,v88PreviewScene=null,v88PreviewCamera=null,v88PreviewLast=0;
 function v88RefreshPreview(){
  if(!v88PreviewScene)return;
- if(v88PreviewHero){v88PreviewScene.remove(v88PreviewHero);v88PreviewHero.traverse(o=>{if(o.isMesh&&o.material&&o.userData.v88OwnedMat)o.material.dispose()})}
- v88PreviewHero=hero.clone(true);v88PreviewHero.position.set(0,-.25,0);v88PreviewHero.rotation.y=v88PreviewAngle;
- // Clone only the materials used by preview meshes so later palette changes cannot mutate it.
- v88PreviewHero.traverse(o=>{if(o.isMesh&&o.material){o.material=o.material.clone();o.userData.v88OwnedMat=true}});
+ if(v88PreviewHero){
+  v88PreviewScene.remove(v88PreviewHero);
+  v88PreviewHero.traverse(o=>{if(o.isMesh&&o.material)[].concat(o.material).forEach(material=>material.dispose())});
+ }
+ v88PreviewHero=cloneSkeleton(hero);
+ v88PreviewHero.position.set(0,-.25,0);
+ v88PreviewHero.rotation.y=v88PreviewAngle;
+ v88PreviewHero.traverse(o=>{
+  if(o.isMesh&&o.material)o.material=Array.isArray(o.material)?o.material.map(material=>material.clone()):o.material.clone();
+ });
+ if(v150Previewing){
+  const armor=v143Warrior?v88PreviewHero.children[hero.children.indexOf(v143Warrior)]:v88PreviewHero;
+  v150TintArmor(armor,true);
+ }
  v88PreviewScene.add(v88PreviewHero);
 }
 try{
@@ -954,6 +945,7 @@ try{
 }catch(err){console.warn('V88 önizleme kullanılamıyor:',err)}
 document.querySelectorAll('.v87Char').forEach(btn=>btn.addEventListener('click',()=>{if(window.pirpirStarted)return;v88Choose(btn.dataset.character);document.querySelectorAll('.v87Char').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)))}));
 v88Choose(window.pirpirCharacter||'ates');
+window.dispatchEvent(new Event('pirpir-cosmetics-ready'));
 
 // V89: class-specific procedural idle, walk and strike poses. No additional skeletal engine.
 const v89Effects=[];
@@ -1654,7 +1646,7 @@ function v80DeathBurst(x,z,boss=false){for(let i=0;i<(boss?15:7);i++){const p=v8
 const v80Trail=new THREE.Mesh(new THREE.RingGeometry(1.55,1.82,28,1,0,Math.PI*.8),new THREE.MeshBasicMaterial({color:0xffe5a3,transparent:true,opacity:0,depthWrite:false,side:THREE.DoubleSide}));v80Trail.rotation.x=-Math.PI/2;v80Trail.visible=false;scene.add(v80Trail);
 const v80BossFlare=new THREE.Mesh(new THREE.RingGeometry(1.8,2.08,36),new THREE.MeshBasicMaterial({color:0xff512b,transparent:true,opacity:0,depthWrite:false,side:THREE.DoubleSide}));v80BossFlare.rotation.x=-Math.PI/2;v80BossFlare.visible=false;scene.add(v80BossFlare);
 function v80Tick(dt){for(const p of v80Death){if(p.life<=0)continue;p.life-=dt;if(p.life<=0){p.mesh.visible=false;continue}p.mesh.position.x+=p.vx*dt;p.mesh.position.z+=p.vz*dt;p.mesh.position.y+=p.vy*dt;p.vy-=9*dt;p.mesh.rotation.x+=dt*7;p.mesh.rotation.z+=dt*5;p.mesh.material.opacity=Math.min(1,p.life*1.7)}
- const swinging=attackTime>0&&window.pirpirStarted&&!gameOver;v80Trail.visible=swinging;if(swinging){const progress=1-attackTime/.4;v80Trail.position.set(hero.position.x,.13,hero.position.z);v80Trail.rotation.z=hero.rotation.y-progress*1.7;v80Trail.material.opacity=Math.sin(Math.PI*progress)*.7;v80Trail.scale.setScalar(1+progress*.3)}
+ const swinging=attackTime>0&&window.pirpirStarted&&!gameOver;v80Trail.visible=swinging;if(swinging){const progress=1-attackTime/.4;v80Trail.material.color.setHex(v150Equipped==='founder-pack'?0xffb523:0xffe5a3);v80Trail.position.set(hero.position.x,.13,hero.position.z);v80Trail.rotation.z=hero.rotation.y-progress*1.7;v80Trail.material.opacity=Math.sin(Math.PI*progress)*.7;v80Trail.scale.setScalar(1+progress*.3)}
  const b=mobs.find(m=>m.alive&&m.boss);v80BossFlare.visible=!!b&&!gameOver;if(b){v80BossFlare.position.set(b.g.position.x,.1,b.g.position.z);const low=b.hp<b.maxHp*.5;v80BossFlare.scale.setScalar((low?1.3:1)+Math.sin(elapsed*5)*.09);v80BossFlare.material.opacity=(low?.45:.19)+Math.sin(elapsed*9)*.07}}
 // V69: boss shockwave telegraph, with a timed dodge window.
 const v69Ring=new THREE.Mesh(new THREE.RingGeometry(1.9,2.13,32),new THREE.MeshBasicMaterial({color:0xff5728,transparent:true,opacity:.75,side:THREE.DoubleSide,depthWrite:false}));
@@ -2471,4 +2463,4 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
  persist();render();
 })();
 </script>
-<script type="module" src="./v145-shop.js"></script></body></html>
+<script type="module" src="./v151-shop.js"></script></body></html>
