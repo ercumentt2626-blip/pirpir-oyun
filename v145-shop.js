@@ -1,0 +1,27 @@
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './duo-config.js';
+const $=id=>document.getElementById(id);
+const items=[
+ {id:'classic',name:'Klasik Savaşçı',icon:'⚔️',free:true,game:'ates'},
+ {id:'ranger',name:'Orman Avcısı',icon:'🏹',free:true,game:'orman'},
+ {id:'dragon',name:'Ejder Savaşçısı',icon:'🐉',price:7999},
+ {id:'shadow',name:'Gölge Suikastçı',icon:'🌑',price:9999},
+ {id:'knight',name:'Zırhlı Şövalye',icon:'🛡️',price:0,diamonds:250},
+ {id:'ice',name:'Buz Kraliçesi',icon:'❄️',price:14999}
+];
+let client=null,user=null,owned=new Set(),chosen='classic';
+const el=$('v145Shop');if(!el)throw Error('V145 mağaza alanı bulunamadı');
+const notice=document.createElement('div');notice.id='v145Notice';notice.setAttribute('role','status');
+const auth=document.createElement('div');auth.id='v145Auth';
+auth.innerHTML='<b>🔐 Oyuncu hesabı</b><p id="v145AuthState">Hesap kontrol ediliyor…</p><label>E-posta<input id="v145Email" type="email" autocomplete="email" placeholder="ornek@eposta.com"></label><label>Şifre (en az 8 karakter)<input id="v145Password" type="password" autocomplete="current-password" minlength="8"></label><button id="v145Login" type="button">Giriş yap</button> <button id="v145Signup" type="button">Kayıt ol</button> <button id="v145Logout" type="button">Çıkış</button>';
+el.append(auth);
+const cards=document.createElement('div');el.append(cards,notice);
+function say(t){notice.textContent=t}
+function money(c){return(c/100).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2})+' TL'}
+function render(){cards.replaceChildren();for(const free of [true,false]){const h=document.createElement('h3');h.textContent=free?'🟢 ÜCRETSİZ SAVAŞÇILAR':'👑 PREMIUM SAVAŞÇILAR — GERÇEK ÖDEME KAPALI';cards.append(h);const grid=document.createElement('div');grid.className='v145Grid';for(const x of items.filter(y=>y.free===free)){const card=document.createElement('div');card.className='v145Card';card.setAttribute('aria-selected',String(chosen===x.id));const icon=document.createElement('span');icon.className='symbol';icon.textContent=x.icon;const title=document.createElement('b');title.textContent=x.name;const sub=document.createElement('small');sub.textContent=x.free?'Ücretsiz · mevcut V144 görünümü':(x.diamonds?x.diamonds+' Elmas (öneri)':money(x.price))+(x.id==='knight'?' · FBX 3D model mevcut':' · 3D oyun modeli hazırlanıyor');const b=document.createElement('button');b.textContent=x.free?(chosen===x.id?'✓ Seçili':'Seç'):owned.has(x.id)?(x.id==='knight'?'Seç':'Satın alındı · model bekleniyor'):'Demo ödeme önizlemesi';b.disabled=x.free&&chosen===x.id;b.onclick=()=>{if(x.free){chosen=x.id;window.pirpirSelectedPremium=null;window.pirpirApplyPremium?.(null);const old=document.querySelector('.v87Char[data-character="'+x.game+'"]');old?.click();render();say(x.name+' seçildi. Mevcut oyun karakteri kullanılıyor.');return}if(owned.has(x.id)){if(x.id==='knight'){chosen=x.id;window.pirpirV147SelectKnight?.();render();say('Zırhlı Şövalye seçildi. Model yüklenmesi bağlantı hızına bağlıdır.');return}say('Bu karakter hesabında kayıtlı; 3D model hazır olmadan oynanamaz.');return}say(x.name+' — '+(x.diamonds?x.diamonds+' Elmas (öneri)':money(x.price))+'. DEMO: gerçek ödeme başlatılmaz, elmas düşülmez, hesapta sahiplik oluşturulmaz.');};card.append(icon,title,sub,b);grid.append(card)}cards.append(grid)}}
+async function sync(){owned=new Set();if(!client||!user){render();return}try{const {data,error}=await client.from('player_characters').select('character_id').eq('user_id',user.id);if(error)throw error;for(const r of data||[])owned.add(r.character_id);say('Hesap sahipliği sunucudan okundu.');}catch(e){say('Karakter sahipliği okunamadı: Supabase SQL kurulumunu kontrol et. Premium erişim verilmedi.')}render()}
+function status(){const st=$('v145AuthState');st.textContent=user?'Giriş yapıldı: '+(user.email||'Oyuncu'):'Giriş yapılmadı. Ücretsiz karakterlerle oynayabilirsin.';$('v145Logout').hidden=!user}
+async function connect(){try{const mod=await import('https://esm.sh/@supabase/supabase-js@2');client=mod.createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});const {data}=await client.auth.getUser();user=data?.user||null;status();await sync();client.auth.onAuthStateChange((_event,session)=>{user=session?.user||null;status();setTimeout(()=>sync(),0)});}catch(e){status();say('Hesap bağlantısı kurulamadı. Oyun ücretsiz modda kullanılabilir; premium erişim kapalı.')}}
+async function sign(mode){if(!client){say('Supabase bağlantısı yok.');return}const email=$('v145Email').value.trim(),password=$('v145Password').value;if(!email||password.length<8){say('Geçerli e-posta ve en az 8 karakter şifre gir.');return}try{const {error}=mode==='up'?await client.auth.signUp({email,password}):await client.auth.signInWithPassword({email,password});if(error)throw error;say(mode==='up'?'Kayıt talebi alındı. Gerekirse e-postanı doğrula.':'Giriş yapıldı.')}catch(e){say('Hesap işlemi başarısız: '+e.message)}}
+$('v145Login').onclick=()=>sign('in');$('v145Signup').onclick=()=>sign('up');$('v145Logout').onclick=async()=>{if(client)await client.auth.signOut();user=null;owned=new Set();status();render()};
+window.pirpirV145={getUser:()=>user?.id||null,getOwned:()=>[...owned],getSelected:()=>chosen};
+render();status();say('Ödeme sistemi devre dışı. Premium karakterler henüz oynanabilir değil.');connect();

@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Pırpır V140 • 3D Hayatta Kalma</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;inset:0;width:100%;height:100%;overscroll-behavior:none;-webkit-overflow-scrolling:auto;margin:0;background:#101e21;color:white;font-family:system-ui;overflow:hidden;touch-action:none}#stage{position:fixed;inset:0;touch-action:none;overscroll-behavior:none}#stage canvas{display:block;touch-action:none}#hud{position:fixed;top:env(safe-area-inset-top);left:0;right:0;padding:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none;text-shadow:0 2px 4px #000}#hud a{pointer-events:auto;color:#fff;background:#183e46;padding:9px;border-radius:12px;text-decoration:none;font-size:12px}#hud span{font-weight:800}#joy{position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));left:25px;width:128px;height:128px;border:3px solid #ffffff70;background:#ffffff20;border-radius:50%;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;z-index:5}#nub{position:absolute;left:40px;top:40px;width:43px;height:43px;background:#ffffffb8;border-radius:50%}#attack{position:fixed;bottom:calc(45px + env(safe-area-inset-bottom));right:28px;border:2px solid #ffdc91;border-radius:50%;width:95px;height:95px;background:#a64227;color:white;font-weight:900;font-size:17px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;z-index:5}#coins{position:fixed;top:calc(100px + env(safe-area-inset-top));left:12px;font-weight:700;color:#ffe69c;pointer-events:none}#note{position:fixed;top:62px;left:10px;right:10px;text-align:center;font-size:12px;color:#f6e8bd;pointer-events:none}#error{position:fixed;inset:0;background:#17272a;padding:28px;display:none;z-index:10}#timer{position:fixed;top:calc(136px + env(safe-area-inset-top));left:12px;font-size:21px;font-weight:900;color:#fff;pointer-events:none;text-shadow:0 2px 5px #000}#powers{position:fixed;top:calc(187px + env(safe-area-inset-top));left:12px;font-size:12px;max-width:78vw;color:#fff5bf;pointer-events:none;text-shadow:0 2px 4px #000}#chest{position:fixed;bottom:calc(160px + env(safe-area-inset-bottom));right:20px;border:2px solid #ffe4a2;border-radius:14px;background:#68472e;color:#fff;padding:12px;font-weight:800;z-index:6;touch-action:manipulation}#message{position:fixed;top:44%;left:10%;width:80%;text-align:center;font-weight:900;font-size:22px;color:#ffe5a3;text-shadow:0 3px 7px #000;pointer-events:none;z-index:7}#restart{display:none;position:fixed;top:56%;left:30%;width:40%;border:2px solid #fff3b4;border-radius:14px;background:#a64227;color:white;font-size:17px;font-weight:800;padding:15px;z-index:8}#bossbar{display:none;position:fixed;top:calc(220px + env(safe-area-inset-top));left:12px;right:12px;z-index:4;pointer-events:none;background:#250e17bb;border:1px solid #ff9b69;border-radius:10px;padding:7px;font-size:12px;font-weight:800}#bossfill{height:9px;background:linear-gradient(90deg,#c83236,#ffad41);border-radius:8px;width:100%;margin-top:5px}#hitnote{position:fixed;left:50%;top:35%;transform:translateX(-50%);font-weight:900;font-size:22px;color:#fff1a4;text-shadow:0 2px 4px black;pointer-events:none;opacity:0;z-index:6}#chest:disabled{opacity:.5}#chest{bottom:calc(150px + env(safe-area-inset-bottom));right:18px;display:none;box-shadow:0 0 14px #ffd15c55}#chest.near{display:block}#nearChest{position:fixed;bottom:calc(260px + env(safe-area-inset-bottom));right:10px;color:#ffe9a0;font-size:12px;font-weight:800;text-shadow:0 2px 3px #000;pointer-events:none;z-index:5}
+<!doctype html><html lang="tr"><head><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Pırpır V144 • 3D Hayatta Kalma</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;inset:0;width:100%;height:100%;overscroll-behavior:none;-webkit-overflow-scrolling:auto;margin:0;background:#101e21;color:white;font-family:system-ui;overflow:hidden;touch-action:none}#stage{position:fixed;inset:0;touch-action:none;overscroll-behavior:none}#stage canvas{display:block;touch-action:none}#hud{position:fixed;top:env(safe-area-inset-top);left:0;right:0;padding:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none;text-shadow:0 2px 4px #000}#hud a{pointer-events:auto;color:#fff;background:#183e46;padding:9px;border-radius:12px;text-decoration:none;font-size:12px}#hud span{font-weight:800}#joy{position:fixed;bottom:calc(28px + env(safe-area-inset-bottom));left:25px;width:128px;height:128px;border:3px solid #ffffff70;background:#ffffff20;border-radius:50%;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;overscroll-behavior:none;z-index:5}#nub{position:absolute;left:40px;top:40px;width:43px;height:43px;background:#ffffffb8;border-radius:50%}#attack{position:fixed;bottom:calc(45px + env(safe-area-inset-bottom));right:28px;border:2px solid #ffdc91;border-radius:50%;width:95px;height:95px;background:#a64227;color:white;font-weight:900;font-size:17px;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;z-index:5}#coins{position:fixed;top:calc(100px + env(safe-area-inset-top));left:12px;font-weight:700;color:#ffe69c;pointer-events:none}#note{position:fixed;top:62px;left:10px;right:10px;text-align:center;font-size:12px;color:#f6e8bd;pointer-events:none}#error{position:fixed;inset:0;background:#17272a;padding:28px;display:none;z-index:10}#timer{position:fixed;top:calc(136px + env(safe-area-inset-top));left:12px;font-size:21px;font-weight:900;color:#fff;pointer-events:none;text-shadow:0 2px 5px #000}#powers{position:fixed;top:calc(187px + env(safe-area-inset-top));left:12px;font-size:12px;max-width:78vw;color:#fff5bf;pointer-events:none;text-shadow:0 2px 4px #000}#chest{position:fixed;bottom:calc(160px + env(safe-area-inset-bottom));right:20px;border:2px solid #ffe4a2;border-radius:14px;background:#68472e;color:#fff;padding:12px;font-weight:800;z-index:6;touch-action:manipulation}#message{position:fixed;top:44%;left:10%;width:80%;text-align:center;font-weight:900;font-size:22px;color:#ffe5a3;text-shadow:0 3px 7px #000;pointer-events:none;z-index:7}#restart{display:none;position:fixed;top:56%;left:30%;width:40%;border:2px solid #fff3b4;border-radius:14px;background:#a64227;color:white;font-size:17px;font-weight:800;padding:15px;z-index:8}#bossbar{display:none;position:fixed;top:calc(220px + env(safe-area-inset-top));left:12px;right:12px;z-index:4;pointer-events:none;background:#250e17bb;border:1px solid #ff9b69;border-radius:10px;padding:7px;font-size:12px;font-weight:800}#bossfill{height:9px;background:linear-gradient(90deg,#c83236,#ffad41);border-radius:8px;width:100%;margin-top:5px}#hitnote{position:fixed;left:50%;top:35%;transform:translateX(-50%);font-weight:900;font-size:22px;color:#fff1a4;text-shadow:0 2px 4px black;pointer-events:none;opacity:0;z-index:6}#chest:disabled{opacity:.5}#chest{bottom:calc(150px + env(safe-area-inset-bottom));right:18px;display:none;box-shadow:0 0 14px #ffd15c55}#chest.near{display:block}#nearChest{position:fixed;bottom:calc(260px + env(safe-area-inset-bottom));right:10px;color:#ffe9a0;font-size:12px;font-weight:800;text-shadow:0 2px 3px #000;pointer-events:none;z-index:5}
 /* V73 ana menu ve Duo lobisi */
 #menuRoot{isolation:isolate;pointer-events:auto;position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,#071b24ed,#103d39e8 50%,#111c2aef);padding:calc(14px + env(safe-area-inset-top)) 14px calc(14px + env(safe-area-inset-bottom));overflow-y:auto;touch-action:pan-y}
 #menuRoot.hidden{display:none}#menuCard{width:min(460px,100%);max-height:100%;overflow-y:auto;background:linear-gradient(160deg,#183c43,#10232d);border:1px solid #e3c47a80;border-radius:24px;box-shadow:0 16px 55px #0009;padding:20px;touch-action:pan-y}
@@ -145,12 +145,35 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffdf8b;outline-offse
 #v138Arena button,#v138Open{background:#d3a84e;color:#172837;font-weight:800}
 #v138Scores{max-height:210px;overflow:auto}
 .v138Score{display:flex;justify-content:space-between;padding:7px;border-bottom:1px solid #ffffff20;font-size:13px}
+
+ /* V142: compact power HUD, safer boss overlap, readable top area */
+ #v87PowerBar{top:calc(192px + env(safe-area-inset-top));right:auto;max-width:min(75vw,320px);gap:5px}
+ .v87PowerChip{min-width:39px;height:36px;display:inline-flex;align-items:center;justify-content:center;padding:4px 7px;font-size:19px;line-height:1;border-radius:12px;background:#102b36e6;box-shadow:0 2px 8px #0006}
+ #bossbar{top:calc(245px + env(safe-area-inset-top));left:12px;right:12px}
+ #v87PowerBar:empty{display:none}
+ @media(max-width:430px){#v87PowerBar{max-width:65vw}#bossbar{top:calc(254px + env(safe-area-inset-top))}}
+
+/* V142 cinematic lobby polish: CSS-only and safe on iPhone */
+#menuRoot{background:radial-gradient(ellipse at 50% 16%,#406a60b0 0%,transparent 55%),linear-gradient(145deg,#06121d,#133d3a 56%,#12192c)}
+#menuCard{background:linear-gradient(160deg,#234b51f2,#0d2636f7 65%,#0a1728f9);border:1px solid #f4c76d99;box-shadow:0 0 0 1px #f3b54b20,0 22px 65px #000b;}
+.v80HeroArt{min-height:94px;display:flex;justify-content:center;align-items:center;gap:20px;filter:drop-shadow(0 5px 13px #0009)}
+.v80HeroArt span{display:inline-block;font-size:clamp(37px,9vw,56px);text-shadow:0 0 20px #ffae5680;animation:v142Float 3.6s ease-in-out infinite}
+.v80HeroArt span:nth-child(2){font-size:clamp(53px,13vw,79px);animation-delay:-1.3s}
+.v80HeroArt span:nth-child(3){animation-delay:-2.4s}
+@keyframes v142Float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){.v80HeroArt span{animation:none}}
+.menuBrand{background:linear-gradient(180deg,#fff4bd,#ffca69 52%,#c77931);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 3px 1px #572b16)}
+.menuBtn{box-shadow:inset 0 1px #fff4c570,0 4px 9px #0005}
+
+.v144Premium{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.v144Premium button{border:1px solid #b99b64;background:linear-gradient(145deg,#263d4c,#15202e);color:#f9e6c3;border-radius:12px;padding:10px 5px;font-weight:800;min-height:90px;touch-action:manipulation}.v144Premium button .em{display:block;font-size:32px}.v144Premium button small{display:block;color:#ffdb87;font-size:11px}.v144Premium button[aria-pressed=true]{outline:2px solid #ffda70}.v144Premium button:disabled{opacity:.65}#v144Status{font-size:12px;color:#ffdc8b;min-height:17px}
+</style><style>
+#v145Shop{margin-top:10px;text-align:left}#v145Shop h3{color:#ffe0a4;margin:12px 0 7px} .v145Grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.v145Card{background:linear-gradient(145deg,#19303c,#111c2c);border:1px solid #987b50;border-radius:12px;padding:10px 7px;color:#f8e5bd;min-height:106px;text-align:center}.v145Card b{display:block;font-size:12px}.v145Card .symbol{font-size:27px;display:block}.v145Card small{display:block;font-size:10px;opacity:.86;margin:4px 0}.v145Card button,#v145Auth button{border:0;border-radius:8px;background:#e5b75e;color:#15212d;font-weight:800;padding:8px 10px;max-width:100%;font-size:12px}.v145Card button:disabled{opacity:.65}.v145Card[aria-selected=true]{outline:2px solid #b7efbb}#v145Auth{border:1px solid #557a84;border-radius:12px;padding:10px;margin:10px 0;background:#102a36}#v145Auth input{width:100%;box-sizing:border-box;padding:9px;margin:4px 0 8px;border-radius:8px;border:1px solid #64818a;background:#081d27;color:white}#v145Auth p,#v145Notice{font-size:11px;line-height:1.5;color:#d5e6e8}#v145Notice{min-height:30px}
 </style></head><body><div id="stage"></div><button id="pauseButton" type="button">☰ MENÜ</button>
-<div id="v93Load" role="status" aria-live="polite"><div style="font-size:32px">⚔️ PIRPIR V140</div><div id="v93Track"><div id="v93Progress"></div></div><small id="v93LoadText">Orman hazırlanıyor...</small></div>
+<div id="v93Load" role="status" aria-live="polite"><div style="font-size:32px">⚔️ PIRPIR V143</div><div id="v93Track"><div id="v93Progress"></div></div><small id="v93LoadText">Orman hazırlanıyor...</small></div>
 <div id="v93Pause" role="dialog" aria-modal="true" aria-label="Duraklatma menüsü"><div id="v93PauseCard"><h2>⏸ OYUN MENÜSÜ</h2><p id="v93PauseInfo">Oyun duraklatıldı.</p><button id="v93Resume">▶ DEVAM ET</button><button id="v104Home" class="secondary" type="button">🏠 ANA MENÜYE DÖN</button><button id="v93PauseHelp" class="secondary">🎮 KONTROLLER</button><div class="v94AudioSettings"><strong>🔊 Ses ve müzik</strong><label>Sesler açık <input type="checkbox" data-v94="enabled" checked></label><label>Arka plan müziği <input type="checkbox" data-v94="music" checked></label><label>Genel ses <input type="range" data-v94="volume" min="0" max="100" value="45"></label><label>Efekt seviyesi <input type="range" data-v94="effects" min="0" max="100" value="80"></label><small class="v94Note">Sesler oyuna başladıktan veya ekrana dokunduktan sonra etkinleşir. Tamamen özgün, tarayıcıda üretilen seslerdir.</small></div><p id="v93PauseHelpText" hidden>Sol joystick: hareket • Sağ kılıç: saldırı • Ekranı sürükle: kamera • Sandığa yaklaş: aç.</p></div></div>
 <div id="v93MobileHint">Sol: hareket · Sağ: saldırı · ☰: menü</div>
 <div id="menuRoot"><section id="menuCard" aria-label="Pırpır ana menü">
-<div class="v80HeroArt" aria-hidden="true"><span>⚔️</span><span>🐉</span><span>🛡️</span></div><div class="menuBrand">⚔️ PIRPIR</div><div class="menuSub">V140 · 3D HAYATTA KALMA · ORMAN ARENASI</div><div id="v93Subtitle">🌲 DÖRT BÖLGE · ⚔️ 10 DAKİKA · 👥 DUO</div>
+<div class="v80HeroArt" aria-hidden="true"><span>⚔️</span><span>🐉</span><span>🛡️</span></div><div class="menuBrand">⚔️ PIRPIR</div><div class="menuSub">V144 · 3D HAYATTA KALMA · ORMAN ARENASI</div><div id="v93Subtitle">🌲 DÖRT BÖLGE · ⚔️ 10 DAKİKA · 👥 DUO</div>
 <div class="v134Bar" style="margin:10px 0"><button id="v134Open" type="button" style="background:#edc469;border:0;border-radius:10px;padding:10px;font-weight:900">💎 ELMAZ MAĞAZASI</button><strong id="v134Balance">💎 0</strong></div>
 <section id="v134Store" hidden aria-label="Elmas ve kostüm mağazası">
 <h3>💎 Kostüm Mağazası</h3>
@@ -191,7 +214,7 @@ button:focus-visible,input:focus-visible{outline:3px solid #ffdf8b;outline-offse
 <div id="v138Scores"></div>
 <p id="v138Message" role="status" style="font-size:12px"></p>
 </section>
-<div id="characterPanel"><h3>🛡️ Savaşçını seç</h3><div id="v88PreviewWrap"><canvas id="v88Preview" aria-label="Seçilen savaşçının döndürülebilir üç boyutlu önizlemesi"></canvas><div class="v88PreviewControls"><button type="button" id="v88Left" aria-label="Sola döndür">↶</button><span>3D ÖNİZLEME · Sürükleyerek döndür</span><button type="button" id="v88Right" aria-label="Sağa döndür">↷</button></div></div><div class="v87Characters" role="group" aria-label="Karakter seçimi"><button type="button" class="v87Char" data-character="ates" aria-pressed="true"><span class="avatar">🔥</span>Ateş Savaşçısı</button><button type="button" class="v87Char" data-character="buz" aria-pressed="false"><span class="avatar">❄️</span>Buz Muhafızı</button><button type="button" class="v87Char" data-character="orman" aria-pressed="false"><span class="avatar">🌿</span>Orman Şövalyesi</button></div><p class="menuHint">Üç farklı animasyon ve savaş efekti; temel güçleri eşit.</p></div><div class="menuGrid"><button class="menuBtn menuWide" id="soloBtn">▶ TEK OYUNCU BAŞLA</button><button class="menuBtn" id="duoBtn">👥 DUO</button><button class="menuBtn secondary" id="howBtn">📜 NASIL OYNANIR?</button><button class="menuBtn secondary" id="profileBtn">🛡️ OYUNCU</button><button class="menuBtn secondary" id="settingsBtn">⚙️ AYARLAR</button></div>
+<div id="characterPanel"><h3>🛡️ Savaşçını seç</h3><div id="v88PreviewWrap"><canvas id="v88Preview" aria-label="Seçilen savaşçının döndürülebilir üç boyutlu önizlemesi"></canvas><div class="v88PreviewControls"><button type="button" id="v88Left" aria-label="Sola döndür">↶</button><span>3D ÖNİZLEME · Sürükleyerek döndür</span><button type="button" id="v88Right" aria-label="Sağa döndür">↷</button></div></div><div class="v87Characters" style="display:none" role="group" aria-label="Karakter seçimi"><button type="button" class="v87Char" data-character="ates" aria-pressed="true"><span class="avatar">🔥</span>Ateş Savaşçısı</button><button type="button" class="v87Char" data-character="buz" aria-pressed="false"><span class="avatar">❄️</span>Buz Muhafızı</button><button type="button" class="v87Char" data-character="orman" aria-pressed="false"><span class="avatar">🌿</span>Orman Şövalyesi</button></div><p class="menuHint">V147: 2 ücretsiz, 4 premium. Şövalye FBX modeli oyun içinde yüklenir; GLB dönüşümü bekliyor. Gerçek ödeme kapalı.</p><div id="v145Shop"></div><div id="v144Premium" hidden></div><div id="v144Status" role="status" hidden></div></div><div class="menuGrid"><button class="menuBtn menuWide" id="soloBtn">▶ TEK OYUNCU BAŞLA</button><button class="menuBtn" id="duoBtn">👥 DUO</button><button class="menuBtn secondary" id="howBtn">📜 NASIL OYNANIR?</button><button class="menuBtn secondary" id="profileBtn">🛡️ OYUNCU</button><button class="menuBtn secondary" id="settingsBtn">⚙️ AYARLAR</button></div>
 <div class="menuPanel" id="duoPanel" hidden><h3>👥 Duo lobisi</h3><p>Arkadaşınla birlikte oynama için lobi arayüzü. Oda koduyla arkadaşınla aynı arenaya bağlan. Bağlantı için aşağıdaki Supabase ayarları gereklidir.</p><label>Oyuncu adın<input id="playerName" maxlength="18" placeholder="Pırpır savaşçısı" autocomplete="off"></label><div class="menuGrid"><button class="menuBtn" id="makeRoom">Oda kodu oluştur</button><button class="menuBtn secondary" id="joinRoom">Kod gir</button></div><div id="roomResult" class="menuStatus" aria-live="polite"></div><button class="menuBtn secondary" type="button" id="copyRoom" style="width:100%;margin:4px 0 10px">📋 Oda kodunu kopyala</button><label>Oda kodu<input id="roomCode" maxlength="6" placeholder="6 karakter" autocomplete="off"></label><div class="menuGrid"><button class="menuBtn" id="duoStart" disabled>▶ DUO OYUNU BAŞLAT</button><button class="menuBtn secondary" id="duoLeave">Odadan ayrıl</button></div><p id="duoConnection" class="menuStatus" aria-live="polite">Bağlantı bekleniyor.</p><p class="menuHint" id="peerCount">👥 Lobide: 0/2 oyuncu</p><p class="menuHint">Oda sahibi oyunu başlatır. Aynı Supabase projesini kullanan iki telefon eşleşir.</p></div>
 <div class="menuPanel" id="howPanel" hidden><h3>📜 Nasıl oynanır?</h3>10 dakika hayatta kal. Sol joystick ile yürü, sağdaki kılıçla saldır. Canavarlardan altın topla; haritadaki sandıkları 50 altınla aç ve güç kazan. Son dakikada boss'a karşı savaş!</div>
 <div class="menuPanel" id="profilePanel" hidden><h3>🛡️ Oyuncu profili</h3><p>Tek oyuncu modu ve Duo lobi taslağı hazır. Kalıcı oyuncu hesabı, arkadaş listesi ve sıralama bu prototipte henüz etkin değil.</p></div>
@@ -243,16 +266,17 @@ document.getElementById('duoLeave').onclick=()=>window.pirpirDuo?.leave();
 document.getElementById('copyRoom').onclick=async()=>{const code=document.getElementById('roomCode').value.trim();if(!code)return;try{await navigator.clipboard.writeText(code);document.getElementById('roomResult').textContent='📋 Kod kopyalandı: '+code}catch{document.getElementById('roomCode').select();document.getElementById('roomResult').textContent='Kodu seçip kopyala: '+code}};
 window.pirpirBeginDuo=start;
 })();
-</script><div id="hud"><span>🔥 PIRPIR V140 3D<br><small id="status">❤️ 100 • 🪙 0 • 👹 0</small></span><span style="font-size:12px">🌲 ORMAN ARENASI</span></div><div id="v97Connection" role="status" aria-live="polite" style="display:none;position:fixed;top:calc(52px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(92vw,440px);padding:10px 12px;background:#241d20ee;color:#ffe8be;border:1px solid #e7a35a;border-radius:12px;z-index:60;font:700 12px system-ui;text-align:center;box-shadow:0 5px 20px #0008"><span id="v97ConnectionText">Bağlantı bekleniyor</span><button id="v97Reconnect" type="button" style="margin-left:8px;background:#d6a44f;color:#161b1d;border:0;border-radius:8px;padding:7px 9px;font-weight:800">Yeniden bağlan</button></div><div id="duoHud" style="position:fixed;top:calc(255px + env(safe-area-inset-top));left:12px;font-size:12px;color:#aef7ff;z-index:4;pointer-events:none"></div><div id="teamPanel" style="display:none;position:fixed;top:calc(285px + env(safe-area-inset-top));left:12px;z-index:5;background:#082436dd;border:1px solid #59c8ec88;border-radius:12px;padding:9px 11px;color:white;font-size:12px;min-width:145px;pointer-events:none"><b>🛡️ DUO TAKIM</b><div id="teamHost">Ev sahibi ❤️ 100</div><div id="teamGuest">Arkadaş ❤️ 100</div><div id="teamShield">Kalkan hazır</div></div><button id="duoShieldBtn" style="display:none;position:fixed;right:12px;bottom:175px;z-index:8;border:2px solid #65ddff;border-radius:50%;background:#145b7ddd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">🛡️<br>KORU</button><button id="duoHealBtn" style="display:none;position:fixed;right:94px;bottom:175px;z-index:8;border:2px solid #8bf6a2;border-radius:50%;background:#176e47dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">💚<br>İYİLEŞTİR</button><button id="duoReviveBtn" style="display:none;position:fixed;right:176px;bottom:175px;z-index:8;border:2px solid #ffd478;border-radius:50%;background:#855126dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">✨<br>KALDIR</button><div id="v77Victory" style="display:none;position:fixed;inset:0;z-index:22;background:#061b2bf2;color:white;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:22px;font-family:system-ui"><div style="font-size:52px">🏆</div><h1 style="color:#ffe29b;text-shadow:0 4px 18px #ffd36b66">🏆 DUO ZAFERİ!</h1><p id="v77VictoryText"></p><p id="v78VictoryStats" style="font-size:13px;opacity:.85;line-height:1.8"></p><button onclick="location.replace(location.pathname+location.search+location.hash)" style="padding:14px 24px;border:0;border-radius:14px;background:#e9b65b;color:#1b2833;font-weight:bold">ANA MENÜYE DÖN</button></div><div id="coins">🪙 Toplanan altın: 0</div><div id="timer">⏳ 10:00</div><div id="v85Stage" style="position:fixed;top:calc(161px + env(safe-area-inset-top));left:12px;font-size:11px;color:#a8ffcc;text-shadow:0 1px 3px #000;pointer-events:none;z-index:4">🌱 Başlangıç</div><div id="v87PowerBar" aria-label="Aktif özel güçler"></div><div id="powers">Güçler: Henüz yok</div><div id="v87Result" role="dialog" aria-modal="true" aria-labelledby="v87ResultTitle"><div id="v87ResultCard"><div id="v87ResultIcon" style="font-size:48px">🏆</div><h2 id="v87ResultTitle">Oyun tamamlandı</h2><p id="v87ResultSummary"></p><div id="v95ResultStats" aria-label="Oyun istatistikleri"><div class="v95Stat"><b id="v95Kills">0</b>Canavar</div><div class="v95Stat"><b id="v95Gold">0</b>Altın</div><div class="v95Stat"><b id="v95Time">0:00</b>Süre</div></div><button type="button" id="v87ResultRestart">↻ ANA MENÜYE DÖN</button></div></div><div id="message"></div><div id="hitnote"></div><div id="bossbar">👹 BOSS CANI<div id="bossfill"></div></div><button id="restart">YENİDEN OYNA</button><button id="chest">🎁 AÇ<br>🪙 50</button><div id="nearChest"></div><div id="note">V140 • Haritada sandık ara (50 altın) • Son dakikada boss!</div><div id="joy"><div id="nub"></div></div><button id="attack">⚔️<br>SALDIR</button><div id="hurt" style="position:fixed;inset:0;pointer-events:none;z-index:3;background:#ff242455;opacity:0"></div><div id="error">3D motoru yüklenemedi. İnternet bağlantını kontrol et ve Safari'de tekrar aç.</div><script type="module">
+</script><div id="hud"><span>🔥 PIRPIR V145 3D<br><small id="status">❤️ 100 • 🪙 0 • 👹 0</small></span><span style="font-size:12px">🌲 ORMAN ARENASI</span></div><div id="v97Connection" role="status" aria-live="polite" style="display:none;position:fixed;top:calc(52px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(92vw,440px);padding:10px 12px;background:#241d20ee;color:#ffe8be;border:1px solid #e7a35a;border-radius:12px;z-index:60;font:700 12px system-ui;text-align:center;box-shadow:0 5px 20px #0008"><span id="v97ConnectionText">Bağlantı bekleniyor</span><button id="v97Reconnect" type="button" style="margin-left:8px;background:#d6a44f;color:#161b1d;border:0;border-radius:8px;padding:7px 9px;font-weight:800">Yeniden bağlan</button></div><div id="duoHud" style="position:fixed;top:calc(255px + env(safe-area-inset-top));left:12px;font-size:12px;color:#aef7ff;z-index:4;pointer-events:none"></div><div id="teamPanel" style="display:none;position:fixed;top:calc(285px + env(safe-area-inset-top));left:12px;z-index:5;background:#082436dd;border:1px solid #59c8ec88;border-radius:12px;padding:9px 11px;color:white;font-size:12px;min-width:145px;pointer-events:none"><b>🛡️ DUO TAKIM</b><div id="teamHost">Ev sahibi ❤️ 100</div><div id="teamGuest">Arkadaş ❤️ 100</div><div id="teamShield">Kalkan hazır</div></div><button id="duoShieldBtn" style="display:none;position:fixed;right:12px;bottom:175px;z-index:8;border:2px solid #65ddff;border-radius:50%;background:#145b7ddd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">🛡️<br>KORU</button><button id="duoHealBtn" style="display:none;position:fixed;right:94px;bottom:175px;z-index:8;border:2px solid #8bf6a2;border-radius:50%;background:#176e47dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">💚<br>İYİLEŞTİR</button><button id="duoReviveBtn" style="display:none;position:fixed;right:176px;bottom:175px;z-index:8;border:2px solid #ffd478;border-radius:50%;background:#855126dd;color:white;font-weight:bold;width:75px;height:75px;touch-action:manipulation">✨<br>KALDIR</button><div id="v77Victory" style="display:none;position:fixed;inset:0;z-index:22;background:#061b2bf2;color:white;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:22px;font-family:system-ui"><div style="font-size:52px">🏆</div><h1 style="color:#ffe29b;text-shadow:0 4px 18px #ffd36b66">🏆 DUO ZAFERİ!</h1><p id="v77VictoryText"></p><p id="v78VictoryStats" style="font-size:13px;opacity:.85;line-height:1.8"></p><button onclick="location.replace(location.pathname+location.search+location.hash)" style="padding:14px 24px;border:0;border-radius:14px;background:#e9b65b;color:#1b2833;font-weight:bold">ANA MENÜYE DÖN</button></div><div id="coins">🪙 Toplanan altın: 0</div><div id="timer">⏳ 10:00</div><div id="v85Stage" style="position:fixed;top:calc(161px + env(safe-area-inset-top));left:12px;font-size:11px;color:#a8ffcc;text-shadow:0 1px 3px #000;pointer-events:none;z-index:4">🌱 Başlangıç</div><div id="v87PowerBar" aria-label="Aktif özel güçler"></div><div id="powers">Güçler: Henüz yok</div><div id="v87Result" role="dialog" aria-modal="true" aria-labelledby="v87ResultTitle"><div id="v87ResultCard"><div id="v87ResultIcon" style="font-size:48px">🏆</div><h2 id="v87ResultTitle">Oyun tamamlandı</h2><p id="v87ResultSummary"></p><div id="v95ResultStats" aria-label="Oyun istatistikleri"><div class="v95Stat"><b id="v95Kills">0</b>Canavar</div><div class="v95Stat"><b id="v95Gold">0</b>Altın</div><div class="v95Stat"><b id="v95Time">0:00</b>Süre</div></div><button type="button" id="v87ResultRestart">↻ ANA MENÜYE DÖN</button></div></div><div id="message"></div><div id="hitnote"></div><div id="bossbar">👹 BOSS CANI<div id="bossfill"></div></div><button id="restart">YENİDEN OYNA</button><button id="chest">🎁 AÇ<br>🪙 50</button><div id="nearChest"></div><div id="note">V145 • Haritada sandık ara (50 altın) • Son dakikada boss!</div><div id="joy"><div id="nub"></div></div><button id="attack">⚔️<br>SALDIR</button><div id="hurt" style="position:fixed;inset:0;pointer-events:none;z-index:3;background:#ff242455;opacity:0"></div><div id="error">3D motoru yüklenemedi. İnternet bağlantını kontrol et ve Safari'de tekrar aç.</div><script type="module">
 import * as THREE from 'three';
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/GLTFLoader.js';
+import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.1/examples/jsm/loaders/FBXLoader.js';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './duo-config.js';
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x9ecbca);scene.fog=new THREE.Fog(0x9ecbca,29,72);const camera=new THREE.PerspectiveCamera(58,innerWidth/innerHeight,.1,100);const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,matchMedia("(pointer:coarse)").matches?1.1:1.25));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.17;document.querySelector('#stage').append(renderer.domElement);scene.add(new THREE.HemisphereLight(0xe6f8ff,0x53673b,2));const sun=new THREE.DirectionalLight(0xffe4bb,2.0);sun.position.set(-8,15,8);scene.add(sun);// V95: a single low-cost instanced mesh of warm woodland motes, away from the central arena.
 const v95MoteGeometry=new THREE.SphereGeometry(.055,5,4);
 const v95MoteMaterial=new THREE.MeshBasicMaterial({color:0xffd68b,transparent:true,opacity:.63,depthWrite:false});
 const v95Motes=new THREE.InstancedMesh(v95MoteGeometry,v95MoteMaterial,36);
 const v95Dummy=new THREE.Object3D();for(let i=0;i<36;i++){const angle=i*2.39996,dist=8+(i*13%29);v95Dummy.position.set(Math.cos(angle)*dist,.8+(i*7%23)*.11,Math.sin(angle)*dist);v95Dummy.scale.setScalar(.6+(i%5)*.14);v95Dummy.updateMatrix();v95Motes.setMatrixAt(i,v95Dummy.matrix)}v95Motes.instanceMatrix.needsUpdate=true;v95Motes.frustumCulled=false;scene.add(v95Motes);
-// V140: one draw call for scattered woodland grass tufts, away from center.
+// V142: one draw call for scattered woodland grass tufts, away from center.
 const v120GrassGeo=new THREE.ConeGeometry(.105,.38,3);
 const v120GrassMat=new THREE.MeshStandardMaterial({color:0x579957,roughness:1,flatShading:true});
 const v120Grass=new THREE.InstancedMesh(v120GrassGeo,v120GrassMat,260);
@@ -267,7 +291,7 @@ for(let i=0;i<260;i++){
 }
 v120Grass.instanceMatrix.needsUpdate=true;v120Grass.frustumCulled=true;scene.add(v120Grass);
 const materialCache=new Map();const mat=(c)=>{if(!materialCache.has(c))materialCache.set(c,new THREE.MeshStandardMaterial({color:c,roughness:.75}));return materialCache.get(c)};
-// V140: bundled material maps; color fallback remains if a texture fails to load.
+// V142: bundled material maps; color fallback remains if a texture fails to load.
 const v129TextureLoader=new THREE.TextureLoader();
 function v129MapMaterial(color,path){
  const material=mat(color);
@@ -286,7 +310,7 @@ v129MapMaterial(0x2e7544,'./textures/foliage-768.png');
 v129MapMaterial(0x28613e,'./textures/foliage-768.png');
 v129MapMaterial(0x927c56,'./textures/stone-768.png');
 
-const ground=mat(0x477f4c),red=mat(0x9d2e21),gold=mat(0xe5b94c),skin=mat(0xf2b78b),hair=mat(0xd34b1c),dark=mat(0x283443),fire=new THREE.MeshBasicMaterial({color:0xff9c23});const geo={box:new THREE.BoxGeometry(1,1,1),sphere:new THREE.SphereGeometry(1,10,8),cone:new THREE.ConeGeometry(1,1,7),cyl:new THREE.CylinderGeometry(1,1,1,8)};function part(parent,g,m,x,y,z,sx,sy,sz){const o=new THREE.Mesh(geo[g],m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);return o}// V140: one shared procedural albedo texture, generated once (no network asset).
+const ground=mat(0x477f4c),red=mat(0x9d2e21),gold=mat(0xe5b94c),skin=mat(0xf2b78b),hair=mat(0xd34b1c),dark=mat(0x283443),fire=new THREE.MeshBasicMaterial({color:0xff9c23});const geo={box:new THREE.BoxGeometry(1,1,1),sphere:new THREE.SphereGeometry(1,10,8),cone:new THREE.ConeGeometry(1,1,7),cyl:new THREE.CylinderGeometry(1,1,1,8)};function part(parent,g,m,x,y,z,sx,sy,sz){const o=new THREE.Mesh(geo[g],m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);parent.add(o);return o}// V142: one shared procedural albedo texture, generated once (no network asset).
 const v122Canvas=document.createElement('canvas');v122Canvas.width=v122Canvas.height=256;
 const v122Ctx=v122Canvas.getContext('2d');v122Ctx.fillStyle='#608b56';v122Ctx.fillRect(0,0,256,256);
 let v122Seed=82413;function v122Rand(){v122Seed=(1664525*v122Seed+1013904223)>>>0;return v122Seed/4294967296}
@@ -302,15 +326,15 @@ const v122GroundMaterial=new THREE.MeshStandardMaterial({map:v122Texture,color:0
 const v122Ground=part(scene,'box',ground,0,-.22,0,90,.4,90);
 // Top surface is textured, sides retain the old inexpensive material.
 v122Ground.material=[ground,ground,v122GroundMaterial,ground,ground,ground];
-// V140: locally bundled 1024px albedo; procedural canvas remains fallback.
+// V142: locally bundled 1024px albedo; procedural canvas remains fallback.
 new THREE.TextureLoader().load('./textures/forest-ground-1024.png',tex=>{
  tex.wrapS=tex.wrapT=THREE.RepeatWrapping;
  tex.repeat.set(13,13);tex.colorSpace=THREE.SRGBColorSpace;
  tex.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
  v122GroundMaterial.map=tex;v122GroundMaterial.needsUpdate=true;
-},undefined,err=>console.warn('V140 zemin dokusu yüklenemedi',err));
-const rand=(a,b)=>a+Math.random()*(b-a);for(let i=0;i<100;i++){const x=rand(-37,37),z=rand(-37,37);if(Math.hypot(x,z)<7)continue;const tree=new THREE.Group();tree.position.set(x,0,z);part(tree,'cyl',mat(0x6c4930),0,.9,0,.27,1.8,.27);const leaf=mat(i%3===0?0x2e7544:0x28613e);part(tree,'cone',leaf,0,2.2,0,1.25,2.5,1.25);part(tree,'cone',leaf,0,3.1,0,.95,2,.95);scene.add(tree)}for(let i=0;i<52;i++){let x=rand(-35,35),z=rand(-35,35);if(Math.hypot(x,z)<5)continue;part(scene,'sphere',mat(i%2?0x819477:0x7d8b8c),x,.14,z,rand(.2,.55),.25,.35)}
-// V140: Instanced woodland undergrowth with predictable GPU cost.
+},undefined,err=>console.warn('V142 zemin dokusu yüklenemedi',err));
+const rand=(a,b)=>a+Math.random()*(b-a);for(let i=0;i<78;i++){const x=rand(-37,37),z=rand(-37,37);if(Math.hypot(x,z)<7)continue;const tree=new THREE.Group();tree.position.set(x,0,z);part(tree,'cyl',mat(0x6c4930),0,.9,0,.27,1.8,.27);const leaf=mat(i%3===0?0x2e7544:0x28613e);part(tree,'cone',leaf,0,2.2,0,1.25,2.5,1.25);part(tree,'cone',leaf,0,3.1,0,.95,2,.95);scene.add(tree)}for(let i=0;i<52;i++){let x=rand(-35,35),z=rand(-35,35);if(Math.hypot(x,z)<5)continue;part(scene,'sphere',mat(i%2?0x819477:0x7d8b8c),x,.14,z,rand(.2,.55),.25,.35)}
+// V142: Instanced woodland undergrowth with predictable GPU cost.
 const v128ShrubGeometry=new THREE.DodecahedronGeometry(.48,0);
 const v128Shrubs=new THREE.InstancedMesh(v128ShrubGeometry,
  new THREE.MeshLambertMaterial({color:0x36774c,flatShading:true}),175);
@@ -481,7 +505,7 @@ let v83ImpactLife=0;
 function v83Hit(x,z){const zi=v83Zone(x,z);v83Impact.material.color.setHex([0x56cf8c,0xffcf61,0x78dfdf,0xff6b4c][zi]);v83Impact.position.set(x,.09,z);v83Impact.scale.setScalar(1);v83ImpactLife=.3;v83Impact.visible=true}
 function v83Tick(dt){if(v83ImpactLife<=0)return;v83ImpactLife=Math.max(0,v83ImpactLife-dt);v83Impact.visible=v83ImpactLife>0;v83Impact.scale.setScalar(1+(.3-v83ImpactLife)*3);v83Impact.material.opacity=v83ImpactLife*1.8}
 
-// V140: shared geometry and instanced flowers, avoids hundreds of draw calls.
+// V142: shared geometry and instanced flowers, avoids hundreds of draw calls.
 const v124Flowers=new THREE.InstancedMesh(
  new THREE.ConeGeometry(.11,.24,5),
  new THREE.MeshLambertMaterial({color:0xe7ad6d,vertexColors:false}),
@@ -498,7 +522,7 @@ for(let i=0;i<110;i++){
 }
 v124Flowers.instanceMatrix.needsUpdate=true;scene.add(v124Flowers);
 
-// V140: instanced ambient fireflies, a single draw call and no per-frame allocations.
+// V142: instanced ambient fireflies, a single draw call and no per-frame allocations.
 const v126Fireflies=new THREE.InstancedMesh(
  new THREE.IcosahedronGeometry(.075,0),
  new THREE.MeshBasicMaterial({color:0xffdb81,transparent:true,opacity:.74,depthWrite:false,blending:THREE.AdditiveBlending}),
@@ -519,6 +543,143 @@ function v126UpdateAmbient(dt){
  v126Fireflies.position.y=Math.sin(elapsed*.65)*.09;
 }
 const hero=new THREE.Group();scene.add(hero);
+// V143: rigged leather warrior replaces the V142 procedural hero visuals only.
+// Gameplay collision, hero position, combat, coins, boss, timers and Duo remain unchanged.
+let v143Warrior=null, v143Mixer=null, v143Action=null, v143Actions={};
+const v144Skins={dragon:{color:0x962c25,metal:0xffb447,em:'🐉'},shadow:{color:0x28233c,metal:0x9a79e5,em:'🌑'},frost:{color:0x4b83b5,metal:0xb8f2ff,em:'❄️'},gold:{color:0xa77b29,metal:0xffe09a,em:'👑'},demon:{color:0x682d42,metal:0xff5353,em:'😈'}};
+let v144Current=null;let v144Ornaments=[];
+function v144ApplySkin(id){
+ v144Current=v144Skins[id]?id:null;
+ if(!v143Warrior)return;
+ const skin=v144Skins[v144Current];
+ v143Warrior.traverse(o=>{if(!o.isMesh||!o.material)return;const mats=Array.isArray(o.material)?o.material:[o.material];for(const m of mats){if(!m.userData.v144Original){m.userData.v144Original={color:m.color?.getHex(),emissive:m.emissive?.getHex()};}if(m.color&&m.userData.v144Original.color!==undefined){m.color.setHex(m.userData.v144Original.color);if(skin)m.color.lerp(new THREE.Color(skin.color),.52)}if(m.emissive){m.emissive.setHex(skin?skin.metal: m.userData.v144Original.emissive||0);m.emissiveIntensity=skin?.17:0;}}});
+ for(const o of v144Ornaments)v143Warrior.remove(o);v144Ornaments=[];
+ if(skin){const g=new THREE.Group();const mat=new THREE.MeshStandardMaterial({color:skin.metal,metalness:.8,roughness:.22,emissive:skin.metal,emissiveIntensity:.18});const ring=new THREE.Mesh(new THREE.TorusGeometry(.34,.055,6,18),mat);ring.rotation.x=Math.PI/2;ring.position.y=2.34;g.add(ring);for(const side of [-1,1]){const spike=new THREE.Mesh(new THREE.ConeGeometry(.13,.52,6),mat);spike.position.set(side*.42,2.13,0);spike.rotation.z=-side*.3;g.add(spike)}v143Warrior.add(g);v144Ornaments.push(g)}
+}
+window.pirpirApplyPremium=id=>{v147ShowKnight(id==='knight');v144ApplySkin(id==='knight'?null:id);if(id){window.pirpirCharacter='ates';v88Choose('ates');v144ApplySkin(id)}if(v88PreviewHero)v88RefreshPreview()};
+// V147: load the ORIGINAL skinned knight FBX without pretending it is a GLB.
+// Premium entitlement is verified by the V145 shop before enabling this visual.
+let v147Knight=null, v147KnightMixer=null, v147KnightAction=null, v147KnightClips={};
+let v147KnightReady=false;
+const v147TexLoader=new THREE.TextureLoader();
+function v147KnightTexture(filename, color=false){
+ const tex=v147TexLoader.load('./knight-source/textures/'+filename);
+ tex.flipY=true;
+ if(color)tex.colorSpace=THREE.SRGBColorSpace;
+ tex.anisotropy=Math.min(2,renderer.capabilities.getMaxAnisotropy());
+ return tex;
+}
+function v147SetupKnightMaterials(model){
+ const maps={main:{d:v147KnightTexture('Knight_Main_D.png',true),n:v147KnightTexture('Knight_Main_N.png'),r:v147KnightTexture('Knight_Main_R.png'),m:v147KnightTexture('Knight_Main_M.png')},extras:{d:v147KnightTexture('Knight_Extras_D.png',true),n:v147KnightTexture('Knight_Extras_N.png'),r:v147KnightTexture('Knight_Extras_R.png'),m:v147KnightTexture('Knight_Extras_M.png')},eye:{d:v147KnightTexture('Knight_Eye_D.png',true),e:v147KnightTexture('Knight_Eye_Emissive.png',true)}};
+ model.traverse(o=>{if(!o.isMesh)return;o.frustumCulled=false;o.castShadow=false;o.receiveShadow=false;
+ const matFor=(original)=>{const n=(original?.name||o.name||'').toLowerCase();const t=n.includes('eye')?maps.eye:n.includes('extra')?maps.extras:maps.main;
+ const m=new THREE.MeshStandardMaterial({name:original?.name||'Knight',map:t.d,normalMap:t.n||null,roughnessMap:t.r||null,metalnessMap:t.m||null,metalness:t.m?1:.45,roughness:t.r?1:.45,side:THREE.DoubleSide,skinning:true});
+ if(t.e){m.emissive=new THREE.Color(0xffffff);m.emissiveMap=t.e;m.emissiveIntensity=.8}return m;};
+ o.material=Array.isArray(o.material)?o.material.map(matFor):matFor(o.material);
+ });
+}
+function v147ShowKnight(enabled){
+ const show=!!enabled && v147KnightReady;
+ if(v147Knight)v147Knight.visible=show;
+ if(v143Warrior)v143Warrior.visible=!show;
+ // Fallback procedural hero stays hidden while either model is visible.
+ if(show){hips.visible=false;v141HeroAccent.visible=false;v142HeroArmor.visible=false;}
+ return show;
+}
+window.pirpirV147SelectKnight=()=>{
+ window.pirpirSelectedPremium='knight';
+ v147ShowKnight(true);
+ if(v88PreviewHero)v88RefreshPreview();
+ return v147KnightReady;
+};
+new FBXLoader().load('./knight-source/SK-Knight.fbx', model=>{
+ try{
+  v147SetupKnightMaterials(model);
+  model.updateMatrixWorld(true);
+  const bounds=new THREE.Box3().setFromObject(model),size=bounds.getSize(new THREE.Vector3());
+  if(!Number.isFinite(size.y)||size.y<=0)throw Error('Invalid FBX dimensions');
+  model.scale.multiplyScalar(2.65/size.y);
+  model.updateMatrixWorld(true);
+  const corrected=new THREE.Box3().setFromObject(model);
+  model.position.y-=corrected.min.y;
+  model.rotation.y=Math.PI;
+  hero.add(model);v147Knight=model;v147KnightReady=true;
+  v147KnightMixer=new THREE.AnimationMixer(model);
+  for(const clip of model.animations||[])v147KnightClips[clip.name.toLowerCase()]=v147KnightMixer.clipAction(clip);
+  model.visible=false;
+  if(window.pirpirSelectedPremium==='knight')v147ShowKnight(true);
+  console.info('V147 FBX knight ready; animations:',Object.keys(v147KnightClips));
+ }catch(e){console.warn('V147 knight setup failed',e)}
+},undefined,e=>console.warn('V147 FBX load failed; original warrior remains',e));
+const v143Loader=new GLTFLoader();
+v143Loader.load('./models/leather-armor-warrior-rigged.glb', gltf=>{
+ try {
+  const model=gltf.scene;
+  model.updateMatrixWorld(true);
+  const bounds=new THREE.Box3().setFromObject(model);
+  const size=bounds.getSize(new THREE.Vector3());
+  if(!Number.isFinite(size.y)||size.y<=0)throw new Error('Invalid model height');
+  model.scale.multiplyScalar(2.65/size.y);
+  model.updateMatrixWorld(true);
+  const box=new THREE.Box3().setFromObject(model);
+  model.position.y-=box.min.y;
+  // Procedural hero faces -Z; align the GLB forward orientation if necessary.
+  model.rotation.y=Math.PI;
+  model.traverse(o=>{if(o.isMesh){o.castShadow=false;o.receiveShadow=false;
+   if(o.isSkinnedMesh)o.frustumCulled=false;
+   if(o.material){const mats=Array.isArray(o.material)?o.material:[o.material];
+    for(const m of mats){if(m.map)m.map.anisotropy=Math.min(2,renderer.capabilities.getMaxAnisotropy());}
+   }
+  }});
+  model.traverse(o=>{if(o.isMesh&&o.material){o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone()}});
+  hero.add(model);
+  v143Warrior=model;
+  v144ApplySkin(window.pirpirSelectedPremium||null);
+  v143Mixer=new THREE.AnimationMixer(model);
+  for(const clip of gltf.animations)v143Actions[clip.name.toLowerCase()]=v143Mixer.clipAction(clip);
+  hips.visible=false;
+  v141HeroAccent.visible=false;
+  v142HeroArmor.visible=false;
+  console.info('Pırpır V143: deri zırhlı savaşçı yüklendi');
+ }catch(err){console.warn('V143 model initialization failed; procedural hero preserved',err)}
+},undefined,err=>console.warn('V143 warrior load failed; original hero preserved',err));
+function v143UpdateWarrior(dt,moving){
+ if(v147Knight?.visible){if(v147KnightMixer){const nextK=moving?(v147KnightClips.run||v147KnightClips.walk):v147KnightClips.idle;if(nextK!==v147KnightAction){v147KnightAction?.fadeOut(.16);if(nextK)nextK.reset().fadeIn(.16).play();v147KnightAction=nextK;}v147KnightMixer.update(Math.min(dt,.05));}return;}
+ if(!v143Mixer||!v143Warrior)return;
+ const next=moving?(v143Actions.run||v143Actions.walk):null;
+ if(next!==v143Action){if(v143Action)v143Action.fadeOut(.16);
+  if(next)next.reset().fadeIn(.16).play();v143Action=next;}
+ if(dt>0)v143Mixer.update(Math.min(dt,.05));
+}
+
+// V142 hero silhouette: lightweight decorative halo, safely attached to moving hero.
+const v141HeroAccent=new THREE.Group();hero.add(v141HeroAccent);
+const v141AccentMat=new THREE.MeshStandardMaterial({color:0xffcf73,metalness:.75,roughness:.25,emissive:0x593008,emissiveIntensity:.18});
+const v141AccentGem=new THREE.Mesh(new THREE.OctahedronGeometry(.17,0),new THREE.MeshStandardMaterial({color:0xff6d36,metalness:.2,roughness:.24,emissive:0x661e08,emissiveIntensity:.3}));
+v141AccentGem.position.set(0,2.55,-.34);v141HeroAccent.add(v141AccentGem);
+for(const side of [-1,1]){
+ const ornament=new THREE.Mesh(new THREE.ConeGeometry(.18,.48,5),v141AccentMat);
+ ornament.position.set(side*.56,1.95,-.08);ornament.rotation.z=side*.34;v141HeroAccent.add(ornament);
+}
+
+
+// V142: stronger hero silhouette, lightweight equipment meshes; no combat-stat changes.
+const v142HeroArmor=new THREE.Group();hero.add(v142HeroArmor);
+const v142Metal=new THREE.MeshStandardMaterial({color:0xd8b66a,metalness:.82,roughness:.27});
+const v142Iron=new THREE.MeshStandardMaterial({color:0x283447,metalness:.68,roughness:.33});
+const v142Ember=new THREE.MeshStandardMaterial({color:0xff9a3c,emissive:0xe54a10,emissiveIntensity:.52,metalness:.35,roughness:.28});
+for(const side of [-1,1]){
+ const shoulder=new THREE.Mesh(new THREE.DodecahedronGeometry(.36,0),v142Metal);
+ shoulder.position.set(side*.69,1.85,-.03);shoulder.scale.set(1.15,.66,.94);v142HeroArmor.add(shoulder);
+ const spike=new THREE.Mesh(new THREE.ConeGeometry(.15,.57,6),v142Iron);
+ spike.position.set(side*.75,2.27,-.04);spike.rotation.z=-side*.22;v142HeroArmor.add(spike);
+ const knee=new THREE.Mesh(new THREE.OctahedronGeometry(.20,0),v142Metal);
+ knee.position.set(side*.27,.52,-.39);v142HeroArmor.add(knee);
+}
+const v142Crest=new THREE.Mesh(new THREE.OctahedronGeometry(.21,0),v142Ember);
+v142Crest.position.set(0,1.54,-.48);v142HeroArmor.add(v142Crest);
+const v142HelmetRim=new THREE.Mesh(new THREE.TorusGeometry(.32,.055,6,14),v142Metal);
+v142HelmetRim.position.set(0,2.37,-.02);v142HelmetRim.rotation.x=Math.PI/2;v142HeroArmor.add(v142HelmetRim);
 
 const v124CombatFx=new THREE.Group();scene.add(v124CombatFx);
 const v124Ring=new THREE.Mesh(
@@ -532,7 +693,7 @@ const v124Blade=new THREE.Mesh(
 );
 v124Blade.rotation.x=-Math.PI/2;v124Blade.position.y=1.05;v124CombatFx.add(v124Blade);
 
-// V140: pooled GPU-instanced sparks; one draw call.
+// V142: pooled GPU-instanced sparks; one draw call.
 const v125Sparks=new THREE.InstancedMesh(
  new THREE.OctahedronGeometry(.10,0),
  new THREE.MeshBasicMaterial({color:0xffd57a,transparent:true,opacity:.88,depthWrite:false}),
@@ -584,7 +745,7 @@ function v124UpdateFx(dt){
 // V87 appearance-only character palette: clone hero-specific materials to avoid recoloring mobs.
 const v87Appearance=window.pirpirCharacter||'ates';
 const v87Palette={ates:{armor:0x9d2e21,trim:0xe5b94c,plume:0xd34b1c},buz:{armor:0x2d659c,trim:0xb6eaff,plume:0x7bc8ed},orman:{armor:0x34714b,trim:0xc4d78a,plume:0x71b65b}};
-const hips=new THREE.Group();hero.add(hips);const torso=part(hips,'box',red,0,1.38,0,.92,.98,.55);part(hips,'box',gold,0,1.48,-.32,.46,.53,.08);part(hips,'box',gold,0,1.0,0,1.04,.17,.6);part(hips,'sphere',skin,0,2.17,0,.34,.38,.33);part(hips,'box',gold,0,1.9,-.34,.63,.16,.13);part(hips,'box',dark,0,1.48,-.38,.17,.44,.06);for(const x of [-.13,.13])part(hips,'sphere',dark,x,2.22,-.302,.045,.045,.04);part(hips,'box',gold,0,2.03,-.26,.16,.07,.14);part(hips,'cone',red,0,2.68,.12,.34,.46,.32);part(hips,'box',gold,0,1.58,-.37,.52,.10,.12);part(hips,'box',gold,0,1.26,-.37,.52,.10,.12);part(hips,'sphere',gold,-.55,1.77,-.02,.29,.21,.31);part(hips,'sphere',gold,.55,1.77,-.02,.29,.21,.31);part(hips,'cone',hair,-.29,2.48,-.23,.19,.42,.21);part(hips,'cone',hair,.29,2.48,-.23,.19,.42,.21);for(let i=-1;i<=1;i++)part(hips,'cone',hair,i*.22,2.55,-.04,.22,.46,.26);// V140: additional hero silhouette, metal trim and crest without new draw loops.
+const hips=new THREE.Group();hero.add(hips);const torso=part(hips,'box',red,0,1.38,0,.92,.98,.55);part(hips,'box',gold,0,1.48,-.32,.46,.53,.08);part(hips,'box',gold,0,1.0,0,1.04,.17,.6);part(hips,'sphere',skin,0,2.17,0,.34,.38,.33);part(hips,'box',gold,0,1.9,-.34,.63,.16,.13);part(hips,'box',dark,0,1.48,-.38,.17,.44,.06);for(const x of [-.13,.13])part(hips,'sphere',dark,x,2.22,-.302,.045,.045,.04);part(hips,'box',gold,0,2.03,-.26,.16,.07,.14);part(hips,'cone',red,0,2.68,.12,.34,.46,.32);part(hips,'box',gold,0,1.58,-.37,.52,.10,.12);part(hips,'box',gold,0,1.26,-.37,.52,.10,.12);part(hips,'sphere',gold,-.55,1.77,-.02,.29,.21,.31);part(hips,'sphere',gold,.55,1.77,-.02,.29,.21,.31);part(hips,'cone',hair,-.29,2.48,-.23,.19,.42,.21);part(hips,'cone',hair,.29,2.48,-.23,.19,.42,.21);for(let i=-1;i<=1;i++)part(hips,'cone',hair,i*.22,2.55,-.04,.22,.46,.26);// V142: additional hero silhouette, metal trim and crest without new draw loops.
 for(const side of [-1,1]){
  part(hips,'box',gold,side*.49,1.48,-.33,.13,.68,.10);
  part(hips,'sphere',dark,side*.57,1.82,-.28,.13,.12,.13);
@@ -592,9 +753,9 @@ for(const side of [-1,1]){
 }
 part(hips,'sphere',fire,0,1.50,-.425,.10,.10,.055);
 const capeMat=new THREE.MeshStandardMaterial({color:0x751c24,side:THREE.DoubleSide,roughness:.9});
-// V140: cloth heraldry, graceful fallback if asset is missing.
+// V142: cloth heraldry, graceful fallback if asset is missing.
 new THREE.TextureLoader().load('./textures/hero-cape-1024.png',tex=>{tex.colorSpace=THREE.SRGBColorSpace;capeMat.map=tex;capeMat.color.set(0xffffff);capeMat.needsUpdate=true;},undefined,()=>{});const cape=new THREE.Mesh(new THREE.PlaneGeometry(1.28,1.55,4,8),capeMat);cape.position.set(0,1.16,.37);cape.rotation.x=-.13;hips.add(cape);part(hips,'box',gold,0,.91,-.08,.78,.19,.53);for(const side of [-1,1]){part(hips,'box',gold,side*.37,1.36,-.36,.11,.75,.12);part(hips,'cone',gold,side*.62,1.99,0,.19,.38,.24);part(hips,'box',dark,side*.15,2.29,-.32,.13,.045,.035);part(hips,'cone',hair,side*.39,2.56,.09,.18,.56,.22)}part(hips,'box',gold,0,1.03,-.38,.24,.24,.11);part(hips,'sphere',fire,0,1.05,-.46,.10,.10,.08);const arms=[],legs=[];for(const side of [-1,1]){const a=new THREE.Group();a.position.set(side*.64,1.74,0);hips.add(a);part(a,'box',red,0,-.37,0,.34,.72,.36);part(a,'sphere',gold,0,-.08,0,.27,.24,.27);part(a,'box',gold,0,-.56,-.03,.39,.15,.42);arms.push(a);const l=new THREE.Group();l.position.set(side*.25,.93,0);hips.add(l);part(l,'box',dark,0,-.4,0,.34,.8,.4);part(l,'box',gold,0,-.78,-.06,.39,.27,.49);part(l,'box',red,0,-.81,-.22,.42,.17,.54);legs.push(l)}
-// V140: layered crest, chest insignia and shield rivets with shared materials.
+// V142: layered crest, chest insignia and shield rivets with shared materials.
 const v130Bronze=mat(0xd8a452),v130Ruby=mat(0xe7552f),v130Iron=mat(0x586773);
 for(const side of [-1,1]){
  part(hips,'sphere',v130Bronze,side*.54,1.76,-.405,.11,.11,.06);
@@ -674,7 +835,7 @@ v87SetHeroPalette(v87Appearance);
 
 const sword=new THREE.Group();arms[1].add(sword);sword.position.set(0,-.76,0);part(sword,'cyl',dark,0,-.12,0,.075,.33,.075);part(sword,'box',gold,0,-.28,0,.38,.09,.15);part(sword,'cone',fire,0,-.82,0,.19,.98,.16);sword.rotation.z=-.35;
 
-// V140: equipped lobby cosmetics appear on the actual 3D hero, not just inventory.
+// V142: equipped lobby cosmetics appear on the actual 3D hero, not just inventory.
 const v135CosmeticRoot=new THREE.Group();hips.add(v135CosmeticRoot);
 const v135SwordRoot=new THREE.Group();sword.add(v135SwordRoot);
 const v139CosmeticMats={
@@ -912,21 +1073,21 @@ function v75AnimateTeammate(dt){if(!teammate.visible)return;const moving=duo.rol
 const remoteLabel=document.createElement('div');remoteLabel.id='remoteLabel';remoteLabel.style.cssText='position:fixed;top:35%;right:10px;color:#8ceaff;font-size:12px;font-weight:800;pointer-events:none;z-index:4';document.body.append(remoteLabel);
 let mobSerial=0;
 
-// V140: distinctive, mobile-friendly monster silhouettes. Geometry is built once per enemy.
+// V142: distinctive, mobile-friendly monster silhouettes. Geometry is built once per enemy.
 const v113Palette=[
  {armor:mat(0x51317d),accent:new THREE.MeshBasicMaterial({color:0xd88bff}),spike:mat(0xa47ce2)},
  {armor:mat(0x175c4c),accent:new THREE.MeshBasicMaterial({color:0x61ffd0}),spike:mat(0x43b893)},
  {armor:mat(0x8c3d26),accent:new THREE.MeshBasicMaterial({color:0xffbd55}),spike:mat(0xd98a42)},
  {armor:mat(0x55202a),accent:new THREE.MeshBasicMaterial({color:0xff4c2b}),spike:mat(0xe3aa46)}
 ];
-// V140: bold, distinct silhouettes, built from existing shared low-poly geometries.
+// V142: bold, distinct silhouettes, built from existing shared low-poly geometries.
 const v113Materials=[
  {body:mat(0x503096),plate:mat(0x8f5be1),glow:new THREE.MeshBasicMaterial({color:0xe7a2ff}),horn:mat(0xd5c1f7)},
  {body:mat(0x187e5b),plate:mat(0x3bc68c),glow:new THREE.MeshBasicMaterial({color:0x9dffb8}),horn:mat(0xb8e7a0)},
  {body:mat(0x8d3d24),plate:mat(0xd47737),glow:new THREE.MeshBasicMaterial({color:0xffd066}),horn:mat(0xf1b76d)},
  {body:mat(0x4c203c),plate:mat(0xa73348),glow:new THREE.MeshBasicMaterial({color:0xff542f}),horn:mat(0xffcf6a)}
 ];
-// V140: distinct silhouettes; custom low-poly 3D creatures (no external assets).
+// V142: distinct silhouettes; custom low-poly 3D creatures (no external assets).
 const v113M={
  gob:mat(0x628d42),gobDark:mat(0x27472c),leather:mat(0x68402b),steel:mat(0xc4d7d5),gold:mat(0xffd26a),
  wolf:mat(0x344b56),wolfLight:mat(0x698c8b),wolfDark:mat(0x192e38),claw:mat(0xe9e1ca),
@@ -1008,13 +1169,13 @@ function v113BuildMonster(g,type=0,q=1){
 }
 
 
-// V140: actual local glTF 2.0 binary character assets, loaded once and reused.
+// V142: actual local glTF 2.0 binary character assets, loaded once and reused.
 // The original low-poly monsters remain visible if an asset cannot load.
 const v114Assets=[null,null,null,null];
 const v114Names=['goblin','wolf','golem','boss'];
 const v114Loader=new GLTFLoader();
 
-// V140: four independent high-resolution monster surface maps.
+// V142: four independent high-resolution monster surface maps.
 // Only the model's main body receives its map; eyes, horns, claws and runes keep their original colors.
 const v131MonsterMaps={};
 const v131TextureLoader=new THREE.TextureLoader();
@@ -1051,7 +1212,7 @@ function v131ApplyMonsterSurface(root,type){
 }
 
 
-// V140: actual THREE.Bone + SkinnedMesh skinning on GLB limb meshes.
+// V142: actual THREE.Bone + SkinnedMesh skinning on GLB limb meshes.
 // Skinning uses a two-joint chain and blended per-vertex weights.
 function v118RigModel(model){
  const rigs=[];
@@ -1115,6 +1276,25 @@ function v114Install(g,type,size){
      node.material.metalness=.08;
    }
  });
+ // V142: recognizable boss silhouette layered over the imported boss model.
+ // Shared materials and small geometries keep GPU costs bounded.
+ if(type===3){
+  const darkArmor=new THREE.MeshStandardMaterial({color:0x401826,metalness:.72,roughness:.35});
+  const brightArmor=new THREE.MeshStandardMaterial({color:0xe0a24c,metalness:.84,roughness:.25});
+  const glow=new THREE.MeshStandardMaterial({color:0xff7139,emissive:0xff3910,emissiveIntensity:.8});
+  const reg=(geo,material,x,y,z)=>{const mesh=new THREE.Mesh(geo,material);mesh.position.set(x,y,z);model.add(mesh);return mesh};
+  for(const side of [-1,1]){
+   const pauldron=reg(new THREE.DodecahedronGeometry(.35,0),darkArmor,side*.79,1.88,-.02);
+   pauldron.scale.set(1.25,.68,1.15);
+   const horn=reg(new THREE.ConeGeometry(.23,.86,7),brightArmor,side*.48,3.03,-.04);
+   horn.rotation.z=side*.34;
+   const claw=reg(new THREE.ConeGeometry(.13,.47,6),brightArmor,side*.92,1.45,-.43);
+   claw.rotation.z=side*.18;
+  }
+  const chest=reg(new THREE.OctahedronGeometry(.25,0),glow,0,1.74,-.57);
+  chest.scale.z=.52;
+  reg(new THREE.CylinderGeometry(.16,.24,.18,8),brightArmor,0,2.50,-.10);
+ }
  // Preserve enemy gameplay group, collision, damage and network identifiers.
  for(const child of g.children)child.visible=false;
  g.add(model);
@@ -1124,7 +1304,7 @@ function v114Install(g,type,size){
  contact.rotation.x=-Math.PI/2;contact.position.y=.025;contact.name='v121GroundRing';contact.scale.setScalar(type===3?1.8:type===1?1.2:1);
  g.add(contact);g.userData.v120Contact=contact;
 
- // V140: cache limb nodes once, rather than traversing models every frame.
+ // V142: cache limb nodes once, rather than traversing models every frame.
  const limbs=[];
  model.traverse(node=>{
    if(!node.isMesh)return;
@@ -1145,7 +1325,7 @@ function v114LoadAssets(){
        if(m.alive&&m.variety===type&&!m.g.userData.v114Visual)
          v114Install(m.g,type,m.boss?1.9:(type===1?.88:type===2?1.13:1));
      }
-   },undefined,err=>console.warn('V140 model yüklenemedi:',v114Names[type],err));
+   },undefined,err=>console.warn('V142 model yüklenemedi:',v114Names[type],err));
  }
 }
 const mobs=[];for(let i=0;i<4;i++){const g=new THREE.Group();const a=i*Math.PI*2/5;g.position.set(Math.cos(a)*(12+i*.9),0,Math.sin(a)*(7+i*.9));part(g,'sphere',mat([0x654b87,0x387b64,0x9b633b][i%3]),0,.55,0,.25,.30,.25);part(g,'cone',dark,0,1.04,0,.32,.42,.3);part(g,'sphere',fire,-.15,.62,-.37,.07,.07,.07);part(g,'sphere',fire,.15,.62,-.37,.07,.07,.07);v113BuildMonster(g,i%3,1);v114Install(g,i%3,1);scene.add(g);mobs.push({id:++mobSerial,g,alive:true,hp:2,maxHp:2,attackCooldown:0,phase:i*1.7,boss:false,variety:i%3,strafe:i%2?1:-1,charge:0,windup:0,stun:0,attackTell:0,stepPhase:Math.random()*6.28})}v114LoadAssets();document.addEventListener('touchmove',e=>{if(window.pirpirStarted&&(e.target.closest('#stage,#joy,#attack,#chest')||e.target.closest('canvas'))&&e.cancelable)e.preventDefault()},{passive:false});const joy=document.querySelector('#joy'),nub=document.querySelector('#nub');let axis={x:0,y:0},pid=null,attackTime=0,elapsed=0,kills=0,health=100,damageFlash=0,deadTimer=0;let gameOver=false,bossSpawned=false,bossDefeated=false,spawnClock=0,attackCooldown=0;const powers={};const powerNames=["Ateş Kılıcı","Koruma Kalkanı","Hız Gücü","Can Yenileme","Zincir Şimşek","Kritik Vuruş"];// V85: predictable 10-minute difficulty curve, capped for mobile stability.
@@ -1165,7 +1345,7 @@ function v85ChestPower(zone){
 }
 const v87PowerIcons={'Ateş Kılıcı':'🔥','Koruma Kalkanı':'🛡️','Hız Gücü':'💨','Can Yenileme':'💚','Zincir Şimşek':'⚡','Kritik Vuruş':'🎯'};
 const v87PowerBar=document.getElementById('v87PowerBar');
-function v87RenderPowers(){const entries=Object.entries(powers);v87PowerBar.replaceChildren();for(const [name,level] of entries){const chip=document.createElement('span');chip.className='v87PowerChip';chip.textContent=(v87PowerIcons[name]||'✨')+' '+name+' Lv.'+level;v87PowerBar.append(chip)}}
+function v87RenderPowers(){const entries=Object.entries(powers);v87PowerBar.replaceChildren();for(const [name,level] of entries){const chip=document.createElement('span');chip.className='v87PowerChip';chip.textContent=(v87PowerIcons[name]||'✨')+(level>1?' ×'+level:'');chip.title=name+' Seviye '+level;chip.setAttribute('aria-label',name+' seviye '+level);v87PowerBar.append(chip)}}
 const timerEl=document.querySelector("#timer"),powersEl=document.querySelector("#powers"),messageEl=document.querySelector("#message"),restartEl=document.querySelector("#restart"),chestEl=document.querySelector("#chest");let hitNoteTime=0;const hitNoteEl=document.querySelector("#hitnote"),bossBar=document.querySelector("#bossbar"),bossFill=document.querySelector("#bossfill");let messageTimeout=0;function message(t){messageEl.textContent=t;messageTimeout=3}function finish(t){if(gameOver||document.getElementById("v87Result").style.display==="flex")return;window.pirpirAudio?.play(bossDefeated?'victory':'lose');gameOver=true;messageEl.textContent=t;restartEl.style.display="none";
  const win=!!bossDefeated;document.getElementById('v87ResultIcon').textContent=win?'🏆':'💀';
  document.getElementById('v87ResultTitle').textContent=win?'ZAFER!':'MÜCADELE SONA ERDİ';
@@ -1330,7 +1510,7 @@ function v81BossPhase(dt){const b=mobs.find(m=>m.alive&&m.boss);const phase=!!b&
 const bossWarning=new THREE.Mesh(new THREE.RingGeometry(2.3,2.48,36),new THREE.MeshBasicMaterial({color:0xff6633,transparent:true,opacity:.65,side:THREE.DoubleSide,depthWrite:false}));
 bossWarning.rotation.x=-Math.PI/2;bossWarning.visible=false;scene.add(bossWarning);
 
-// V140: boss telegraph is visible and legible on small mobile screens.
+// V142: boss telegraph is visible and legible on small mobile screens.
 const v127BossDanger=new THREE.Mesh(
  new THREE.CircleGeometry(2.27,40),
  new THREE.MeshBasicMaterial({color:0xe74636,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false})
@@ -1416,10 +1596,10 @@ function grantPower(){if(!window.pirpirStarted)return;if(gameOver||!nearestChest
  // V84: animate the lid over time, rather than snapping it open.
  nearestChest.lid.rotation.x=0;
  nearestChest=null;
- const name=v85ChestPower(v83ChestZone);powers[name]=(powers[name]||0)+1;if(name==="Can Yenileme")health=Math.min(100,health+25*powers[name]);powersEl.textContent="Güçler: "+Object.entries(powers).map(([n,l])=>n+" Lv."+l).join(" • ");v87RenderPowers();message("🎁 "+v83ZoneNames[v83ChestZone]+" sandığı: "+name+" Lv."+powers[name]);updateHud();updateChestProximity()}chestEl.addEventListener("pointerdown",e=>{e.preventDefault();grantPower()});function stick(e){if(window.pirpirDuoMenuOpen||window.pirpirSoloPaused)return;const r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),len=Math.hypot(dx,dy)||1,p=Math.min(1,len/(r.width*.38));axis.x=dx/len*p;axis.y=dy/len*p;nub.style.transform=`translate(${axis.x*40}px,${axis.y*40}px)`;window.pirpirV140Input={x:axis.x,y:axis.y,last:Date.now()};}
+ const name=v85ChestPower(v83ChestZone);powers[name]=(powers[name]||0)+1;if(name==="Can Yenileme")health=Math.min(100,health+25*powers[name]);powersEl.textContent="Güçler: "+Object.entries(powers).map(([n,l])=>n+" Lv."+l).join(" • ");v87RenderPowers();message("🎁 "+v83ZoneNames[v83ChestZone]+" sandığı: "+name+" Lv."+powers[name]);updateHud();updateChestProximity()}chestEl.addEventListener("pointerdown",e=>{e.preventDefault();grantPower()});function stick(e){if(window.pirpirDuoMenuOpen||window.pirpirSoloPaused)return;const r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),len=Math.hypot(dx,dy)||1,p=Math.min(1,len/(r.width*.38));axis.x=dx/len*p;axis.y=dy/len*p;nub.style.transform=`translate(${axis.x*40}px,${axis.y*40}px)`;window.pirpirV142Input={x:axis.x,y:axis.y,last:Date.now()};}
 function joyBegin(e){if(window.pirpirDuoMenuOpen||window.pirpirSoloPaused)return;if(pid!==null)return;e.preventDefault();pid=e.pointerId;try{joy.setPointerCapture(pid)}catch(_){}stick(e)}
 joy.addEventListener('pointerdown',joyBegin,{passive:false});joy.addEventListener('pointermove',e=>{if(e.pointerId===pid){e.preventDefault();stick(e)}},{passive:false});
-function release(e){if(e.pointerId!==pid)return;if(e.cancelable)e.preventDefault();pid=null;axis.x=axis.y=0;nub.style.transform='';window.pirpirV140Input={x:0,y:0,last:Date.now()}}
+function release(e){if(e.pointerId!==pid)return;if(e.cancelable)e.preventDefault();pid=null;axis.x=axis.y=0;nub.style.transform='';window.pirpirV142Input={x:0,y:0,last:Date.now()}}
 for(const ev of ['pointerup','pointercancel','lostpointercapture'])joy.addEventListener(ev,release);
 window.pirpirResetControls=()=>{axis.x=axis.y=0;nub.style.transform='';pid=null;guestAttack=false;for(const k in keys)keys[k]=false};
 const keys={};addEventListener('keydown',e=>keys[e.key.toLowerCase()]=true);addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();if(!e.repeat&&!window.pirpirDuoMenuOpen&&!window.pirpirSoloPaused)strike()}});
@@ -1440,7 +1620,7 @@ function updatePulse(dt){if(pulseAge>=.32){pulse.visible=false;return;}pulseAge+
 pulse.visible=true;pulse.scale.setScalar(1+pulseAge*5);pulse.material.opacity=Math.max(0,.7*(1-pulseAge/.32));}
 let v116Flash=0;
 function strike(){if(!window.pirpirStarted||gameOver||health<=0||window.pirpirSoloPaused||window.pirpirDuoMenuOpen)return;if(duo.role==='guest'){if(duo.connected&&duo.peer)guestAttack=true;return}if(attackCooldown>0)return;window.pirpirAudio?.play('sword');v124TriggerAttack();v116Flash=0.16;v91Shake=Math.min(.11,v91Shake+.045);attackCooldown=.28;attackTime=.4;slashLife=.22;pulseAge=0;pulse.position.set(hero.position.x,.085,hero.position.z);hips.rotation.z=-.13;slash.rotation.z=hero.rotation.y;slash.scale.setScalar(1+(powers["Ateş Kılıcı"]||0)*.08);const damage=1+(powers["Ateş Kılıcı"]||0)+(Math.random()<Math.min(.6,.12*(powers["Kritik Vuruş"]||0))?2:0);let target=null,closest=3.25;for(const m of mobs){if(!m.alive)continue;const d=m.g.position.distanceTo(hero.position);if(d<closest){closest=d;target=m}}if(target){window.pirpirAudio?.play('hit');v69Burst(target.g.position.x,target.g.position.z);v83Hit(target.g.position.x,target.g.position.z);hitSparks(target.g.position.x,.9,target.g.position.z);target.hp-=damage;target.stun=target.boss?.08:.16;hitNoteEl.textContent="⚔️ -"+damage;hitNoteEl.style.opacity="1";hitNoteTime=.7;if(target.boss)bossFill.style.width=(Math.max(0,target.hp)/target.maxHp*100)+"%";target.g.scale.setScalar(target.boss?1:Math.max(.78,target.hp/target.maxHp));if(target.hp<=0){target.alive=false;v90Burst(target,true);v80DeathBurst(target.g.position.x,target.g.position.z,!!target.boss);scene.remove(target.g);kills++;window.dispatchEvent(new Event("pirpir:kill"));for(let i=0;i<(target.boss?12:1);i++)dropCoin(target.g.position.x+rand(-.7,.7),target.g.position.z+rand(-.7,.7));if(target.boss){bossWarning.visible=false;v81PhaseRing.visible=false;bossDefeated=true;bossBar.style.display="none";message("🏆 BOSS YENİLDİ!");v77Win()}}if(powers["Zincir Şimşek"]){const other=mobs.find(m=>m.alive&&m!==target&&m.g.position.distanceTo(target.g.position)<3.5);if(other){other.hp-=powers["Zincir Şimşek"];if(other.hp<=0){other.alive=false;v90Burst(other,true);v80DeathBurst(other.g.position.x,other.g.position.z,false);scene.remove(other.g);kills++;window.dispatchEvent(new Event("pirpir:kill"));dropCoin(other.g.position.x,other.g.position.z)}}}}updateHud()}
-const attackButton=document.querySelector('#attack');let lastAttackPointer=0;attackButton.addEventListener('pointerdown',e=>{e.preventDefault();lastAttackPointer=Date.now();window.pirpirV140AttackTap=lastAttackPointer;strike()});attackButton.addEventListener('click',e=>{e.preventDefault();if(Date.now()-lastAttackPointer>400){window.pirpirV140AttackTap=Date.now();strike()}});const stage=document.querySelector('#stage');let cameraPointer=null,lastX=0,lastY=0,orbitAngle=.61,orbitPitch=.48;stage.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;if(cameraPointer!==null)return;e.preventDefault();cameraPointer=e.pointerId;lastX=e.clientX;lastY=e.clientY;stage.setPointerCapture(e.pointerId)});stage.addEventListener('pointermove',e=>{if(e.pointerId!==cameraPointer)return;e.preventDefault();const mx=e.clientX-lastX,my=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;orbitAngle-=mx*.008;orbitPitch=THREE.MathUtils.clamp(orbitPitch+my*.004,.18,1.05)});function endOrbit(e){if(e.pointerId===cameraPointer)cameraPointer=null}for(const ev of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(ev,endOrbit);// V68: boss ground shockwave, telegraphed and dodgeable.
+const attackButton=document.querySelector('#attack');let lastAttackPointer=0;attackButton.addEventListener('pointerdown',e=>{e.preventDefault();lastAttackPointer=Date.now();window.pirpirV142AttackTap=lastAttackPointer;strike()});attackButton.addEventListener('click',e=>{e.preventDefault();if(Date.now()-lastAttackPointer>400){window.pirpirV142AttackTap=Date.now();strike()}});const stage=document.querySelector('#stage');let cameraPointer=null,lastX=0,lastY=0,orbitAngle=.61,orbitPitch=.48;stage.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;if(cameraPointer!==null)return;e.preventDefault();cameraPointer=e.pointerId;lastX=e.clientX;lastY=e.clientY;stage.setPointerCapture(e.pointerId)});stage.addEventListener('pointermove',e=>{if(e.pointerId!==cameraPointer)return;e.preventDefault();const mx=e.clientX-lastX,my=e.clientY-lastY;lastX=e.clientX;lastY=e.clientY;orbitAngle-=mx*.008;orbitPitch=THREE.MathUtils.clamp(orbitPitch+my*.004,.18,1.05)});function endOrbit(e){if(e.pointerId===cameraPointer)cameraPointer=null}for(const ev of ['pointerup','pointercancel','lostpointercapture'])stage.addEventListener(ev,endOrbit);// V68: boss ground shockwave, telegraphed and dodgeable.
 const shockMat=new THREE.MeshBasicMaterial({color:0xff632f,transparent:true,opacity:.0,depthWrite:false,side:THREE.DoubleSide});
 const shockRing=new THREE.Mesh(new THREE.RingGeometry(.94,1.04,40),shockMat);
 shockRing.rotation.x=-Math.PI/2;shockRing.visible=false;scene.add(shockRing);
@@ -1815,11 +1995,11 @@ function v91Collision(dt){
 }
 camera.position.set(12,17,15);camera.lookAt(0,1,0);let qualityAdjusted=false,slowFrames=0;const clock=new THREE.Clock();let v100PauseRenderAt=0;const cameraTarget=new THREE.Vector3();const hurtEl=document.querySelector("#hurt");let v119HealClock=0;
 const v120EnemyVector=new THREE.Vector3();
-function loop(){window.pirpirV140Frame=Date.now();requestAnimationFrame(loop);let dt=Math.min(clock.getDelta(),.05);window.pirpirAudio?.tick(!!window.pirpirStarted&&!gameOver,elapsed>=540,!!window.pirpirSoloPaused||!!window.pirpirDuoMenuOpen||document.hidden);if(window.pirpirSoloPaused){const now=performance.now();if(now-v100PauseRenderAt>180){renderer.render(scene,camera);v100PauseRenderAt=now;}return;}if(document.hidden||!window.pirpirStarted||duo.role==='guest')dt=0;duoTick(dt||.016);v75AnimateTeammate(dt);if(typeof v75HitTick==='function')v75HitTick(dt);v80Tick(dt);v90GhostTick(dt);v76Tick(dt);v124UpdateFx(dt);v126UpdateAmbient(dt);v135SyncCosmetics(dt);v116Flash=Math.max(0,v116Flash-dt);
+function loop(){window.pirpirV142Frame=Date.now();requestAnimationFrame(loop);let dt=Math.min(clock.getDelta(),.05);window.pirpirAudio?.tick(!!window.pirpirStarted&&!gameOver,elapsed>=540,!!window.pirpirSoloPaused||!!window.pirpirDuoMenuOpen||document.hidden);if(window.pirpirSoloPaused){const now=performance.now();if(now-v100PauseRenderAt>180){renderer.render(scene,camera);v100PauseRenderAt=now;}return;}if(document.hidden||!window.pirpirStarted||duo.role==='guest')dt=0;duoTick(dt||.016);v143UpdateWarrior(dt,!!window.pirpirStarted&&!gameOver&&(Math.abs(axis.x)+Math.abs(axis.y)>0.12||keys.w||keys.a||keys.s||keys.d||keys.arrowup||keys.arrowdown||keys.arrowleft||keys.arrowright));v75AnimateTeammate(dt);if(typeof v75HitTick==='function')v75HitTick(dt);v80Tick(dt);v90GhostTick(dt);v76Tick(dt);v124UpdateFx(dt);v126UpdateAmbient(dt);v135SyncCosmetics(dt);v116Flash=Math.max(0,v116Flash-dt);
 for(const m of mobs){
  const model=m.g.userData.v114Visual;
  if(!model||model===true||!m.alive)continue;
- // V140: reaction to actual health loss, with a short recoverable stagger.
+ // V142: reaction to actual health loss, with a short recoverable stagger.
  const hpNow=Number.isFinite(m.hp)?m.hp:null;
  if(hpNow!==null){
   if(m.v133PreviousHp!==undefined && hpNow<m.v133PreviousHp)
@@ -1872,7 +2052,7 @@ for(const m of mobs){
 }
 v77Tick(dt);v75BossFlash=Math.max(0,v75BossFlash-dt);v69Update(dt);v70MeteorUpdate(dt);v71BossArc(dt);
 v82UpdateRegion(hero.position.x,hero.position.z);v85UpdateStage();v83Tick(dt);v84Lighting(dt);v84ChestTick(dt);v84SkillTick(dt);if(!qualityAdjusted&&dt>.041){slowFrames++;if(slowFrames>100){renderer.setPixelRatio(Math.min(devicePixelRatio,1));v98ScheduleResize();qualityAdjusted=true}}if(!gameOver&&duo.role!=='guest'){elapsed+=dt;spawnClock+=dt;
- // V140: small solo recovery during the learning phase; never affects Duo.
+ // V142: small solo recovery during the learning phase; never affects Duo.
  if(!duo.connected&&elapsed<120&&health>0&&health<100){
    v119HealClock+=dt;
    if(v119HealClock>=3){v119HealClock=0;health=Math.min(100,health+1);updateHud()}
@@ -1915,7 +2095,7 @@ if(m.variety===0&&!m.boss&&distance<3.8){
  m.g.position.z+=(delta.x)*dt*weave;
 }
 m.g.position.addScaledVector(delta,dt*moveSpeed);
-// V140: local separation steering, bounded and lightweight for mobile.
+// V142: local separation steering, bounded and lightweight for mobile.
 if(!m.boss){let sx=0,sz=0,n=0;
  for(const other of mobs){if(other===m||!other.alive)continue;
   const dx=m.g.position.x-other.g.position.x,dz=m.g.position.z-other.g.position.z;
@@ -2010,8 +2190,8 @@ addEventListener('resize',v98ScheduleResize,{passive:true});addEventListener('or
 let fault='';const badge=document.createElement('div');badge.id='v105Diag';badge.setAttribute('role','status');badge.style.cssText='position:fixed;top:calc(48px + env(safe-area-inset-top));right:8px;z-index:15;background:#10272be8;border:1px solid #ffd58c;border-radius:8px;padding:5px 8px;color:#fff;font:11px system-ui;max-width:55vw;pointer-events:none;display:none';document.body.append(badge);
 window.addEventListener('error',e=>{if(e.message)fault=String(e.message).slice(0,130)});
 window.addEventListener('unhandledrejection',e=>{fault=String(e.reason?.message||e.reason||'Promise hatası').slice(0,130)});
-setInterval(()=>{if(!window.pirpirStarted){badge.style.display='none';return}badge.style.display=fault?'block':'none';const age=Date.now()-(window.pirpirV140Frame||0);const input=window.pirpirV140Input||{};const tap=Date.now()-(window.pirpirV140AttackTap||0)<1800;
-badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döngüsü durdu ('+Math.round(age/1000)+' sn)':'V140 • Motor aktif • Joy '+(Math.hypot(input.x||0,input.y||0)>.1?'ALGILANDI':'hazır')+' • Saldır '+(tap?'ALGILANDI':'hazır');},350);
+setInterval(()=>{if(!window.pirpirStarted){badge.style.display='none';return}badge.style.display=fault?'block':'none';const age=Date.now()-(window.pirpirV142Frame||0);const input=window.pirpirV142Input||{};const tap=Date.now()-(window.pirpirV142AttackTap||0)<1800;
+badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döngüsü durdu ('+Math.round(age/1000)+' sn)':'V142 • Motor aktif • Joy '+(Math.hypot(input.x||0,input.y||0)>.1?'ALGILANDI':'hazır')+' • Saldır '+(tap?'ALGILANDI':'hazır');},350);
 })();</script><script>(function(){const p=document.getElementById('v93Progress'),t=document.getElementById('v93LoadText'),e=document.getElementById('v93Load');let completed=false;function fail(){if(completed)return;t.textContent='Oyun yüklenemedi. İnterneti kontrol edip yeniden deneyin.';p.style.width='12%';if(!document.getElementById('v98Retry')){const b=document.createElement('button');b.id='v98Retry';b.textContent='↻ YENİDEN DENE';b.style.cssText='padding:12px 18px;border:1px solid #ffe2a2;border-radius:12px;background:#b66a36;color:white;font-weight:900;cursor:pointer';b.addEventListener('click',()=>location.reload());e.append(b)}}function ready(){if(completed)return;if(!document.querySelector('#stage canvas')){fail();return}completed=true;window.pirpirEngineReady=true;p.style.width='100%';t.textContent='Oyun hazır!';requestAnimationFrame(()=>requestAnimationFrame(()=>{e.classList.add('done');setTimeout(()=>e.remove(),350)}))}window.addEventListener('load',()=>setTimeout(ready,150));window.addEventListener('error',event=>{if(!completed&&event.target!==window)fail()},true);window.addEventListener('unhandledrejection',()=>{if(!completed)fail()});setTimeout(()=>{if(!completed)fail()},14000)})();</script><script id="v103MenuRecovery">
 (function(){
   'use strict';
@@ -2043,7 +2223,7 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
     },true);
     // Keep controls reachable in Safari, even with an invisible stale loading overlay.
     const load=document.getElementById('v93Load');if(load)load.style.pointerEvents='none';
-    window.pirpirV140MenuReady=true;
+    window.pirpirV142MenuReady=true;
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
 })();
@@ -2055,11 +2235,11 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
   document.body.appendChild(status);
   let previous=0;
   setInterval(function(){
-    const frame=window.pirpirV140Frame||0;
+    const frame=window.pirpirV142Frame||0;
     const active=!!window.pirpirStarted;
     const paused=!!window.pirpirSoloPaused;
     const alive=Date.now()-frame<1500;
-    status.textContent='V140 | '+(active?'BAŞLADI':'BAŞLAMADI')+' | '+(paused?'DURAKLATILDI':'AKTİF')+' | '+(alive?'ÇİZİM VAR':'ÇİZİM YOK');
+    status.textContent='V142 | '+(active?'BAŞLADI':'BAŞLAMADI')+' | '+(paused?'DURAKLATILDI':'AKTİF')+' | '+(alive?'ÇİZİM VAR':'ÇİZİM YOK');
     previous=frame;
   },500);
   document.getElementById('v93Resume')?.addEventListener('click',function(){
@@ -2085,7 +2265,12 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
   {id:'outfit_royal',name:'Kraliyet Zırhı',icon:'🛡️',type:'Kostüm',price:220},
   {id:'outfit_shadow',name:'Gölge Kostümü',icon:'🥷',type:'Kostüm',price:180},
   {id:'trail_star',name:'Yıldız İzi',icon:'✨',type:'Efekt',price:90},
-  {id:'cape_dragon',name:'Ejder Pelerini',icon:'🐉',type:'Pelerin',price:200}
+  {id:'cape_dragon',name:'Ejder Pelerini',icon:'🐉',type:'Pelerin',price:200},
+  {id:'dragon',name:'Ejder Kanlı',icon:'🐉',type:'Efsanevi Kahraman',price:300},
+  {id:'shadow',name:'Gölge Celladı',icon:'🌑',type:'Efsanevi Kahraman',price:350},
+  {id:'frost',name:'Buz Hükümdarı',icon:'❄️',type:'Efsanevi Kahraman',price:400},
+  {id:'gold',name:'Altın Muhafız',icon:'👑',type:'Efsanevi Kahraman',price:450},
+  {id:'demon',name:'Alev İblisi',icon:'😈',type:'Efsanevi Kahraman',price:500}
  ];
  const defaultState=()=>({diamonds:250,owned:[],equipped:{}});
  let state;
@@ -2101,7 +2286,7 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
   $('v134Balance').textContent='💎 '+state.diamonds;
   $('v134ShopBalance').textContent='💎 '+state.diamonds+' elmas';
   const grid=$('v134Grid');grid.replaceChildren();
-  for(const item of catalog){
+  for(const item of catalog.filter(x=>x.type!=='Efsanevi Kahraman')){
    const owned=state.owned.includes(item.id);
    const equipped=state.equipped[item.type]===item.id;
    const card=document.createElement('div');card.className='v134Product';
@@ -2117,7 +2302,7 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
      state.diamonds-=item.price;state.owned.push(item.id);
     }
     state.equipped[item.type]=item.id;save();render();
-    message(item.name+' seçildi. Bu sürümde seçim envantere kaydedilir; 3D görünüm bağlantısı sonraki aşamada.');
+    if(item.type==='Efsanevi Kahraman'){window.pirpirSelectedPremium=item.id;window.pirpirApplyPremium?.(item.id);window.pirpirV144Render?.();message(item.name+' seçildi ve 3D görünüm uygulandı.')}else message(item.name+' seçildi. Bu eşyanın 3D görünüm bağlantısı henüz yok.');
    });
    card.append(icon,name,info,btn);grid.append(card);
   }
@@ -2125,6 +2310,11 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
  $('v134Open').addEventListener('click',()=>{$('v134Store').hidden=false;render()});
  $('v134Close').addEventListener('click',()=>{$('v134Store').hidden=true});
  save();render();
+ const premium=[]; // V145: legacy diamond premium items disabled; never grant real-money characters
+ function renderPremium(){const el=$('v144Premium');if(!el)return;el.replaceChildren();for(const item of premium){const owned=state.owned.includes(item.id),selected=state.equipped['Efsanevi Kahraman']===item.id;const btn=document.createElement('button');btn.type='button';btn.setAttribute('aria-pressed',String(selected));btn.innerHTML='<span class="em">'+item.icon+'</span>'+item.name+'<small>'+(selected?'✓ Seçili':owned?'Kullan':'🔒 💎 '+item.price)+'</small>';btn.onclick=()=>{if(!owned){$('v134Store').hidden=false;render();$('v134Store').scrollIntoView({behavior:'smooth',block:'nearest'});$('v144Status').textContent='💎 '+item.name+' için mağazadan satın al.';return}state.equipped['Efsanevi Kahraman']=item.id;save();window.pirpirSelectedPremium=item.id;window.pirpirApplyPremium?.(item.id);renderPremium();$('v144Status').textContent=item.name+' kuşanıldı.'};el.append(btn)}}
+ window.pirpirV144Render=renderPremium;renderPremium();
+ // V145: legacy localStorage purchases cannot grant premium access
+ document.querySelectorAll('.v87Char').forEach(btn=>btn.addEventListener('click',()=>{window.pirpirSelectedPremium=null;window.pirpirApplyPremium?.(null);state.equipped['Efsanevi Kahraman']=null;save();renderPremium()}));
  window.pirpirCosmetics={getEquipped:()=>({...state.equipped}),getDiamonds:()=>state.diamonds,addDemoDiamonds:(amount)=>{if(!Number.isSafeInteger(amount)||amount<1||amount>100)return false;state.diamonds+=amount;save();render();return true}};
 })();
 </script>
@@ -2281,4 +2471,4 @@ badge.textContent=fault?'⚠️ Kod hatası: '+fault:age>1800?'⚠️ Oyun döng
  persist();render();
 })();
 </script>
-</body></html>
+<script type="module" src="./v145-shop.js"></script></body></html>
